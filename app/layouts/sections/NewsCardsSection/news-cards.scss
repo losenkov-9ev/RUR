@@ -1,0 +1,58 @@
+.home-page {
+  .newsCards {
+    padding-top: 120px;
+    margin-top: -20px;
+  }
+}
+
+.newsCards {
+  background-color: $bg-gray;
+  padding: 100px 0;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__arrows {
+    display: flex;
+    gap: 8px;
+
+    a:not(.swiper-button-disabled) {
+      cursor: pointer;
+
+      svg rect,
+      svg path {
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        svg rect {
+          fill: $accent;
+        }
+        svg path {
+          stroke: #fff;
+        }
+      }
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+
+    a.swiper-button-disabled {
+      svg rect {
+        fill-opacity: 0.5;
+      }
+      svg path {
+        stroke-opacity: 0.5;
+      }
+    }
+  }
+
+  .a {
+    margin-top: 40px;
+  }
+}

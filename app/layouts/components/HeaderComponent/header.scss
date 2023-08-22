@@ -1,0 +1,154 @@
+.popup-opened .header {
+  padding-right: var(--scrollbar-width);
+}
+
+.header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 12px 0;
+  background: #fff;
+  border-bottom: 1px solid $divider;
+  transition: all 0.3s, padding-right 0s;
+
+  &.scrolled {
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 266px;
+    height: 56px;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__menu-linkWrapper {
+    position: relative;
+    margin-bottom: -5px;
+    &:hover {
+      .header__menu-link {
+        color: #fff;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__menu-dropdown {
+    &.opened {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    opacity: 0;
+    transform: translateY(-5px);
+    position: absolute;
+    display: none;
+    top: 52px;
+    gap: 24px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: -15px 20px 24px -4px rgba(145, 158, 171, 0.08),
+      0px 0px 2px 0px rgba(145, 158, 171, 0.24);
+    left: 0;
+    transition: all 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 50px;
+      left: 0;
+      top: -50px;
+      z-index: 0;
+      width: 200px;
+    }
+  }
+  &__menu-dropdownLink {
+    overflow: hidden;
+    color: #212b36;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    padding: 6px 16px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s;
+    max-width: 198px;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background: rgba(145, 158, 171, 0.08);
+    }
+  }
+  &__menu-link {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: $text;
+    background-color: $bg-gray;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+
+    span {
+      z-index: 5;
+      position: relative;
+    }
+
+    &:not(.header__menu-link--search)::before {
+      content: '';
+      opacity: 0;
+      z-index: 4;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(226deg, #48c1c0 0%, #2b8cd9 100%);
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: #fff;
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &--search {
+      padding: 8px 10px;
+      svg path {
+        transition: all 0.3s;
+      }
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+      &:hover {
+        svg path {
+          stroke: $accent;
+        }
+      }
+    }
+  }
+}

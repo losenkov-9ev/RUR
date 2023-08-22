@@ -1,0 +1,146 @@
+.home-page .footer {
+  margin-top: -20px;
+}
+
+.footer {
+  padding: 80px 0;
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(239deg, #fbe002 0%, #df3512 100%);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #fff;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  &__top-logo {
+    width: 235.15px;
+    height: 109.251px;
+    flex: none;
+    margin-right: 82px;
+  }
+  &__top-content {
+    display: flex;
+  }
+
+  &__top-contacts {
+    max-width: 233px;
+    margin-right: 62px;
+  }
+
+  &__top-call,
+  &__top-mail,
+  &__top-address {
+    color: $text;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 30px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+
+    transition: all 0.3s;
+    &:hover {
+      color: $accent;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('@img/icons/call.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__top-mail {
+    color: $accent;
+    margin: 0;
+    &::before {
+      background-image: url('@img/icons/mail.svg');
+    }
+  }
+
+  &__top-address {
+    margin: 0;
+    &:hover {
+      color: $text;
+    }
+    &::before {
+      background-image: url('@img/icons/map.svg');
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: stretch;
+  }
+  &__rankings {
+    padding-top: 24px;
+    padding-bottom: 18px;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    max-width: 498px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-right: 30px;
+  }
+  &__rankings-title {
+    margin-bottom: 18px;
+    color: $text;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__rankings-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 0;
+  }
+  &__rankings-link {
+    color: #212b36;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 50%;
+    padding-right: 10px;
+
+    transition: all 0.3s;
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 14px 30px;
+    max-width: 100%;
+    width: 100%;
+  }
+  &__link {
+    height: 100%;
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    border-radius: 12px;
+    background: #fff;
+    color: $text;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}

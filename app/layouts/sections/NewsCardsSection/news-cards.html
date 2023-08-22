@@ -1,0 +1,66 @@
+<section class="newsCards">
+  <div class="newsCards__inner container">
+    <div class="newsCards__head">
+      <h2 class="newsCards__title title-2">
+        @@title
+      </h2>
+      <div class="newsCards__arrows">
+        <a class="newsCards__arrow newsCards__arrow--prev">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"/>
+            <path d="M18 10.75L12.75 16L18 21.25" stroke="#2B8CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="newsCards__arrow newsCards__arrow--next">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="16" fill="white"/>
+            <path d="M14 10.75L19.25 16L14 21.25" stroke="#2B8CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+        </a>
+      </div>
+    </div>
+    <div class="newsCards__box swiper">
+      <div class="swiper-wrapper">
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "25",
+          "month": "may",
+          "title": "RUR 2023 is released",
+          "image": "@img/content/news/item-1.jpg"
+        })
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "21",
+          "month": "dec",
+          "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023",
+          "image": "@img/content/news/item-2.jpg"
+        })
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "7",
+          "month": "dec",
+          "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released",
+          "image": "@img/content/news/item-3.jpg"
+        })
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "25",
+          "month": "may",
+          "title": "RUR 2023 is released",
+          "image": "@img/content/news/item-1.jpg"
+        })
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "21",
+          "month": "dec",
+          "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023",
+          "image": "@img/content/news/item-2.jpg"
+        })
+        @@include('../../components/NewsCardComponent/news-card.html', {
+          "day": "7",
+          "month": "dec",
+          "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released",
+          "image": "@img/content/news/item-3.jpg"
+        })
+      </div>
+    </div>
+    @@if (withADS) {
+      <div class="a">ADS</div>
+    }
+  </div>
+</section>

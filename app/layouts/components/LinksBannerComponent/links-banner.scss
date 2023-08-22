@@ -1,0 +1,56 @@
+.linksBanner {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 -20px;
+    width: 110%;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 32%;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: $bg-gray;
+    transition: all 0.3s;
+
+    color: $text;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: #fff;
+      svg path {
+        stroke: #fff;
+      }
+
+      &.linksBanner__item--rankings {
+        background-color: #ffc36c;
+      }
+      &.linksBanner__item--countriesOverview {
+        background-color: #48c1c0;
+      }
+      &.linksBanner__item--methodology {
+        background-color: #2b8cd9;
+      }
+    }
+  }
+  &__item-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  &__item-arrow {
+    margin-bottom: -8px;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "University Main"})
+  <body class="university-main-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+          "breadcrumbs": [
+            {
+              "link": "#",
+              "name": 1
+            },
+            {
+              "link": "#",
+              "name": 2
+            },
+            {
+              "link": "#",
+              "name": 3
+            },
+            {
+              "link": "#",
+              "name": 4
+            },
+          ]
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

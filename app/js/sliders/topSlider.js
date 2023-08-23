@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-export const topSlider = () => {
-  new Swiper('.top__info-slider', {
+export const topSliderFn = () => {
+  const topSlider = new Swiper('.top__info-slider', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 20,

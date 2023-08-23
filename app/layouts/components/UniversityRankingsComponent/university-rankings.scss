@@ -1,0 +1,162 @@
+.universityRankings {
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__table {
+    padding: 0px 6px 6px 6px;
+    border-radius: 10px;
+    background: #f4f6f8;
+  }
+  &__table + .universityRankings__table {
+    margin-top: 18px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+  &__row--head {
+    color: #5f6262;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    .universityRankings__table-item {
+      padding-left: 14px;
+
+      &:first-of-type {
+        padding-left: 10px;
+      }
+    }
+  }
+  &__table-item {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+  &__table-item--main {
+    width: 60%;
+  }
+  &__table-item--rank,
+  &__table-item--score {
+    width: 20%;
+  }
+  &__row:not(.universityRankings__row--head) {
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 7px;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #dfe6ed;
+    }
+    .universityRankings__table-item {
+      padding-left: 18px;
+
+      &:first-of-type {
+        padding-left: 0px;
+      }
+    }
+    .universityRankings__table-item--rank,
+    .universityRankings__table-item--score {
+      color: #131313;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+    .universityRankings__table-item--main {
+      color: #131313;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+  &__table-rank {
+    position: relative;
+    margin-right: 16px;
+    cursor: pointer;
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 5px;
+    }
+  }
+  &__popover {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-5px) translateX(-50%);
+    top: -110px;
+    padding: 10px 12px 14px 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    min-width: 214px;
+    box-shadow: -10px 10px 40px -4px rgba(145, 158, 171, 0.24),
+      0px 0px 2px 0px rgba(145, 158, 171, 0.24);
+    transition: all 0.3s;
+
+    &.opened {
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+    }
+
+    .popover-arrow {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      svg {
+        width: 12px;
+        height: 6px;
+      }
+    }
+  }
+  &__popover-title {
+    color: #212b36;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  &__popover-rank {
+    color: #637381;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  &__popover-line {
+    display: flex;
+    gap: 2px;
+    padding-top: 12px;
+  }
+  &__popover-lineItem {
+    width: 20%;
+    background-color: var(--popover-line-color);
+    height: 16px;
+    position: relative;
+    &:first-of-type {
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+    &.active .polygon {
+      opacity: 1;
+    }
+    .polygon {
+      position: absolute;
+      opacity: 0;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 10px;
+
+      svg path {
+        fill: var(--popover-line-color);
+      }
+    }
+  }
+}

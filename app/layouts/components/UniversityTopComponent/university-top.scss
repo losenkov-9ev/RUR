@@ -1,0 +1,124 @@
+.universityTop {
+  margin-bottom: 36px;
+  &__inner {
+    padding: 20px 20px 20px 40px;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__content {
+    max-width: 530px;
+  }
+  &__image {
+    max-width: 570px;
+    margin-left: 20px;
+
+    img {
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+  &__logo {
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__location {
+    margin-bottom: 56px;
+    &.with-socialMedia {
+      margin-bottom: 15px;
+    }
+  }
+  &__location-item {
+    display: flex;
+    align-items: center;
+  }
+  &__location-item + .universityTop__location-item {
+    margin-top: 15px;
+  }
+  &__location-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  &__location-info {
+    color: rgba($text, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__location-link {
+    color: $accent;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__achievements {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__achievements-item {
+    display: flex;
+    align-items: center;
+
+    color: $text;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 11px 15px 11px 10px;
+    border-radius: 8px;
+    background-color: $bg-gray;
+  }
+  &__achievements-info:not(.icon) {
+    height: 28px;
+    min-width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: $accent;
+    margin-right: 8px;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__achievements-info.icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+  &__social {
+    margin-bottom: 40px;
+  }
+  &__social-item {
+    svg path {
+      transition: all 0.3s;
+    }
+    svg path.social-bg {
+      opacity: 1;
+    }
+    svg path.social-bg-active {
+      opacity: 0;
+    }
+    &:hover {
+      svg path.social-bg {
+        opacity: 0;
+      }
+      svg path.social-bg-active {
+        opacity: 1;
+      }
+    }
+  }
+}

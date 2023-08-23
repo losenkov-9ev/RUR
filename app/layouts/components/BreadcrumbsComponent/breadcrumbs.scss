@@ -1,3 +1,44 @@
 .breadcrumbs {
   display: flex;
+  margin-top: 14px;
+  margin-bottom: 20px;
+
+  &__item {
+    color: #73808d;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 120%;
+    padding-right: 20px;
+    margin-right: 16px;
+    position: relative;
+
+    a {
+      color: inherit;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      background-color: #a5b2bf;
+      border-radius: 50%;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+      margin-right: 0;
+      color: $text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 120%;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }

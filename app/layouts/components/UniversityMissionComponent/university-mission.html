@@ -1,0 +1,22 @@
+<div class="universityMission university-item">
+  @@if (withImage) {
+    <div class="universityMission__box">
+  } 
+  @@if (!withImage) {
+    <div class="universityMission__box withoutImage">
+  }
+    <div class="universityMission__content">
+      <h4 class="universityMission__title title-4">Mission Statement</h4>
+      <p class="universityMission__text">
+        The mission of Harvard College is to educate the citizens and citizen-leaders for our
+        society. We do this through our commitment to the transformative power of a liberal arts
+        and sciences education.
+      </p>
+    </div>
+    @@if (withImage) {
+    <div class="universityMission__image">
+      <img src="@img/content/universities-images/item-2.jpg" alt="university-image" />
+    </div>
+    }
+  </div>
+</div>

@@ -1,6 +1,9 @@
 import { isWebp, checkPage } from './utills.js';
 import { initHeader } from './header.js';
 import { initNewsSlider, initTopSlider } from './sliders.js';
+import { readMore } from './readMore.js';
+import { rankingsPopover } from './rankingsPopover.js';
+import { doughnutChart } from './doughnutChart.js';
 
 const doc = document.documentElement;
 const documentHeight = () => {
@@ -26,8 +29,14 @@ scrollbarWidth();
 
 initHeader();
 
+document.onclick = (e) => {
+  readMore(e);
+};
+
 if (checkPage('home-page')) {
-  console.log('home');
   initTopSlider();
   initNewsSlider();
+} else if (checkPage('university-page')) {
+  rankingsPopover();
+  doughnutChart();
 }

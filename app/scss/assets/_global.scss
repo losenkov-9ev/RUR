@@ -56,6 +56,42 @@ body {
   }
 }
 
+.university-page {
+  background-color: $bg-gray;
+}
+
+.u-aside-wrapper {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.u-box {
+  max-width: 960px;
+  width: 100%;
+}
+
+.university-item {
+  border-radius: 20px;
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+[data-readMore='text'].opened {
+  display: block;
+  -webkit-line-clamp: auto;
+  -webkit-box-orient: none;
+}
+[data-readMore='button'] {
+  svg {
+    transition: all 0.3s;
+  }
+  &.opened svg {
+    transform: rotate(180deg);
+  }
+}
+
 section {
   overflow-x: clip !important;
 }

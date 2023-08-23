@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('./layouts/global/head.html', {"title": "University Main"})
-  <body class="university-main-page">
+  <body class="university-page university-main-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -12,22 +12,40 @@
           "breadcrumbs": [
             {
               "link": "#",
-              "name": 1
+              "name": "Home"
             },
             {
               "link": "#",
-              "name": 2
+              "name": "Universities"
             },
             {
               "link": "#",
-              "name": 3
-            },
-            {
-              "link": "#",
-              "name": 4
-            },
+              "name": "Harvard University"
+            }
           ]
         })
+        <!-- University Top component -->
+        @@include('./layouts/components/UniversityTopComponent/university-top.html', {
+          "socialMedia": false
+        })
+        <div class="u-aside-wrapper container">
+          <div class="u-box">
+            <!-- University Overview component -->
+            @@include('./layouts/components/UniversityOverviewComponent/university-overview.html')
+            <!-- University Mission component -->
+            @@include('./layouts/components/UniversityMissionComponent/university-mission.html', {
+              withImage: true
+            })
+            <!-- University Rankings component -->
+            @@include('./layouts/components/UniversityRankingsComponent/university-rankings.html')
+            
+            <!-- University Indicators component -->
+            @@include('./layouts/components/UniversityIndicatorsComponent/university-indicators.html')
+          </div>
+          <div class="u-aside">
+
+          </div>
+        </div>
         <!-- Footer component -->
         @@include('./layouts/components/FooterComponent/footer.html')
       </div>

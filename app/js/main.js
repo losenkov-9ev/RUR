@@ -3,7 +3,7 @@ import { initHeader } from './header.js';
 import { initNewsSlider, initTopSlider } from './sliders.js';
 import { readMore } from './readMore.js';
 import { rankingsPopover } from './rankingsPopover.js';
-import { doughnutChart } from './doughnutChart.js';
+import { doughnutChart } from './chart/chart.js';
 
 const doc = document.documentElement;
 const documentHeight = () => {

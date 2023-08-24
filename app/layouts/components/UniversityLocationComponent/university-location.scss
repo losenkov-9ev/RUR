@@ -1,0 +1,40 @@
+.universityLocation {
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__place {
+    padding-left: 16px;
+    margin-bottom: 15px;
+  }
+  &__place-title {
+    color: $text;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 4px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: $accent;
+      border-radius: 50%;
+    }
+  }
+  &__place-box {
+    height: 180px;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  &__place-description {
+    color: rgba($text, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}

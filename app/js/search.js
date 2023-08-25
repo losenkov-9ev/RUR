@@ -1,105 +1,127 @@
-export const initSearch = () => {
-  let isOpened = false;
+export class SearchManager {
+  constructor() {
+    this.isOpened = false;
 
-  const $searchWrapper = document.querySelector('[data-search="wrapper"]');
-  const $searchList = $searchWrapper.querySelector('[data-search="list"]');
-  const $searchButton = $searchWrapper.querySelector('[data-search="searchButton"]');
-  const $searchOpen = document.querySelector('[data-search="open"]');
-  const $searchInput = $searchWrapper.querySelector('[data-search="input"]');
+    this.searchWrapper = document.querySelector('[data-search="wrapper"]');
+    this.searchList = this.searchWrapper.querySelector('[data-search="list"]');
+    this.searchButton = this.searchWrapper.querySelector('[data-search="searchButton"]');
+    this.searchOpenButton = document.querySelector('[data-search="open"]');
+    this.searchInput = this.searchWrapper.querySelector('[data-search="input"]');
 
-  window.onload = () => {
-    $searchWrapper.style.display = 'none';
-  };
-
-  $searchOpen.addEventListener('click', () => {
-    !isOpened ? searchOpen() : searchClose();
-  });
-
-  $searchWrapper.addEventListener('click', (e) => {
-    if (e.target.closest('[data-search="close"]')) {
-      searchClose();
-    }
-    searchFocused(e);
-    seacrchSelect(e);
-  });
-
-  $searchInput.onfocus = (e) => searchFocused(e, 'inputFocused');
-
-  function searchOpen() {
-    document.body.classList.add('popup-opened');
-    isOpened = true;
-
-    $searchWrapper.style.display = 'block';
-    setTimeout(() => {
-      $searchWrapper.classList.remove('closed');
-    }, 0);
-    setTimeout(() => {
-      $searchWrapper.querySelector('.search__field').classList.remove('closed');
-    }, 300);
+    this.init();
   }
-  function searchClose() {
-    isOpened = false;
 
-    $searchList.classList.remove('opened');
-    if ($searchWrapper.classList.contains('list-opened')) {
-      $searchWrapper.classList.remove('list-opened');
-      setTimeout(() => {
-        $searchWrapper.querySelector('.search__field').classList.add('closed');
-      }, 300);
-      setTimeout(() => {
-        $searchButton.style.transform = 'translateX(0)';
-        $searchWrapper.classList.add('closed');
-        document.body.classList.remove('popup-opened');
-      }, 600);
-      setTimeout(() => {
-        $searchWrapper.style.display = 'none';
-      }, 900);
+  init() {
+    this.addEventListeners();
+    this.hideSearchList();
+    this.searchWrapper.style.display = 'none';
+  }
+
+  addEventListeners() {
+    this.searchOpenButton.addEventListener('click', this.toggleSearch.bind(this));
+    this.searchWrapper.addEventListener('click', this.handleSearchClick.bind(this));
+    this.searchInput.addEventListener('focus', this.handleInputFocus.bind(this));
+  }
+
+  async toggleSearch() {
+    if (!this.isOpened) {
+      await this.openSearch();
     } else {
-      $searchWrapper.querySelector('.search__field').classList.add('closed');
-
-      setTimeout(() => {
-        $searchWrapper.classList.add('closed');
-      }, 300);
-      setTimeout(() => {
-        $searchWrapper.style.display = 'none';
-        document.body.classList.remove('popup-opened');
-      }, 600);
+      this.closeSearch();
     }
   }
-  function searchFocused(e, eventName) {
-    if (eventName && eventName === 'inputFocused') {
-      $searchList.classList.add('opened');
-      $searchWrapper.classList.add('list-opened');
 
-      setTimeout(() => {
-        $searchButton.style.transform = 'translateX(1000px)';
-      }, 300);
-    } else if (e.target.closest('[data-search="searchButton"]')) {
-      $searchList.classList.add('opened');
-      $searchWrapper.classList.add('list-opened');
-      $searchInput.focus();
-      setTimeout(() => {
-        $searchButton.style.transform = 'translateX(1000px)';
-      }, 300);
+  async openSearch() {
+    document.body.classList.add('popup-opened');
+    this.isOpened = true;
+
+    this.searchWrapper.style.display = 'block';
+    await this.delay(0);
+    this.searchWrapper.classList.remove('closed');
+    await this.delay(300);
+    this.searchWrapper.querySelector('.search__field').classList.remove('closed');
+  }
+
+  async closeSearch() {
+    this.isOpened = false;
+
+    this.hideSearchList();
+
+    this.searchWrapper.querySelector('.search__field').classList.add('closed');
+    await this.delay(300);
+    this.searchWrapper.classList.add('closed');
+    await this.delay(300);
+    this.hideSearchList();
+
+    document.body.classList.remove('popup-opened');
+    this.searchWrapper.style.display = 'none';
+  }
+
+  async showSearchList() {
+    this.searchList.classList.add('opened');
+    this.searchWrapper.classList.add('list-opened');
+    await this.delay(300);
+    this.searchButton.style.transform = 'translateX(1000px)';
+  }
+
+  async hideSearchList() {
+    this.searchList.classList.remove('opened');
+    this.searchWrapper.classList.remove('list-opened');
+    await this.delay(300);
+    this.searchButton.style.transform = 'translateX(0)';
+  }
+
+  async handleInputFocus(e) {
+    if (e.target.closest('[data-search="searchButton"]')) {
+      this.showSearchList();
+      this.searchInput.focus();
     }
   }
-  function seacrchSelect(e) {
-    const $dropdownSelect = $searchWrapper.querySelector('[data-search="selectWrapper"]');
-    const dropdownSelectors = {
-      button: '[data-search="selectButon"]',
-      item: '[data-search="selectItem"]',
-    };
 
-    if (e.target.closest(dropdownSelectors.button)) {
-      $dropdownSelect.classList.toggle('opened');
-    } else if (e.target.closest(dropdownSelectors.item)) {
-      $searchWrapper.querySelector(`${dropdownSelectors.item}.active`).classList.remove('active');
+  async handleSearchClick(e) {
+    const closeBtn = e.target.closest('[data-search="close"]');
+    const searchBtn = e.target.closest('[data-search="searchButton"]');
+    const selectBtn = e.target.closest('[data-search="selectButton"]');
+    const selectItem = e.target.closest('[data-search="selectItem"]');
 
-      e.target.classList.add('active');
-      $searchWrapper.querySelector(`${dropdownSelectors.button} span`).innerHTML =
-        e.target.innerHTML;
+    if (closeBtn) {
+      this.closeSearch();
+    }
 
-      $dropdownSelect.classList.remove('opened');
+    if (searchBtn) {
+      this.showSearchList();
+      this.searchInput.focus();
+    }
+
+    if (selectBtn) {
+      this.toggleDropdown();
+    }
+
+    if (selectItem) {
+      this.selectDropdownItem(selectItem);
     }
   }
-};
+
+  toggleDropdown() {
+    const dropdownSelect = this.searchWrapper.querySelector('[data-search="selectWrapper"]');
+    dropdownSelect.classList.toggle('opened');
+  }
+
+  selectDropdownItem(item) {
+    const dropdownSelect = this.searchWrapper.querySelector('[data-search="selectWrapper"]');
+    const activeItem = this.searchWrapper.querySelector('[data-search="selectItem"].active');
+
+    if (activeItem) {
+      activeItem.classList.remove('active');
+    }
+
+    item.classList.add('active');
+    this.searchWrapper.querySelector('[data-search="selectButton"] span').innerHTML =
+      item.innerHTML;
+    dropdownSelect.classList.remove('opened');
+  }
+
+  delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+}

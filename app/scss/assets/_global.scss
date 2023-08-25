@@ -62,14 +62,25 @@ body {
 
 .u-aside-wrapper {
   display: flex;
+  align-items: flex-start;
   gap: 30px;
-  position: relative;
+  margin-bottom: 100px;
 }
+.u-aside {
+  position: sticky;
+  top: 0;
+  transition: all 0.3s;
+  max-width: 300px;
+  width: 100%;
 
+  .a {
+    margin-bottom: 20px;
+    height: 334px;
+  }
+}
 .u-box {
   max-width: 960px;
   width: 100%;
-
   .a {
     height: 123px;
     margin-bottom: 20px;

@@ -1,0 +1,3 @@
+поставить карту
+добавить IntersectionObserver
+исправить открывашку в universityLocation

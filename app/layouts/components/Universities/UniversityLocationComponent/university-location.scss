@@ -27,14 +27,24 @@
     }
   }
   &__place-box {
-    height: 180px;
+    height: 165px;
     overflow: hidden;
     transition: all 0.3s;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
   }
   &__place-description {
     color: rgba($text, 0.8);
     font-size: 16px;
     font-weight: 400;
     line-height: 120%;
+  }
+  .universityOverview__readMore {
+    margin-top: 15px;
+  }
+
+  &__place-wrapper {
+    margin-bottom: 22px;
   }
 }

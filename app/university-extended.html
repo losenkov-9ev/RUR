@@ -26,7 +26,7 @@
         })
         <!-- University Top component -->
         @@include('./layouts/components/Universities/UniversityTopComponent/university-top.html', {
-          "socialMedia": false
+          "socialMedia": true
         })
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
@@ -34,7 +34,7 @@
             @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html')
             <!-- University Mission component -->
             @@include('./layouts/components/Universities/UniversityMissionComponent/university-mission.html', {
-              withImage: true
+              withImage: false
             })
             <!-- University Rankings component -->
             @@include('./layouts/components/Universities/UniversityRankingsComponent/university-rankings.html')

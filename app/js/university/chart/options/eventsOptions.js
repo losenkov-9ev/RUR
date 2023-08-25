@@ -1,5 +1,5 @@
 import { data } from '../data.js';
-import { chartTabsInstance } from '../tabs.js';
+import { chartTabsInstance } from '../chart.js';
 
 export const eventsOptions = {
   onClick: (event, elements) => {

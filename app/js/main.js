@@ -1,9 +1,10 @@
-import { isWebp, checkPage } from './utills.js';
-import { initHeader } from './header.js';
+import { isWebp, checkPage } from './utils.js';
+import { Header } from './header.js';
 import { initNewsSlider, initTopSlider } from './sliders.js';
 import { readMore } from './readMore.js';
-import { rankingsPopover } from './rankingsPopover.js';
-import { doughnutChart } from './chart/chart.js';
+import { SearchManager } from './search.js';
+
+import { initUniversity } from './university/university.js';
 
 const doc = document.documentElement;
 const documentHeight = () => {
@@ -27,7 +28,13 @@ isWebp();
 documentHeight();
 scrollbarWidth();
 
-initHeader();
+const header = new Header();
+new SearchManager();
+
+// header paddings
+['.content', '.search'].forEach((selector) => {
+  document.querySelector(selector).style.paddingTop = header.headerHeight + 'px';
+});
 
 document.onclick = (e) => {
   readMore(e);
@@ -37,6 +44,6 @@ if (checkPage('home-page')) {
   initTopSlider();
   initNewsSlider();
 } else if (checkPage('university-page')) {
-  rankingsPopover();
-  doughnutChart();
+  initUniversity();
+  // AIzaSyDo1QvQ4X90oZLJikecmf_BgqA1a8UiJ7o
 }

@@ -1,5 +1,5 @@
-class ChartTabs {
-  constructor(options) {
+export class ChartTabs {
+  constructor() {
     this.$controls = document.querySelector('[data-chart-controls="wrapper"]');
     this.$tabs = document.querySelector('[data-chart-tabs]');
 
@@ -53,20 +53,4 @@ class ChartTabs {
       $tab.classList.add('active');
     }, 50);
   }
-
-  // changeTab(id) {
-  //   this.$tabs.querySelectorAll('[data-chart-tab]').forEach(($c) => {
-  //     $c.classList.remove('active');
-  //     setTimeout(() => {
-  //       $c.style.display = 'none';
-  //     }, 300);
-  //   });
-  //   const $tab = this.$tabs.querySelector(`[data-chart-tab="${id}"]`);
-  //   setTimeout(() => {
-  //     $tab.style.display = 'block';
-  //     $tab.classList.add('active');
-  //   }, 300);
-  // }
 }
-
-export const chartTabsInstance = new ChartTabs();

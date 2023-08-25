@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('./layouts/global/head.html', {"title": "University Main"})
-  <body class="university-page university-main-page">
+  <body class="university-page university-abbreviated-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -36,12 +36,6 @@
             @@include('./layouts/components/Universities/UniversityMissionComponent/university-mission.html', {
               withImage: true
             })
-            <!-- University Rankings component -->
-            @@include('./layouts/components/Universities/UniversityRankingsComponent/university-rankings.html')
-            
-            <!-- University Indicators component -->
-            @@include('./layouts/components/Universities/UniversityIndicatorsComponent/university-indicators.html')
-            
             <div class="a">ADS</div>
             
             <!-- University Location component -->
@@ -57,14 +51,6 @@
                 {
                   "link": "#universityMission",
                   "name": "Mission Statement"
-                },
-                {
-                  "link": "#universityRankings",
-                  "name": "Rankings"
-                },
-                {
-                  "link": "#universityIndicators",
-                  "name": "Indicators"
                 },
                 {
                   "link": "#universityLocation",

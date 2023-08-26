@@ -43,6 +43,42 @@
   line-height: 120%;
 }
 
+.d-button {
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: $accent;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #3195e7;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+
+  .buttonIcon {
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &.d-button-disabled {
+    background-color: $bg-gray;
+    color: $text;
+    &:hover {
+      background-color: $bg-gray;
+    }
+  }
+}
+
 .link-button {
   display: flex;
   align-items: center;

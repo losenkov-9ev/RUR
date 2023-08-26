@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('./layouts/global/head.html', {"title": "University Main"})
-  <body class="university-page university-main-page">
+  <body class="university-page university-extended-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -31,16 +31,29 @@
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <!-- University Overview component -->
-            @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html')
+            @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html', {
+              withVideo: true,
+            })
+
             <!-- University Mission component -->
             @@include('./layouts/components/Universities/UniversityMissionComponent/university-mission.html', {
               withImage: false
             })
+
+            <!-- University Gallery component -->
+            @@include('./layouts/components/Universities/UniversityGalleryComponent/university-gallery.html')
+
             <!-- University Rankings component -->
             @@include('./layouts/components/Universities/UniversityRankingsComponent/university-rankings.html')
             
             <!-- University Indicators component -->
             @@include('./layouts/components/Universities/UniversityIndicatorsComponent/university-indicators.html')
+            
+            <!-- University Programs component -->
+            @@include('./layouts/components/Universities/UniversityPrograms/university-programs.html')
+            
+            <!-- University Materials component -->
+            @@include('./layouts/components/Universities/UniversityMaterials/university-materials.html')
             
             <div class="a">ADS</div>
             
@@ -57,6 +70,10 @@
                 {
                   "link": "#universityMission",
                   "name": "Mission Statement"
+                },
+                {
+                  "link": "#universityGallery",
+                  "name": "Gallery"
                 },
                 {
                   "link": "#universityRankings",

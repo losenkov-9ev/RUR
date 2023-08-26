@@ -2,7 +2,9 @@
   <div class="universityAside__title">Content</div>
   <div class="universityAside__links">
     @@for (var i = 0; i < items.length; i++) {
-    <a href="`+items[i].link+`" class="universityAside__item">`+items[i].name+`</a>
+    <a href="`+items[i].link+`" class="universityAside__item" data-aside="link">
+      `+items[i].name+`
+    </a>
     }
   </div>
 </div>

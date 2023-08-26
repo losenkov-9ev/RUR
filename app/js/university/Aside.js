@@ -22,6 +22,7 @@ export class Aside extends Header {
     this.$aside.style.height = this.asideHeight + 'px';
 
     this.changeAsidePosition(this.topMargin);
+    this.eventListeners();
     // this.observeIntersections();
   }
 
@@ -33,6 +34,25 @@ export class Aside extends Header {
 
   changeAsidePosition(value) {
     this.$aside.style.top = value + 'px';
+  }
+
+  eventListeners() {
+    this.$aside.addEventListener('click', (e) => {
+      const $target = e.target.closest('[data-aside="link"]');
+      if ($target) {
+        e.preventDefault();
+        this.goToSection($target.getAttribute('href'));
+      }
+    });
+  }
+
+  goToSection(href) {
+    const elPosition = this.$content.querySelector(href).offsetTop;
+
+    window.scrollTo({
+      top: elPosition - this.headerHeight - this.topMargin,
+      behavior: 'smooth',
+    });
   }
 
   observeIntersections() {

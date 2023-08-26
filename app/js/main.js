@@ -4,8 +4,6 @@ import { initNewsSlider, initTopSlider } from './sliders.js';
 import { readMore } from './readMore.js';
 import { SearchManager } from './search.js';
 
-import { initUniversity } from './university/university.js';
-
 const doc = document.documentElement;
 const documentHeight = () => {
   doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
@@ -44,6 +42,18 @@ if (checkPage('home-page')) {
   initTopSlider();
   initNewsSlider();
 } else if (checkPage('university-page')) {
-  initUniversity();
+  async function loadUniversity() {
+    try {
+      const universityModule = await import('./university/university.js');
+      const initUniversityFn = universityModule.initUniversity;
+
+      initUniversityFn();
+    } catch (error) {
+      console.error('Ошибка при загрузке модуля:', error);
+    }
+  }
+
+  loadUniversity();
+
   // AIzaSyDo1QvQ4X90oZLJikecmf_BgqA1a8UiJ7o
 }

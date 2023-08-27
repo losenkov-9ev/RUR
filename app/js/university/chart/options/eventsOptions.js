@@ -2,7 +2,7 @@ import { data } from '../data.js';
 import { chartTabsInstance } from '../chart.js';
 
 export const eventsOptions = {
-  onClick: (event, elements) => {
+  onClick: (_, elements) => {
     if (elements.length > 0) {
       const clickedElement = elements[0];
       const datasetIndex = clickedElement.datasetIndex;

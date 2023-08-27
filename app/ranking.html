@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "University Extended"})
+  <body class="ranking-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "Universities"
+              }
+            ]
+          })
+          <div class="container">
+            <h1 class="title-1-head page-head__title">World University Ranking</h1>
+          </div>
+        </div>
+
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": false
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

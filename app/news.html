@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "University Extended"})
+  <body class="ranking-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "News"
+              }
+            ]
+          })
+          <div class="container">
+            <h1 class="title-1-head page-head__title">News</h1>
+          </div>
+        </div>
+        @@include('./layouts/components/PageSearchComponent/page-search.html')
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            @@include('./layouts/components/NewsItemComponent/news-item.html', {
+              "day": "25",
+              "month": "may",
+              "title": "RUR 2023 is released",
+              "image": "@img/content/news/item-1.jpg"
+            })
+            @@include('./layouts/components/NewsItemComponent/news-item.html', {
+              "day": "21",
+              "month": "dec",
+              "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023",
+              "image": "@img/content/news/item-2.jpg"
+            })
+            @@include('./layouts/components/NewsItemComponent/news-item.html', {
+              "day": "7",
+              "month": "dec",
+              "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released",
+              "image": "@img/content/news/item-3.jpg"
+            })
+            @@include('./layouts/components/NewsItemComponent/news-item.html', {
+              "day": "25",
+              "month": "may",
+              "title": "RUR 2023 is released",
+              "image": "@img/content/news/item-1.jpg"
+            })
+          </div>
+          <div class="u-aside" data-aside="block">
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

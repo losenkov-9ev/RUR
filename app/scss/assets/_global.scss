@@ -56,7 +56,8 @@ body {
   }
 }
 
-.university-page {
+.university-page,
+.ranking-page {
   background-color: $bg-gray;
 }
 
@@ -92,6 +93,28 @@ body {
   background: #fff;
   padding: 24px;
   margin-bottom: 20px;
+}
+
+.page-head {
+  padding-top: 38px;
+  padding-bottom: 86px;
+  background: linear-gradient(226deg, #97ca62 0%, #2b8cd9 100%), #d9d9d9;
+
+  .breadcrumbs {
+    margin-top: 0;
+    padding-bottom: 52px;
+    &__item {
+      color: rgba(#fff, 0.6);
+
+      &::before {
+        background-color: rgba(#fff, 0.6);
+      }
+
+      &:last-of-type {
+        color: #fff;
+      }
+    }
+  }
 }
 
 [data-readMore='text'].opened {

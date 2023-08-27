@@ -72,7 +72,7 @@ export class SearchManager {
   }
 
   async handleInputFocus(e) {
-    if (e.target.closest('[data-search="searchButton"]')) {
+    if (e.target.closest('[data-search="input"]')) {
       this.showSearchList();
       this.searchInput.focus();
     }

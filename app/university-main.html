@@ -31,7 +31,9 @@
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <!-- University Overview component -->
-            @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html')
+            @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html', {
+              "withVideo": false
+            })
             <!-- University Mission component -->
             @@include('./layouts/components/Universities/UniversityMissionComponent/university-mission.html', {
               withImage: true

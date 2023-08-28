@@ -57,8 +57,25 @@ body {
 }
 
 .university-page,
-.ranking-page {
+.ranking-page,
+.news-page {
   background-color: $bg-gray;
+}
+
+.news-page .u-aside {
+  .a {
+    height: 80vh;
+  }
+}
+
+.news-links-banner {
+  margin-bottom: 100px;
+}
+
+.ranking-page {
+  .pageSearch {
+    margin-bottom: 30px;
+  }
 }
 
 .u-aside-wrapper {

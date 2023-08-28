@@ -1,0 +1,123 @@
+.rankingFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 20px;
+
+  &-text {
+    color: #606c8c;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__results {
+    padding-right: 45px;
+  }
+
+  &__showBy {
+    display: flex;
+    align-items: center;
+  }
+  &__showBy-item {
+    margin-left: 8px;
+    min-width: 32px;
+    height: 32px;
+    padding: 5px 1px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    color: #637381;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+
+    &:not(.active) {
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $accent;
+      }
+    }
+    &.active {
+      border: 1px solid $accent;
+      background: #f2f5fe;
+      color: $accent;
+    }
+  }
+
+  &__sortBy {
+    display: flex;
+    align-items: center;
+  }
+  &__sortBy-select {
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: #fff;
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    padding-right: 27px;
+    .current {
+      color: $accent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      width: 12px;
+      height: 12px;
+      background-image: url('@img/icons/ios-select-angle-down.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.3s;
+    }
+    &.open::after {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__controls-item {
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: #fff;
+    margin-left: 8px;
+    color: $accent;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+      path {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+      svg path {
+        stroke: #fff;
+      }
+    }
+  }
+}

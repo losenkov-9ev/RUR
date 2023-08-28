@@ -117,3 +117,110 @@
     }
   }
 }
+
+.custom-radio {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  padding-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+
+  color: #212b36;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.custom-radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #637381;
+  border-radius: 50%;
+}
+
+.custom-radio-input:checked ~ .custom-radio-indicator {
+  border-color: $accent; /* Color for selected state */
+}
+
+.custom-radio-indicator::after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: $accent; /* Color for selected state */
+  border-radius: 50%;
+}
+
+.custom-radio-input:checked ~ .custom-radio-indicator::after {
+  display: block;
+}
+
+/* Optional: Hover state */
+.custom-radio:hover .custom-radio-indicator {
+  border-color: #999;
+}
+
+/* Optional: Disabled state */
+.custom-radio-input:disabled ~ .custom-radio-indicator {
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.d-page-select {
+  &.nice-select {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    color: #919eab;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border-radius: 8px;
+    background: rgba(145, 158, 171, 0.08);
+    border: none;
+    &.open {
+      color: $text;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      background-image: url('@img/icons/select-angle-down.svg');
+      transition: all 0.3s;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &.open::after {
+      transform: rotate(180deg) translateY(50%);
+    }
+    .option.disabled {
+      display: none;
+    }
+  }
+  .nice-select-dropdown {
+    max-width: 100%;
+    width: 100%;
+  }
+}

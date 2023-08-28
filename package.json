@@ -27,6 +27,7 @@
 		"jquery-validation": "^1.19.5",
 		"magnific-popup": "^1.1.0",
 		"masonry-layout": "^4.2.2",
+		"nice-select2": "^2.1.0",
 		"rateyo": "^3.0.0-alpha.2",
 		"select2": "^4.1.0-rc.0",
 		"venobox": "^2.0.4"

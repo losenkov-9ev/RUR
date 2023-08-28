@@ -3,6 +3,9 @@ import { Header } from './header.js';
 import { initNewsSlider, initTopSlider } from './sliders.js';
 import { readMore } from './readMore.js';
 import { SearchManager } from './search.js';
+import { Aside } from './Aside.js';
+
+import NiceSelect from './plugins/nice-select2.js';
 
 const doc = document.documentElement;
 const documentHeight = () => {
@@ -38,6 +41,12 @@ document.onclick = (e) => {
   readMore(e);
 };
 
+document.querySelectorAll('.page-select').forEach(($s) => {
+  new NiceSelect($s, {
+    placeholder: 'Select',
+  });
+});
+
 if (checkPage('home-page')) {
   initTopSlider();
   initNewsSlider();
@@ -54,6 +63,8 @@ if (checkPage('home-page')) {
   }
 
   loadUniversity();
-
-  // AIzaSyDo1QvQ4X90oZLJikecmf_BgqA1a8UiJ7o
+} else if (checkPage('news-page')) {
+  new Aside(false);
+} else if (checkPage('ranking-page')) {
+  new Aside(false);
 }

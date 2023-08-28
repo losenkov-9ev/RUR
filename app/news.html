@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('./layouts/global/head.html', {"title": "University Extended"})
-  <body class="ranking-page">
+  @@include('./layouts/global/head.html', {"title": "News"})
+  <body class="news-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -52,10 +52,20 @@
               "title": "RUR 2023 is released",
               "image": "@img/content/news/item-1.jpg"
             })
+            @@include('./layouts/components/NewsItemComponent/news-item.html', {
+              "day": "7",
+              "month": "dec",
+              "title": "RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released",
+              "image": "@img/content/news/item-3.jpg"
+            })
+            @@include('./layouts/components/PaginationComponent/pagination.html')
           </div>
           <div class="u-aside" data-aside="block">
             <div class="a">ADS</div>
           </div>
+        </div>
+        <div class="container news-links-banner">
+          @@include('./layouts/components/LinksBannerComponent/links-banner.html')
         </div>
         <!-- Footer component -->
         @@include('./layouts/components/FooterComponent/footer.html')

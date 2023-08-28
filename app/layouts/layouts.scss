@@ -7,6 +7,7 @@
 @import './components/BreadcrumbsComponent/breadcrumbs.scss';
 @import './components/PageSearchComponent/page-search.scss';
 @import './components/NewsItemComponent/news-item.scss';
+@import './components/PaginationComponent/pagination.scss';
 
 // Universities
 @import './components/Universities/UniversityTopComponent/university-top.scss';
@@ -19,6 +20,11 @@
 @import './components/Universities/UniversityGalleryComponent/university-gallery.scss';
 @import './components/Universities/UniversityPrograms/university-programs.scss';
 @import './components/Universities/UniversityMaterials/university-materials.scss';
+
+// Rankings
+@import './components/Ranking/RankingFilterComponent/ranking-filter.scss';
+@import './components/Ranking/RankingItemComponent/ranking-item.scss';
+@import './components/Ranking/RankingAsideFilterComponent/ranking-aside-filter.scss';
 
 // sections
 @import './sections/TopSection/top.scss';

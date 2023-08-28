@@ -1,5 +1,5 @@
 import { checkPage } from '../utils.js';
-import { Aside } from './Aside.js';
+import { Aside } from '../Aside.js';
 import { doughnutChart } from './chart/chart.js';
 import { popover } from '../utils.js';
 import { Fancybox } from '@fancyapps/ui';

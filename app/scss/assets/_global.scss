@@ -58,7 +58,8 @@ body {
 
 .university-page,
 .ranking-page,
-.news-page {
+.news-page,
+.article-page {
   background-color: $bg-gray;
 }
 
@@ -76,6 +77,25 @@ body {
   .pageSearch {
     margin-bottom: 30px;
   }
+}
+
+.article-page {
+  .u-aside-wrapper {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .u-aside .a {
+    height: 600px;
+  }
+}
+
+.article-content {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .u-aside-wrapper {

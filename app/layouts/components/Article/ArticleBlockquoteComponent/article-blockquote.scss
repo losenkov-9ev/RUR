@@ -1,0 +1,30 @@
+.articleBlockquote {
+  padding: 48px 40px 40px 40px;
+  border-radius: 20px;
+  background: $accent;
+
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 28px;
+  }
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  &__author {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}

@@ -1,0 +1,16 @@
+.articleFooter {
+  &__list {
+    padding-left: 12px;
+    margin: 12px 0;
+  }
+  &__list-item + .articleFooter__list-item {
+    margin-top: 8px;
+  }
+  &__list-item {
+    display: block;
+    color: $accent;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}

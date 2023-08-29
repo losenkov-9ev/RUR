@@ -26,6 +26,20 @@
 @import './components/Ranking/RankingItemComponent/ranking-item.scss';
 @import './components/Ranking/RankingAsideFilterComponent/ranking-aside-filter.scss';
 
+// Article
+@import './components/Article/ArticleTextComponent/article-text.scss';
+@import './components/Article/ArticleBlockquoteComponent/article-blockquote.scss';
+@import './components/Article/ArticleListComponent/article-list.scss';
+@import './components/Article/ArticleGalleryComponent/article-gallery.scss';
+@import './components/Article/ArticleSliderComponent/article-slider.scss';
+@import './components/Article/ArticleLinksComponent/article-links.scss';
+@import './components/Article/ArticleFooterComponent/article-footer.scss';
+
+// Country Overview
+@import './components/CountryOverview/CountryOverviewFilterComponent/country-overview-filter.scss';
+@import './components/CountryOverview/CountryOverviewItemComponent/country-overview-item.scss';
+@import './components/CountryOverview/CountryOverviewFooterComponent/country-overview-footer.scss';
+
 // sections
 @import './sections/TopSection/top.scss';
 @import './sections/BenefitsSection/benefits.scss';

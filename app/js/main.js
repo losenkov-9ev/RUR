@@ -1,6 +1,6 @@
 import { isWebp, checkPage } from './utils.js';
 import { Header } from './header.js';
-import { initNewsSlider, initTopSlider } from './sliders.js';
+import { initArticleSlider, initNewsSlider, initTopSlider } from './sliders.js';
 import { readMore } from './readMore.js';
 import { SearchManager } from './search.js';
 import { Aside } from './Aside.js';
@@ -67,4 +67,7 @@ if (checkPage('home-page')) {
   new Aside(false);
 } else if (checkPage('ranking-page')) {
   new Aside(false);
+} else if (checkPage('article-page')) {
+  new Aside(true);
+  initArticleSlider();
 }

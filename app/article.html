@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "Article"})
+  <body class="article-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "News"
+              },
+              {
+                "link": "#",
+                "name": "Short name"
+              }
+            ]
+          })
+          <div class="container">
+            <h1 class="title-1-head page-head__title">
+              RUR 2023 World University Ranking 
+              <br> Announcement and overview 
+              <br> of methodology updates
+            </h1>
+          </div>
+        </div>
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            <div class="article-content">
+              @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                "text": "We are delighted to announce the release of the 14th edition of the Round University Ranking (RUR), an international university ranking, on May 25, 2025. This edition marks a substantial increase in the number of participating universities. Whereas slightly over 1000 universities participated in 2022, the current year boasts an increased participation of over 1200 universities. We extend our sincere appreciation to the universities for their active collaboration and engagement. <br>Significant changes have been implemented in both the data sources utilized for the ranking and the methodology employed this year. Please see the overview of these changes below."
+              })
+              @@include('./layouts/components/Article/ArticleBlockquoteComponent/article-blockquote.html')
+              @@include('./layouts/components/Article/ArticleListComponent/article-list.html', {
+                "type": "numeric",
+                "items": [
+                {
+                  "title": "1. Bibliometric data sources",
+                  "text": "We have adopted the esteemed open platform, The Lens, as our primary source for bibliometric data. The platform employed in this process operates in an open manner, enabling each university to monitor its publication activity and receive a comprehensive report containing a list of all publications considered. We firmly believe that the transparency of this system represents a crucial milestone in fostering more transparent communication between the ranking provider and universities."
+                },
+                {
+                  "title": "2. Reputation data sources",
+                  "text": "To capture a more comprehensive picture, we have replaced the academic reputation survey data with a broader array of information sourced from across the Internet. This adjustment acknowledges the significant transformation in how universities engage with their key stakeholders since the inception of the RUR ranking in the early 2010s. We firmly believe that relying solely on input from academic experts no longer suffices in depicting the extent of a university's societal interactions and its influential role in disseminating information."
+                },
+                {
+                  "title": "3. Institutional data sources",
+                  "text": "Regarding university statistics, such as the number of faculty members, students, and other relevant data, we have transitioned to utilizing our proprietary platform called RUR Data for data collection purposes. This shift enables us to establish and maintain efficient communication channels with universities, swiftly update university profiles, and engage in other necessary interactions. Simultaneously, a portion of the data pertaining to certain universities was gathered from publicly accessible sources."
+                }
+                ]
+              })
+              @@include('./layouts/components/Article/ArticleGalleryComponent/article-gallery.html')
+              @@include('./layouts/components/Article/ArticleListComponent/article-list.html', {
+                "type": "dots",
+                "items": [
+                {
+                  "title": "Bibliometric data sources",
+                  "text": "We have adopted the esteemed open platform, The Lens, as our primary source for bibliometric data. The platform employed in this process operates in an open manner, enabling each university to monitor its publication activity and receive a comprehensive report containing a list of all publications considered. We firmly believe that the transparency of this system represents a crucial milestone in fostering more transparent communication between the ranking provider and universities."
+                },
+                {
+                  "title": "Reputation data sources",
+                  "text": "To capture a more comprehensive picture, we have replaced the academic reputation survey data with a broader array of information sourced from across the Internet. This adjustment acknowledges the significant transformation in how universities engage with their key stakeholders since the inception of the RUR ranking in the early 2010s. We firmly believe that relying solely on input from academic experts no longer suffices in depicting the extent of a university's societal interactions and its influential role in disseminating information."
+                },
+                {
+                  "title": "Institutional data sources",
+                  "text": "Regarding university statistics, such as the number of faculty members, students, and other relevant data, we have transitioned to utilizing our proprietary platform called RUR Data for data collection purposes. This shift enables us to establish and maintain efficient communication channels with universities, swiftly update university profiles, and engage in other necessary interactions. Simultaneously, a portion of the data pertaining to certain universities was gathered from publicly accessible sources."
+                }
+                ]
+              })
+              @@include('./layouts/components/Article/ArticleSliderComponent/article-slider.html')
+              @@include('./layouts/components/Article/ArticleLinksComponent/article-links.html')
+              @@include('./layouts/components/Article/ArticleFooterComponent/article-footer.html')
+            </div>
+          </div>
+          <div class="u-aside" data-aside="block">
+            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+              "items": [
+                {
+                  "link": "#articleBlockquote",
+                  "name": "Blockquote"
+                },
+                {
+                  "link": "#articleChanges-numeric",
+                  "name": "Changes Numeric"
+                },
+                {
+                  "link": "#articleChanges-dots",
+                  "name": "Changes Dots"
+                },
+                {
+                  "link": "#articleGallery",
+                  "name": "Gallery"
+                }
+              ]
+            })
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": true
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

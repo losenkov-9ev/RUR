@@ -1,0 +1,27 @@
+.articleGallery {
+  &__topImage {
+    height: 588px;
+    margin-bottom: 40px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+  &__bottomImages {
+    display: flex;
+    gap: 20px;
+  }
+  &__bottomImage {
+    max-height: 450px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+    }
+  }
+}

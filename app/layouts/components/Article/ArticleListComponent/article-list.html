@@ -1,0 +1,13 @@
+<div class="articleList @@type" id="articleChanges-@@type">
+  <h4 class="articleList__title title-4">Changes in data sources</h4>
+  <div class="articleList__box">
+    @@for (var i = 0; i < items.length; i++) {
+      <div class="articleList__item">
+        <h6 class="articleList__item-title">`+items[i].title+`</h6>
+        @@include('../ArticleTextComponent/article-text.html', {
+          "text": "`+items[i].text+`",
+        })
+      </div>
+      }
+  </div>
+</div>

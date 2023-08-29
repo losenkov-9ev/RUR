@@ -1,0 +1,31 @@
+.articleLinks {
+  &__list {
+    padding-left: 12px;
+    margin: 12px 0;
+  }
+
+  &__list-item + .articleLinks__list-item {
+    margin-top: 10px;
+  }
+  &__list-item {
+    padding-left: 18px;
+    position: relative;
+    color: $accent;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $accent;
+    }
+  }
+}

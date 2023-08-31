@@ -1,0 +1,48 @@
+.countryOverviewFilter {
+  margin: 0 -20px;
+  &__box {
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__select.d-page-select {
+    width: 24%;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid rgba(145, 158, 171, 0.21);
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+  &__footer {
+    background-color: #f1f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  &__footer-name {
+    color: #637381;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  &__footer-filter {
+    display: flex;
+    align-items: center;
+  }
+  &__footer-filterName {
+    color: $accent;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-right: 50px;
+  }
+  &__footer-filterButton {
+    margin-bottom: -4px;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

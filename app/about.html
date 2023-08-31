@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "About"})
+  <body class="article-page about-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "About us"
+              }
+            ]
+          })
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-1-head page-head__title">
+                RUR World University <br>
+                Rankings
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  Round University Ranking (RUR) is an international world university rankings system which measures performance of 1100 leading world universities from 82 countries by 20 unique indicators and 4 key areas of university activities: teaching, research, international diversity, financial sustainability. All raw data for RUR Rankings is provided by an international company Thomson Reuters. RUR Rankings cover the period from 2010 to the present.
+                </p>
+                <p>
+                  RUR Rankings is designed as an evaluation system aimed to provide sufficient information about university performance to address stakeholder's personal tasks: students, academic community, university management, policy makers.
+                </p>
+              </div>
+            </div>
+            <div class="page-head__image">
+              <img src="@img/global/large-logo.jpg" alt="logo">
+            </div>
+          </div>
+        </div>
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            <div class="article-content">
+              @@include('./layouts/components/About/AboutBannerComponent/about-banner.html')
+              @@include('./layouts/components/About/AboutBenefitsComponent/about-benefits.html')
+              @@include('./layouts/components/About/AboutListComponent/about-list.html')
+              @@include('./layouts/components/About/AboutMethodology/about-methodology.html')
+              @@include('./layouts/components/About/AboutFooterComponent/about-footer.html')
+            </div>
+          </div>
+          <div class="u-aside" data-aside="block">
+            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+              "items": [
+                {
+                  "link": "#aboutData",
+                  "name": "RUR Data <ul><li>Three types of the raw data are used in RUR</li><li>Key rankings</li></ul>"
+                },
+                {
+                  "link": "#aboutMethodology",
+                  "name": "RUR Methodology"
+                },
+                {
+                  "link": "#aboutQuestions",
+                  "name": "Why stakeholders in all over the world choose RUR Ranking?"
+                }
+              ]
+            })
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": true
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

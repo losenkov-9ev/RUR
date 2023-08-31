@@ -1,0 +1,12 @@
+.aboutBanner {
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__image {
+    margin-top: 24px;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+}

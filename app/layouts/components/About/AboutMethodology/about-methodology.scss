@@ -1,0 +1,59 @@
+.aboutMethodology {
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__box {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  &__item {
+    width: 49%;
+    padding: 6px;
+
+    border-radius: 10px;
+    background: #f4f6f8;
+  }
+  &__item-head {
+    border-radius: 7px;
+    background: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    color: #5f6262;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+
+    margin-bottom: 15px;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__item-point {
+    color: $text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: var(--point-color);
+      border-radius: 50%;
+    }
+  }
+}

@@ -132,10 +132,51 @@ body {
   margin-bottom: 20px;
 }
 
+.c-wrapper {
+  border-radius: 16px;
+  background: #fff;
+  margin-top: 45px;
+  margin-bottom: 120px;
+}
+
+.about-page .articleList__title {
+  display: none;
+}
+
 .page-head {
   padding-top: 38px;
   padding-bottom: 86px;
   background: linear-gradient(226deg, #97ca62 0%, #2b8cd9 100%), #d9d9d9;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    max-width: 682px;
+  }
+
+  &__image {
+    width: 498px;
+    height: 474px;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 40px;
+
+    p + p {
+      margin-top: 12px;
+    }
+  }
 
   .breadcrumbs {
     margin-top: 0;

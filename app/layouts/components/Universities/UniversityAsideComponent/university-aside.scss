@@ -25,9 +25,19 @@
     transition: all 0.3s;
     &:hover {
       color: $accent;
+      li {
+        color: $text;
+      }
     }
   }
   &__item + .universityAside__item {
     margin-top: 6px;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+  li {
+    font-size: 14px;
   }
 }

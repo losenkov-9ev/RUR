@@ -1,0 +1,53 @@
+.countryOverviewFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 8px 10px 24px;
+  margin: 0 -20px;
+  border-top: 1px solid rgba(145, 158, 171, 0.24);
+
+  &__select.d-page-select {
+    width: 40px;
+    padding: 0;
+    height: 24px;
+    border-radius: 0;
+    background-color: #fff;
+    margin: 0;
+    color: #212b36;
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      right: 0;
+      background-image: url('@img/icons/page-select-angle-down.svg');
+    }
+    .nice-select-dropdown {
+      li {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__arrow {
+    padding: 8px;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--disabled {
+      svg path {
+        fill-opacity: 0.5;
+      }
+    }
+  }
+}

@@ -7,4 +7,20 @@
   a {
     color: $accent;
   }
+  b {
+    font-weight: 600;
+  }
+
+  ul {
+    margin-top: 12px;
+  }
+  li {
+    color: $text;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  li + li {
+    margin-top: 6px;
+  }
 }

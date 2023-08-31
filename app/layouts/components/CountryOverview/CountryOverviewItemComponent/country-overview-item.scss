@@ -1,0 +1,36 @@
+.countryOverviewItem {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -20px;
+  border-bottom: 1px solid #f4f6f8;
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    color: #212b36;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    svg,
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__content-icon {
+    margin-right: 12px;
+    margin-bottom: -6px;
+  }
+  &__count {
+    color: #212b36;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    width: 144px;
+  }
+}

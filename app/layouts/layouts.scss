@@ -28,6 +28,7 @@
 
 // Article
 @import './components/Article/ArticleTextComponent/article-text.scss';
+@import './components/Article/ArticleAccentComponent/article-accent.scss';
 @import './components/Article/ArticleBlockquoteComponent/article-blockquote.scss';
 @import './components/Article/ArticleListComponent/article-list.scss';
 @import './components/Article/ArticleGalleryComponent/article-gallery.scss';
@@ -46,6 +47,14 @@
 @import './components/About/AboutListComponent/about-list.scss';
 @import './components/About/AboutMethodology/about-methodology.scss';
 @import './components/About/AboutFooterComponent/about-footer.scss';
+
+// Methodology
+@import './components/Methodology/MethodologyTopCompoment/methodology-top.scss';
+@import './components/Methodology/MethodologyItemComponent/methodology-item.scss';
+@import './components/Methodology/MethodologyDevelopmentComponent/methodology-development.scss';
+@import './components/Methodology/MethodologySelectingComponent/methodology-selecting.scss';
+@import './components/Methodology/MethodologyAboutComponent/methodology-about.scss';
+@import './components/Methodology/MethodologyIndicatorsComponent/methodology-indicators.scss';
 
 // sections
 @import './sections/TopSection/top.scss';

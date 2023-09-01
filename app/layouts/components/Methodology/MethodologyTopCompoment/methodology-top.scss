@@ -1,0 +1,11 @@
+.methodologyTop {
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__box {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}

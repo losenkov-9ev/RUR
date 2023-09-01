@@ -39,6 +39,14 @@ new SearchManager();
 
 document.onclick = (e) => {
   readMore(e);
+
+  if (e.target.closest('.methodologyAccordeon__head')) {
+    const $wrapper = e.target.closest('.methodologyAccordeon__item');
+    const $body = $wrapper.querySelector('.methodologyAccordeon__body');
+
+    $wrapper.classList.toggle('opened');
+    $body.style.maxHeight = $wrapper.classList.contains('opened') ? $body.scrollHeight + 'px' : 0;
+  }
 };
 
 document.querySelectorAll('.page-select').forEach(($s) => {

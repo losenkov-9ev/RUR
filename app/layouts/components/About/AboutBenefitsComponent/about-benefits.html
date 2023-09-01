@@ -1,31 +1,21 @@
 <div class="aboutBenefits">
   <div class="aboutBenefits__title">Three types of the raw data are used in RUR</div>
   <div class="aboutBenefits__box">
-    <div class="aboutBenefits__item">
-      <div class="aboutBenefits__item-title">
-        <span>1</span>
-        Statistical data
-      </div>
-      In GIPP universities provide information about 20 raw indicators which are used to generate
-      100 scaled indicators (ratio between 2 values) of which in turn 20 are used in RUR Rankings.
-    </div>
-    <div class="aboutBenefits__item">
-      <div class="aboutBenefits__item-title">
-        <span>2</span>
-        Bibliomteric data
-      </div>
-      For bibliometric/scientometrics information RUR Rankings use the raw data extracted from Web
-      of Science Core Collection.
-    </div>
-    <div class="aboutBenefits__item">
-      <div class="aboutBenefits__item-title">
-        <span>3</span>
-        Reputation data
-      </div>
-      As a part of Global Institutional Profiles Project, a special Academic Reputation Survey is
-      conducted annually. Each reputation survey include around 60,000 responses from 10,000
-      respondents which present all dimensions of global academic community. Please find more
-      details about reputation survey in the methodology.
-    </div>
+    @@include('../../Article/ArticleAccentComponent/article-accent.html', {
+      "items": [
+        {
+          "title": "Statistical data",
+          "text": "In GIPP universities provide information about 20 raw indicators which are used to generate 100 scaled indicators (ratio between 2 values) of which in turn 20 are used in RUR Rankings."
+        },
+        {
+          "title": "Bibliomteric data",
+          "text": "For bibliometric/scientometrics information RUR Rankings use the raw data extracted from Web of Science Core Collection."
+        },
+        {
+          "title": "Reputation data",
+          "text": "As a part of Global Institutional Profiles Project, a special Academic Reputation Survey is conducted annually. Each reputation survey include around 60,000 responses from 10,000 respondents which present all dimensions of global academic community. Please find more details about reputation survey in the methodology."
+        }
+      ]
+    })
   </div>
 </div>

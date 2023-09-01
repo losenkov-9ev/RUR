@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('./layouts/global/head.html', {"title": "About"})
-  <body class="article-page about-page">
+  @@include('./layouts/global/head.html', {"title": "Methodology"})
+  <body class="article-page about-page methodology-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -17,15 +17,14 @@
               },
               {
                 "link": "#",
-                "name": "About us"
+                "name": "Round University Ranking Methodology"
               }
             ]
           })
           <div class="page-head__wrapper container">
             <div class="page-head__box">
               <h1 class="title-2-head page-head__title">
-                RUR World University <br>
-                Rankings
+                Round University Ranking <br> Methodology
               </h1>
               <div class="page-head__text">
                 <p>
@@ -36,19 +35,24 @@
                 </p>
               </div>
             </div>
-            <div class="page-head__image">
-              <img src="@img/global/large-logo.jpg" alt="logo">
-            </div>
           </div>
         </div>
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <div class="article-content">
-              @@include('./layouts/components/About/AboutBannerComponent/about-banner.html')
-              @@include('./layouts/components/About/AboutBenefitsComponent/about-benefits.html')
-              @@include('./layouts/components/About/AboutListComponent/about-list.html')
-              @@include('./layouts/components/About/AboutMethodology/about-methodology.html')
-              @@include('./layouts/components/About/AboutFooterComponent/about-footer.html')
+              @@include('./layouts/components/Methodology/MethodologyTopCompoment/methodology-top.html')
+              @@include('./layouts/components/Methodology/MethodologyDevelopmentComponent/methodology-development.html')
+              @@include('./layouts/components/Methodology/MethodologySelectingComponent/methodology-selecting.html')
+              @@include('./layouts/components/Methodology/MethodologyIndicatorsComponent/methodology-indicators.html')
+              <div class="methodologyIndicators">
+                <h4 class="methodologyIndicators__title title-4">
+                  The stages of Round University Ranking calculation
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "The seemingly clear and simple values of the ranking – points and ranks of universities – are based on a long and elaborated multi-stage data processing. All the stages of data processing in the RUR ranking are listed down below."
+                })
+              </div>
+              @@include('./layouts/components/Methodology/MethodologyAboutComponent/methodology-about.html')
             </div>
           </div>
           <div class="u-aside" data-aside="block">

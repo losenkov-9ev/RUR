@@ -1,0 +1,27 @@
+.methodologySelecting {
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .aboutMethodology__item-head {
+      width: 49%;
+      background-color: #f4f6f8;
+      padding: 12px;
+      margin-top: 12px;
+      height: auto;
+
+      color: $text;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+}

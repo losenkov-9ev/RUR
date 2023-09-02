@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "Participation"})
+  <body class="article-page methodology-page participation-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "Participation in Round University Ranking"
+              }
+            ]
+          })
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head page-head__title">
+                Participation in Round University <br> Ranking
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": true
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

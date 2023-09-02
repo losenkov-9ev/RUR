@@ -1,0 +1,36 @@
+.participationTop {
+  display: flex;
+  flex-direction: column;
+  ul {
+    margin-bottom: 16px;
+  }
+  &__button {
+    padding: 16px;
+    border-radius: 10px;
+    background: $accent;
+    padding-left: 50px;
+    position: relative;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+
+    margin: 0 auto;
+    margin-top: 16px;
+
+    &::before {
+      content: '';
+      background-image: url('@img/icons/mail-white.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+    }
+  }
+}

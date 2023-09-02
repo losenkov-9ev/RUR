@@ -59,5 +59,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  &__step {
+    color: $text;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    span {
+      display: block;
+      color: $accent;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 120%;
+    }
   }
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "Methodology"})
+  <body class="article-page about-page methodology-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "Round University Ranking Methodology"
+              }
+            ]
+          })
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head page-head__title">
+                RUR Reputation World University <br> Rankings Methodology
+              </h1>
+              <div class="page-head__text">
+                <p>Reputation is one of the crucial factors of successful university’s competitiveness on the global scale. It is the reputation, the name of university and its brand that largely determines the attractiveness of university to potential students, faculty.</p>
+                <p>At the same time, reputation is one of the most difficult phenomena to measure. A large amount of factors influences reputation – all university’s activities in each aspect affect power of university within both the country and the world.</p>
+                <p>Understanding the conditionality of reputational surveys, with which the reputation in the RUR ranking is assessed, we however, publish a separate reputation ranking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            <div class="article-content">
+              @@include('./layouts/components/Methodology/MethodologyReputationRankingComponent/methodology-reputation-ranking.html')
+              @@include('./layouts/components/Methodology/MethodologyKeyComponent/methodology-key.html')
+              <div class="methodologyDistribution">
+                <h4 class="methodologyAbout__title title-4">
+                  The geographical distribution of the respondent's votes:
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "<ul><li>North America – 36%;</li><li>South and Central America – 6%;</li><li>Europe – 28%;</li><li>Asia – 20%;</li><li>Africa – 5%;</li><li>Oceania – 5%.</li></ul>"
+                })
+              </div>
+              <div class="methodologyDistribution">
+                <h4 class="methodologyAbout__title title-4">
+                  The distribution of respondents’ votes by subject areas:
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "<ul><li>Social sciences – 20%;</li><li>Engineering sciences – 20%;</li><li>Medical sciences – 19%;</li><li>Natural Sciences – 17%;</li><li>Life sciences – 14%;</li><li>Humanities – 10%.</li></ul>"
+                })
+              </div>
+              <div class="methodologyData-sources">
+                <h4 class="methodologyAbout__title title-4">
+                  Data sources of the reputational survey
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "The initial information collected through a special questionnaire, participation in which is by invitation only, lies in the basis of the reputational survey. In other words, the universities are unable to recommend external experts, as it is practiced in a number of other rankings."
+                })
+              </div>
+              <div class="methodologyDistribution">
+                <h4 class="methodologyAbout__title title-4">
+                  The respondent is asked to indicate the following information in the questionnaire:
+                </h4>
+
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "<ul><li>Current university, for which he worked for or with which he has collaborated recently (however, it is not permitted to vote for your own university);</li><li>Geographic region with which the respondent is familiar to by the greatest degree (one of 13 aggregated regions);</li><li>Narrow subject category (in accordance with the scheme, 250 narrow subject categories by Web of Science Core Collection);</li><li>Narrow subject category (in accordance with the scheme, 250 narrow subject categories by Web of Science Core Collection);</li><li>Current university, for which he worked for or with which he has collaborated recently (however, it is not permitted to vote for your own university);</li></ul>"
+                })
+              </div>
+              <div class="methodologyDistribution">
+                <h4 class="methodologyAbout__title title-4">
+                  Respondent’s profile:
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "<ul><li>The average respondent is a representative of the academic sector: faculty (72%), researchers (13%), university management (13%), PhD students (3%), and other positions (5%).</li><li>Average working experience - 17 to 20 years.</li></ul>"
+                })
+              </div>
+            </div>
+          </div>
+          <div class="u-aside" data-aside="block">
+            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+              "items": [
+                {
+                  "link": "#aboutData",
+                  "name": "RUR Data <ul><li>Three types of the raw data are used in RUR</li><li>Key rankings</li></ul>"
+                },
+                {
+                  "link": "#aboutMethodology",
+                  "name": "RUR Methodology"
+                },
+                {
+                  "link": "#aboutQuestions",
+                  "name": "Why stakeholders in all over the world choose RUR Ranking?"
+                }
+              ]
+            })
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": true
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

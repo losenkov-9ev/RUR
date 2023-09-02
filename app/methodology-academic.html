@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./layouts/global/head.html', {"title": "Methodology"})
+  <body class="article-page about-page methodology-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./layouts/components/HeaderComponent/header.html')
+      <!-- Search component -->
+      @@include('./layouts/components/SearchComponent/search.html')
+      <div class="content">
+        <div class="page-head">
+          @@include('./layouts/components/BreadcrumbsComponent/breadcrumbs.html', {
+            "breadcrumbs": [
+              {
+                "link": "#",
+                "name": "Home"
+              },
+              {
+                "link": "#",
+                "name": "Round University Ranking Methodology"
+              }
+            ]
+          })
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head page-head__title">
+                RUR Academic World University <br> Rankings Methodology
+              </h1>
+              <div class="page-head__text">
+                <p>Round University Ranking team publishes its first world university ranking which evaluates the level of research performance of leading world universities.</p>
+                <p>There are many different concepts of higher education institution. Taking into account all of them, RUR Rankings Agency believes that education and science are equally important to university. That is why “teaching” and “research” dimensions have equal share in overall ranking methodology: 40%.</p>
+                <p>RUR Academic World University Rankings is designed to evaluate productivity of research conducted in universities, through the system of five simple but at the same time comprehensive evaluation criteria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            <div class="article-content">
+              <div class="methodologyAcademicTop">
+                <h4 class="methodologyAbout__title title-4">
+                  RUR Academic World University Rankings methodology
+                </h4>
+                <div class="methodologyAccordeon__body-benefits">
+                  @@include('./layouts/components/Article/ArticleAccentComponent/article-accent.html', {
+                    "items": [
+                      {
+                        "title": "Normalized citation impact",
+                        "text": "This indicator evaluates citations of research publications of all university authors compared with world averages. It demonstrates how much above or below in percentage the university is ranked in comparison with the world average (which is taken as 100%)."
+                      },
+                      {
+                        "title": "Citation per papers",
+                        "text": "This indicator shows average citations per one research publication. To measure this the number of all papers published by faculty and academic staff is divided by the number of citations, which come to the same papers."
+                      },
+                      {
+                        "title": "Papers per academic and research staff.",
+                        "text": "Ratio between the number of research publications and the number of academic and research staff. This indicator evaluates average productivity of academic and research staff working in the university. The overall number of scientific publications is divided by the number of academic and research staff working in the university."
+                      },
+                      {
+                        "title": "International research reputation.",
+                        "text": "International research reputation evaluates the perception of the university by international academic community. As part of this goal, Academic Reputation Survey is conducted annually. Participation in this survey is possible only by invitation from respondents (scientists whose publications are indexed in Web of Science). Respondents are asked to indicate to which university they would send their graduates for PhD programs."
+                      },
+                      {
+                        "title": "Share of research publications written in international co-authorship.",
+                        "text": "International research reputation evaluates the perception of the university by international academic community. As part of this goal, Academic Reputation Survey is conducted annually. Participation in this survey is possible only by invitation from respondents (scientists whose publications are indexed in Web of Science). Respondents are asked to indicate to which university they would send their graduates for PhD programs."
+                      }
+                    ]
+                  })
+                </div>
+              </div>
+              <div class="methodologyAcademicAboutUniversity">
+                <h4 class="methodologyAbout__title title-4">
+                  About Round University Ranking
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "Round University Ranking (RUR) is an international world university rankings system which measures performance of 1100 leading world universities from 82 countries by 20 unique indicators and 4 key areas of university activities: teaching, research, international diversity, financial sustainability. RUR Rankings cover the period from 2010 to the present. In addition, the range of sub-rankings such as RUR Reputation and RUR Research Performance are published. <br><br>RUR Rankings is designed as an evaluation system aimed to provide sufficient information about university performance to address stakeholder's personal tasks: applicants and their families, students, academic community and university management."
+                })
+              </div>
+              <div class="methodologyAcademicAboutAgency">
+                <h4 class="methodologyAbout__title title-4">
+                  About RUR Rankings Agency
+                </h4>
+                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                  "text": "RUR Rankings Agency is a Russian company based in Moscow. The Agency publishes world university ranking - Round University Ranking (RUR) and offers consulting services for universities to strengthen their competitiveness in higher education sector."
+                })
+              </div>
+            </div>
+          </div>
+          <div class="u-aside" data-aside="block">
+            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+              "items": [
+                {
+                  "link": "#aboutData",
+                  "name": "RUR Data <ul><li>Three types of the raw data are used in RUR</li><li>Key rankings</li></ul>"
+                },
+                {
+                  "link": "#aboutMethodology",
+                  "name": "RUR Methodology"
+                },
+                {
+                  "link": "#aboutQuestions",
+                  "name": "Why stakeholders in all over the world choose RUR Ranking?"
+                }
+              ]
+            })
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- News section -->
+        @@include('./layouts/sections/NewsCardsSection/news-cards.html', {
+          "title": "News",
+          "withADS": true
+        })
+        <!-- Footer component -->
+        @@include('./layouts/components/FooterComponent/footer.html')
+      </div>
+    </div>
+
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

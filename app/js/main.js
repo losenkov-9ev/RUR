@@ -6,6 +6,7 @@ import { SearchManager } from './search.js';
 import { Aside } from './Aside.js';
 
 import NiceSelect from './plugins/nice-select2.js';
+import { validateParticipationForm, validateContactsForm } from './validation.js';
 
 const doc = document.documentElement;
 const documentHeight = () => {
@@ -78,4 +79,8 @@ if (checkPage('home-page')) {
 } else if (checkPage('article-page')) {
   new Aside(true);
   initArticleSlider();
+} else if (checkPage('participation-form-page')) {
+  validateParticipationForm();
+} else if (checkPage('contacts-page')) {
+  validateContactsForm();
 }

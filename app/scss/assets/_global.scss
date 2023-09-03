@@ -59,7 +59,9 @@ body {
 .university-page,
 .ranking-page,
 .news-page,
-.article-page {
+.article-page,
+.contacts-page,
+.map-page {
   background-color: $bg-gray;
 }
 
@@ -145,9 +147,41 @@ body {
 .methodology-page .page-head__box {
   max-width: 905px;
 }
+.participation-page,
+.contacts-page {
+  .page-head__wrapper {
+    align-items: flex-start;
+  }
+}
+.participation-page .page-head__box {
+  max-width: 715px;
+}
 .methodologyDistribution ul {
   padding-left: 24px;
 }
+.just-validate-error-label {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: 'Inter';
+  font-weight: 600;
+  color: #e26b6b !important;
+  text-transform: lowercase;
+}
+
+.map-page .page-head {
+  padding-bottom: 60px;
+}
+.contacts-page {
+  .page-head__form {
+    margin-bottom: -230px;
+  }
+  .page-head {
+    margin-bottom: 140px;
+    padding-bottom: 60px;
+  }
+}
+
 .page-head {
   padding-top: 38px;
   padding-bottom: 86px;
@@ -156,6 +190,154 @@ body {
   &__wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 521px;
+    width: 100%;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  &__form-title {
+    margin-bottom: 12px;
+  }
+  &__form-text {
+    margin-bottom: 24px;
+    color: $text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__form-inputWrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+  &__form-button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    background: $accent;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #3895e0;
+    }
+  }
+  &__form-inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  &__form-inputWrapper {
+    position: relative;
+  }
+  &__form-input {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px 12px;
+    background: rgba(145, 158, 171, 0.08);
+
+    color: $text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    border: none;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    position: relative;
+
+    &::placeholder {
+      color: #919eab;
+    }
+    &:focus {
+      border: 1px solid $accent;
+      background: rgba(145, 158, 171, 0.16);
+    }
+  }
+
+  &__contacts {
+    padding: 24px;
+    border-radius: 20px;
+    background: #f4f6f8;
+    margin-top: 38px;
+
+    .footer__top-mail,
+    .footer__top-call {
+      margin-bottom: 22px;
+    }
+  }
+  &__contacts-button {
+    margin-top: 30px;
+
+    padding: 16px 12px;
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $accent;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+
+    transition: all 0.3s;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+
+      svg path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &__benefits {
+    margin-top: 38px;
+  }
+  &__benefitsText {
+    margin-bottom: 16px;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__benefitsBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .methodologyKey__item {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      padding-left: 40px;
+
+      &::before {
+        background-color: #fff;
+        left: 24px;
+      }
+    }
   }
 
   &__box {

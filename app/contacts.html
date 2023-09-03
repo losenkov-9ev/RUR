@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('./layouts/global/head.html', {"title": "Participation"})
-  <body class="participation-page participation-form-page">
+  <body class="contacts-page">
     <div class="wrapper">
       <!-- Header component -->
       @@include('./layouts/components/HeaderComponent/header.html')
@@ -24,33 +24,33 @@
           <div class="page-head__wrapper container">
             <div class="page-head__box">
               <h1 class="title-2-head page-head__title">
-                Participation in Round <br> University Ranking
+                Contacts
               </h1>
-              <div class="page-head__benefits">
-                <div class="page-head__benefitsText">
-                  Key benefits for your university to take part in Round University Ranking (RUR):
+              <div class="page-head__contacts">
+                <div class="footer__top-col footer__top-contacts">
+                  <a href="tel:995322193369" class="footer__top-call">+995 322 19 33 69</a>
+                  <a href="mailto:info@roundranking.com" class="footer__top-mail">info@roundranking.com</a>
                 </div>
-                <div class="page-head__benefitsBox">
-                  <div class="methodologyKey__item">20 indicators that cover all key areas of university activities: teaching, research, international diversity and financial sustainability.</div>
-                  <div class="methodologyKey__item">Detailed statistics of all institutions, which includes user-friendly profiles with both ranks and scores on each of 20 indicators and separately measured 4 key areas.</div>
-                  <div class="methodologyKey__item">Access to 1100 profiles of leading world universities.</div>
-                  <div class="methodologyKey__item">Visitors from over 100 countries including world capitals: London, New York, Tokyo, Los Angeles, Paris, Berlin, Moscow, Singapore, Hong Kong etc.</div>
-                  <div class="methodologyKey__item">RUR is way to promote your university brand in worlds and national mass media by highlighting your university performance in the ranking.</div>
-                  <div class="methodologyKey__item">RUR is an inclusive evaluation system without any limitations for participation. All higher education institutions in the world are welcome to take part in RUR.</div>
+                <div class="footer__top-col footer__top-address">
+                  0177 Georgia, Tbilisi, Saburtalo district, Nutsubidze <br />
+                  plateau, IV micro / district, building 21
                 </div>
+                <a href="#" class="page-head__contacts-button">
+                  Participation in Round University Ranking
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5L16 12L9 19" stroke="#2B8CD9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                    
+                </a>
               </div>
             </div>
-            <form class="page-head__form" data-form-participation>
+            <form class="page-head__form" data-form-contacts>
               <h4 class="page-head__form-title title-4">
-                Application for participation in the rating
+                Feedback form
               </h4>
               <div class="page-head__form-text">
                 To participate in the Round University Ranking (RUR), your university will need to submit a short application:
               </div>
               <div class="page-head__form-inputBox">
-                <div class="page-head__form-inputWrapper">
-                  <input type="text" class="page-head__form-input" data-input="university" placeholder="University official full name">
-                </div>
                 <div class="page-head__form-inputWrapper">
                   <input type="text" class="page-head__form-input" data-input="name" placeholder="Name and surname of contact person">
                 </div>
@@ -60,9 +60,12 @@
                 <div class="page-head__form-inputWrapper">
                   <input type="text" class="page-head__form-input" data-input="phone" placeholder="Phone number of contact person">
                 </div>
+                <div class="page-head__form-inputWrapper">
+                  <input type="text" class="page-head__form-input" data-input="message" placeholder="Your message">
+                </div>
               </div>
               <button type="submit" class="page-head__form-button">
-                Submit your application
+                Send a message
               </button>
             </form>
           </div>

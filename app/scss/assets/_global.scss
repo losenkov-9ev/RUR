@@ -65,9 +65,14 @@ body {
   background-color: $bg-gray;
 }
 
-.news-page .u-aside {
-  .a {
-    height: 80vh;
+.news-page {
+  .u-aside-wrapper {
+    margin-top: 50px;
+  }
+  .u-aside {
+    .a {
+      height: 80vh;
+    }
   }
 }
 

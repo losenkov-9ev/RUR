@@ -9,3 +9,5 @@
 вынести из Universities aside в общие компоненты
 сделать _Ranking, _University, _Article ...
 сделать /pages в scss для глобальных стилей страниц
+добавить компоненты из news в _News
+отрефакторить js

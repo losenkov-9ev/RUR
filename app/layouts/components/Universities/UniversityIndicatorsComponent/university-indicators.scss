@@ -141,6 +141,11 @@
     background: $bg-gray;
     padding: 0px 6px 6px 6px;
     padding-bottom: 1px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
   &__table-row {
     display: flex;

@@ -4,10 +4,11 @@ import { options } from './options.js';
 import { data } from './data.js';
 
 import { Tabs } from '../../tabs.js';
+import { getRGBAColor, setRGBAColor } from '../../utils.js';
 
 export let chartTabsInstance;
 export async function doughnutChart() {
-  new Chart(document.getElementById('university-chart'), {
+  const universityIndicators = new Chart(document.getElementById('university-chart'), {
     type: 'doughnut',
     data,
     options,
@@ -23,4 +24,41 @@ export async function doughnutChart() {
     activeClass: 'active',
     defaultDisplay: 'block',
   });
+
+  const $chartTables = document.querySelector('[data-chart-table-box]');
+
+  chartTabsInstance.on('changeTab', (tabId) => {
+    if ($chartTables) {
+      $chartTables.querySelectorAll(`[data-chart-table]`).forEach(($el) => {
+        $el.classList.remove('active');
+      });
+
+      $chartTables.querySelector(`[data-chart-table=${tabId}]`).classList.add('active');
+    }
+
+    const currentId = data.datasets[0].ids.indexOf(tabId);
+    const newColor = setRGBAColor({
+      ...getRGBAColor(data.datasets[0].backgroundColor[currentId]),
+      opacity: 1,
+    });
+
+    const newData = {
+      ...data, // Копируем все свойства из исходного объекта data
+      datasets: [
+        {
+          ...data.datasets[0], // Копируем все свойства из первого элемента массива datasets
+          backgroundColor: data.datasets[0].backgroundColor.map((color, index) =>
+            index === currentId ? newColor : color,
+          ),
+        },
+      ],
+    };
+
+    universityIndicators.data = newData;
+    universityIndicators.options.animation.duration = 0;
+
+    universityIndicators.update();
+  });
+
+  chartTabsInstance.changeControlActive('item-1', true);
 }

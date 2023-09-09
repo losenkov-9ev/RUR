@@ -5,6 +5,9 @@ import { tooltipOptions } from './options/tooltipOptions.js';
 
 export const options = {
   ...eventsOptions,
+  animation: {
+    duration: 1000,
+  },
   plugins: {
     legend: legendOptions,
     tooltip: tooltipOptions,

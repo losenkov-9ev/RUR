@@ -24,6 +24,11 @@
     font-weight: 600;
     line-height: 140%;
 
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
     svg path {
       transition: all 0.3s;
     }
@@ -49,6 +54,11 @@
     display: flex;
     align-items: center;
     gap: 18px;
+
+    img {
+      width: 54px;
+      height: 54px;
+    }
   }
   &__item-arrow {
     margin-bottom: -8px;

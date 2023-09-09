@@ -10,14 +10,6 @@ export const eventsOptions = {
 
       const clickedElementID = data.datasets[datasetIndex].ids[index];
 
-      // Сделайте выбранный элемент активным (например, измените его цвет)
-      elements[0].element.options.offset = 20;
-      // const dataset = myChart.data.datasets[clickedElement.datasetIndex];
-      // dataset.backgroundColor[clickedElement.index] = 'yellow';
-
-      // // Обновите график, чтобы увидеть изменения
-      // update();
-
       chartTabsInstance.changeControlActive(clickedElementID);
     }
   },

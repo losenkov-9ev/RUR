@@ -10,8 +10,8 @@ export const data = {
       data: [40, 40, 10, 10],
       ids: ['item-1', 'item-2', 'item-3', 'item-4'],
       backgroundColor: [
-        '#2B8CD9',
-        '#48C1C0',
+        'rgb(43, 140, 217, 0.5)',
+        'rgba(72, 193, 192, 0.5)',
         'rgba(151, 202, 98, 0.5)',
         'rgba(255, 195, 108, 0.5)',
       ],

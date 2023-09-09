@@ -8,6 +8,7 @@ export class Tabs {
       throw new Error('Controls or tabs not found');
     }
 
+    this.listeners = {}; // Добавляем объект для хранения обработчиков событий
     this.init(options.defaultTabId);
   }
 
@@ -34,6 +35,13 @@ export class Tabs {
       .classList.add(this.options.activeClass);
 
     this.changeTab(id, skipTimeout);
+
+    // Вызываем обработчики события changeTab
+    if (this.listeners['changeTab']) {
+      this.listeners['changeTab'].forEach((callback) => {
+        callback(id);
+      });
+    }
   }
 
   async changeTab(id, skipTimeout) {
@@ -68,5 +76,13 @@ export class Tabs {
         $tab.classList.add(this.options.activeClass);
       }, 50);
     }
+  }
+
+  // метод для добавления обработчиков событий
+  on(eventName, callback) {
+    if (!this.listeners[eventName]) {
+      this.listeners[eventName] = [];
+    }
+    this.listeners[eventName].push(callback);
   }
 }

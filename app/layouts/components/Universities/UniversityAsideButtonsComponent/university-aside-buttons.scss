@@ -1,0 +1,59 @@
+.universityAsideButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__item {
+    padding: 16px 21px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    color: #919eab;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+
+    transition: all 0.3s;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+      svg path {
+        fill: $accent;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    gap: 12px;
+
+    &__item {
+      padding: 16px 21px;
+      border-radius: 8px;
+      gap: 8px;
+      font-size: 18px;
+      margin-bottom: 20px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

@@ -68,6 +68,10 @@ body {
     font-size: 16px;
     min-width: 320px;
   }
+  @media (max-width: $breakpoint-medium) {
+    font-size: 14px;
+    min-width: 320px;
+  }
 }
 
 .university-page,
@@ -124,6 +128,10 @@ body {
   align-items: flex-start;
   gap: 30px;
   margin-bottom: 100px;
+
+  @media (max-width: $breakpoint-large) {
+    flex-direction: column;
+  }
 }
 .u-aside {
   position: sticky;
@@ -136,6 +144,21 @@ body {
     margin-bottom: 20px;
     height: 334px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    order: -1;
+    max-width: 100%;
+    width: 100%;
+    position: static;
+    margin-top: -10px;
+
+    .a {
+      height: 69px;
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
 }
 .u-box {
   max-width: 960px;
@@ -144,6 +167,11 @@ body {
     height: 123px;
     margin-bottom: 20px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .university-item {
@@ -151,6 +179,12 @@ body {
   background: #fff;
   padding: 24px;
   margin-bottom: 20px;
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .c-wrapper {

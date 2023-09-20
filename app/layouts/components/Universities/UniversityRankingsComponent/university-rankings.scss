@@ -38,6 +38,9 @@
   &__table-item--rank,
   &__table-item--score {
     width: 20%;
+    span {
+      display: none;
+    }
   }
   &__row:not(.universityRankings__row--head) {
     padding: 5px;
@@ -157,6 +160,176 @@
       svg path {
         fill: var(--popover-line-color);
       }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__table {
+      padding: 0px 6px 6px 6px;
+      border-radius: 10px;
+    }
+    &__table + .universityRankings__table {
+      margin-top: 18px;
+    }
+    &__row--head {
+      font-size: 13px;
+      .universityRankings__table-item {
+        padding-left: 14px;
+
+        &:first-of-type {
+          padding-left: 10px;
+        }
+      }
+    }
+    &__table-item {
+      min-height: 48px;
+    }
+    &__row:not(.universityRankings__row--head) {
+      padding: 5px;
+      margin-top: 5px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid #dfe6ed;
+      }
+      .universityRankings__table-item {
+        padding-left: 18px;
+      }
+      .universityRankings__table-item--rank,
+      .universityRankings__table-item--score {
+        font-size: 16px;
+      }
+      .universityRankings__table-item--main {
+        font-size: 16px;
+      }
+    }
+    &__table-rank {
+      margin-right: 16px;
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 5px;
+      }
+    }
+    &__popover {
+      top: -110px;
+      left: 100px;
+      padding: 10px 12px 14px 12px;
+      border-radius: 8px;
+      min-width: 214px;
+      box-shadow: -10px 10px 40px -4px rgba(145, 158, 171, 0.24),
+        0px 0px 2px 0px rgba(145, 158, 171, 0.24);
+
+      .popover-arrow {
+        bottom: 0px;
+        left: 50%;
+        bottom: -10px;
+        svg {
+          width: 12px;
+          height: 6px;
+        }
+      }
+    }
+    &__popover-title {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__popover-rank {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 5px;
+    }
+    &__popover-line {
+      gap: 2px;
+      padding-top: 12px;
+    }
+    &__popover-lineItem {
+      height: 16px;
+      &:first-of-type {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-of-type {
+        border-radius: 0 4px 4px 0;
+      }
+      &.active .polygon {
+        opacity: 1;
+      }
+      .polygon {
+        top: -18px;
+        width: 12px;
+        height: 10px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__table-rank {
+      width: 32px;
+      height: 32px;
+      flex: none;
+      margin-right: 10px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &__row--head {
+      padding-top: 6px;
+      .universityRankings__table-item--rank,
+      .universityRankings__table-item--score {
+        display: none;
+      }
+      .universityRankings__table-item--main {
+        min-height: auto;
+        padding: 4px 0px 4px 4px;
+      }
+    }
+    &__table-item--main {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__row {
+      display: block;
+      &:not(.universityRankings__row--head) {
+        padding: 12px;
+        .universityRankings__table-item {
+          padding: 0;
+          min-height: auto;
+        }
+        .universityRankings__table-item--main {
+          font-weight: 500;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        .universityRankings__table-item--rank,
+        .universityRankings__table-item--score {
+          font-size: 14px;
+          font-weight: 500;
+          padding: 8px 0px;
+        }
+      }
+    }
+    &__table-item--score,
+    &__table-item--rank {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+
+      span {
+        display: block;
+        color: #5f6262;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 120%;
+      }
+    }
+    &__table-item--score {
+      border-top: 1px solid rgba(#e9e9e9, 0.7);
     }
   }
 }

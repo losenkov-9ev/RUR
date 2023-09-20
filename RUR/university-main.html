@@ -1,0 +1,2659 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>University Main</title>
+
+  <meta name="description" content="..." />
+
+  <!-- meta for IOS -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230920175641"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.min.css?_v=20230920175641" type="text/css" media="all" />
+  <link rel="shortcut icon" href="images/global/favicon.svg" type="image/x-icon" />
+</head>
+
+  <body class="university-page university-main-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      <header class="header">
+  <div class="header__inner container">
+    <a href="#" class="header__logo">
+      <picture><source srcset="images/global/logo.webp" type="image/webp"><img src="images/global/logo.png" alt="logo" /></picture>
+    </a>
+    <nav class="header__menu">
+      <div class="header__menu-linkWrapper">
+        <a href="#" class="header__menu-link"><span>Rankings</span></a>
+        <div class="header__menu-dropdown">
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Rankings Overview</a>
+            <a href="#" class="header__menu-dropdownLink">World University Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Dimension Rankings</a>
+            <a href="#" class="header__menu-dropdownLink">Subject Rankings</a>
+            <a href="#" class="header__menu-dropdownLink">Country Rankings</a>
+          </div>
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Rankings by Indicators</a>
+            <a href="#" class="header__menu-dropdownLink">Reputation Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Academic Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Methodology</a>
+            <a href="#" class="header__menu-dropdownLink">About RUR Ranking</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header__menu-link"><span>Universities</span></a>
+      <div class="header__menu-linkWrapper">
+        <a href="#" class="header__menu-link"><span>World Map</span></a>
+        <div class="header__menu-dropdown">
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Countries Overview</a>
+            <a href="#" class="header__menu-dropdownLink">Countries Map</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header__menu-link"><span>News</span></a>
+      <a href="#" class="header__menu-link"><span>About us</span></a>
+      <a href="#" class="header__menu-link"><span>Contacts</span></a>
+      <button
+        class="header__menu-link header__menu-link--search"
+        data-search="open"
+        data-header="close"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 15.75L12.4875 12.4875"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button class="header__menu-link header__menu-link--burger" data-burger="open">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.25 9H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 4.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 13.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="header__mobile">
+  <div class="header__mobile-backdrop" data-header="close"></div>
+  <div class="header__mobile-box">
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        Rankings
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          About RUR Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">Universities</a>
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        World Map
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World Map
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">News</a>
+    <a href="#" class="header__mobile-link" data-header="close">About us</a>
+    <a href="#" class="header__mobile-link" data-header="close">Contacts</a>
+  </div>
+</div>
+
+      <!-- Search component -->
+      <div class="search closed" data-search="wrapper">
+  <div class="search-overlay" data-search="close"></div>
+  <div class="search__inner container">
+    <div class="search__field closed">
+      <div class="search__field-box">
+        <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
+        <input
+          type="text"
+          class="search__field-input"
+          data-search="input"
+          placeholder="Find University"
+        />
+        <div class="search__field-controls">
+          <div class="search__field-select searchSelect" data-search="selectWrapper">
+            <div class="searchSelect__button" data-search="selectButton">
+              Search
+              <div class="searchSelect__button-value">
+                <span>Everywhere</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 7.5L6 4.5L3 7.5"
+                    stroke="#2B8CD9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="searchSelect__dropdown">
+              <div class="searchSelect__item active" data-search="selectItem">Everywhere</div>
+              <div class="searchSelect__item" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item" data-search="selectItem">News</div>
+            </div>
+          </div>
+          <div class="search__field-button" data-search="searchButton">Search</div>
+        </div>
+      </div>
+      <div class="search__field-close" data-search="close">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="38" height="38" rx="8" fill="white" />
+          <path
+            d="M23.5 14.5L14.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14.5 14.5L23.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="search__list" data-search="list">
+      <div class="search__list-wrapper">
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="content">
+        <div class="breadcrumbs-wrapper container">
+  <ul class="breadcrumbs">
+    
+    <li class="breadcrumbs__item"><a href="#">Home</a></li>
+    
+    <li class="breadcrumbs__item"><a href="#">Universities</a></li>
+    
+    <li class="breadcrumbs__item"><a href="#">Harvard University</a></li>
+    
+  </ul>
+</div>
+
+        <div class="universitySelect__wrapper container">
+  <div class="universitySelect">
+    <select id="universitySelect-year" class="universitySelect__item d-page-select page-select">
+      <option disabled selected>Universities</option>
+      <option value="2023">Harvard University</option>
+      <option value="2022">Harvard University</option>
+      <option value="2021">Harvard University</option>
+      <option value="2020">Harvard University</option>
+      <option value="2019">Harvard University</option>
+      <option value="2018">Harvard University</option>
+    </select>
+    <select id="universitySelect-ranking" class="universitySelect__item d-page-select page-select">
+      <option value="" disabled selected>Ranking</option>
+      <option value="world_rank">World rank</option>
+      <option value="country_rank">Country rank</option>
+      <option value="university_score">University score</option>
+    </select>
+    <select id="universitySelect-subject" class="universitySelect__item d-page-select page-select">
+      <option value="" disabled selected>Subject</option>
+      <option value="usa">Science</option>
+      <option value="china">Math</option>
+      <option value="uk">History</option>
+    </select>
+  </div>
+</div>
+
+        <!-- University Top component -->
+        <div class="universityTop container" id="universityTop">
+  <div class="universityTop__inner">
+    <div class="universityTop__content">
+      <div class="universityTop__logo">
+        <picture><source srcset="images/content/universities/item-1.webp" type="image/webp"><img src="images/content/universities/item-1.png" alt="" /></picture>
+      </div>
+      <h3 class="universityTop__title title-3">Harvard University</h3>
+       
+        <div class="universityTop__location">
+          
+          <div class="universityTop__location-info universityTop__location-item">
+            <div class="universityTop__location-icon">
+              <img src="images/icons/country-icons/usa.svg" alt="usa-icon" />
+            </div>
+            <div class="universityTop__location-name">USA, Cambridge, MA 02138, United States</div>
+          </div>
+          <a href="#" class="universityTop__location-link universityTop__location-item">
+            <div class="universityTop__location-icon">
+              <img src="images/icons/location-link.svg" alt="usa-icon" />
+            </div>
+            <div class="universityTop__location-name">harvard.edu</div>
+          </a>
+        </div>
+        
+        <div class="universityTop__achievements">
+          <div class="universityTop__achievements-item">
+            <div class="universityTop__achievements-info icon">
+              <picture><source srcset="images/icons/achivements/diamond.webp" type="image/webp"><img src="images/icons/achivements/diamond.png" alt="diamond" /></picture>
+            </div>
+            <div class="universityTop__achievements-text">Diamond league</div>
+          </div>
+          <div class="universityTop__achievements-item">
+            <div class="universityTop__achievements-info">1</div>
+            <div class="universityTop__achievements-text">World rank</div>
+          </div>
+          <div class="universityTop__achievements-item">
+            <div class="universityTop__achievements-info">1</div>
+            <div class="universityTop__achievements-text">Country rank</div>
+          </div>
+        </div>
+      </div>
+      <div class="universityTop__image">
+        <picture><source srcset="images/content/universities-images/item-1.webp" type="image/webp"><img src="images/content/universities-images/item-1.jpg" alt="university-image" /></picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="u-aside-wrapper container" data-aside="wrapper">
+          <div class="u-box" data-aside="content">
+            <!-- University Overview component -->
+            <div class="universityOverview university-item" id="universityOverview">
+  <div class="universityOverview__content">
+    <h4 class="universityOverview__title title-4">Overview</h4>
+    <div class="universityOverview__readMore-box" data-readMore="wrapper">
+      <p class="universityOverview__text" data-readMore="text">
+        Harvard University is a private Ivy League research university in Cambridge, Massachusetts,
+        established in 1636. Its history, influence and wealth have made it one of the most
+        prestigious universities in the world. Established originally by the Massachusetts
+        legislature and soon thereafter named for John Harvard (its first benefactor), Harvard is
+        the United States` oldest institution of higher learning,and the Harvard Corporation
+        (formally, the President and Fellows of Harvard College) is its first chartered corporation.
+      </p>
+      <a href="#" class="universityOverview__readMore" data-readMore="button">
+        <span>Watch more</span>
+        <svg
+          width="12"
+          height="13"
+          viewBox="0 0 12 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 5L6 8L9 5"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="universityOverview__info">
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Foundation year:</div>
+      <div class="universityOverview__info-text">1636</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Short name:</div>
+      <div class="universityOverview__info-text">Harvard</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Type:</div>
+      <div class="universityOverview__info-text">Private</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Students:</div>
+      <div class="universityOverview__info-text">21580</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Faculty:</div>
+      <div class="universityOverview__info-text">2300</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Students/Faculty Ratio:</div>
+      <div class="universityOverview__info-text">9:1</div>
+    </div>
+    <div class="universityOverview__info-item">
+      <div class="universityOverview__info-name">Region:</div>
+      <div class="universityOverview__info-text">North America</div>
+    </div>
+    
+  </div>
+</div>
+
+            <!-- University Mission component -->
+            <div class="universityMission university-item" id="universityMission">
+  
+    <div class="universityMission__box">
+   
+  
+    <div class="universityMission__content">
+      <h4 class="universityMission__title title-4">Mission Statement</h4>
+      <p class="universityMission__text">
+        The mission of Harvard College is to educate the citizens and citizen-leaders for our
+        society. We do this through our commitment to the transformative power of a liberal arts
+        and sciences education.
+      </p>
+    </div>
+    
+    <div class="universityMission__image">
+      <picture><source srcset="images/content/universities-images/item-2.webp" type="image/webp"><img src="images/content/universities-images/item-2.jpg" alt="university-image" /></picture>
+    </div>
+    
+  </div>
+</div>
+
+            <!-- University Rankings component -->
+            <div class="universityRankings university-item" data-university="rankings" id="universityRankings">
+  <h4 class="universityRankings__title title-4">Rankings</h4>
+  <div class="universityRankings__table">
+    <div class="universityRankings__row universityRankings__row--head">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        Main ratings
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">Rank</div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">Score</div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <picture><source srcset="images/icons/rankings/item-1.webp" type="image/webp"><img src="images/icons/rankings/item-1.jpg" alt="" /></picture>
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="universityRankings__popover-lineItem" style="--popover-line-color: #fc0">
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        World University Ranking
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>
+        1
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>
+        100.000
+      </div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <picture><source srcset="images/icons/rankings/item-2.webp" type="image/webp"><img src="images/icons/rankings/item-2.jpg" alt="" /></picture>
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #fc0"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        World University Ranking
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>1
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>
+        100.000
+      </div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <picture><source srcset="images/icons/rankings/item-3.webp" type="image/webp"><img src="images/icons/rankings/item-3.jpg" alt="" /></picture>
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="universityRankings__popover-lineItem" style="--popover-line-color: #fc0">
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        World University Ranking
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>1
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>
+        100.000
+      </div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <picture><source srcset="images/icons/rankings/item-4.webp" type="image/webp"><img src="images/icons/rankings/item-4.jpg" alt="" /></picture>
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="universityRankings__popover-lineItem" style="--popover-line-color: #fc0">
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        World University Ranking
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>1
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>
+        100.000
+      </div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <picture><source srcset="images/icons/rankings/item-5.webp" type="image/webp"><img src="images/icons/rankings/item-5.jpg" alt="" /></picture>
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="universityRankings__popover-lineItem" style="--popover-line-color: #fc0">
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        World University Ranking
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>1
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>
+        100.000
+      </div>
+    </div>
+  </div>
+  <div class="universityRankings__table">
+    <div class="universityRankings__row universityRankings__row--head">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        Additional Rankings
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">Rank</div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">Score</div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <img src="images/icons/rankings/item-6.svg" alt="" />
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="universityRankings__popover-lineItem" style="--popover-line-color: #fc0">
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        Reputation Rankings
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>-
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>-
+      </div>
+    </div>
+    <div class="universityRankings__row">
+      <div class="universityRankings__table-item universityRankings__table-item--main">
+        <div class="universityRankings__table-rank">
+          <img src="images/icons/rankings/item-7.svg" alt="" />
+          <div class="universityRankings__popover">
+            <div class="popover-arrow">
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0L7.41421 4.58579C6.63317 5.36683 5.36684 5.36684 4.58579 4.58579L0 0H12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="universityRankings__popover-title">Diamond League</div>
+            <div class="universityRankings__popover-rank">Rank 1-100</div>
+            <div class="universityRankings__popover-line">
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #0fd0f7"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem active"
+                style="--popover-line-color: #fc0"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #c5d1d9"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #d7b56d"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #df7a51"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="universityRankings__popover-lineItem"
+                style="--popover-line-color: #6bc73a"
+              >
+                <div class="polygon">
+                  <svg
+                    width="10"
+                    height="8"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82199 6.81355C5.42431 7.38756 4.57569 7.38756 4.17801 6.81355L0.891226 2.06949C0.431747 1.40629 0.906402 0.499999 1.71322 0.499999L8.28678 0.5C9.0936 0.5 9.56825 1.40629 9.10877 2.06949L5.82199 6.81355Z"
+                      fill="#C5D1D9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        Academic Rankings
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--rank">
+        <span>Rank</span>-
+      </div>
+      <div class="universityRankings__table-item universityRankings__table-item--score">
+        <span>Score</span>-
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+            <!-- University Indicators component -->
+            <div class="universityIndicators university-item" id="universityIndicators">
+  <h4 class="universityIndicators__title title-4">Indicators</h4>
+  <div class="universityIndicators__tabs" data-chart-controls="wrapper">
+    <div
+      class="universityIndicators__tabItem active"
+      data-chart-controls="item-1"
+      style="--tab-span-color: #2b8cd9"
+    >
+      Teaching ranking <span>40%</span>
+    </div>
+    <div
+      class="universityIndicators__tabItem"
+      data-chart-controls="item-2"
+      style="--tab-span-color: #48c1c0"
+    >
+      Research ranking <span>40%</span>
+    </div>
+    <div
+      class="universityIndicators__tabItem"
+      data-chart-controls="item-3"
+      style="--tab-span-color: #97ca62"
+    >
+      Research ranking <span>10%</span>
+    </div>
+    <div
+      class="universityIndicators__tabItem"
+      data-chart-controls="item-4"
+      style="--tab-span-color: #ffc36c"
+    >
+      Financial sustainability ranking <span>10%</span>
+    </div>
+  </div>
+  <div class="universityIndicators__content">
+    <div class="universityIndicators-chart"><canvas id="university-chart"></canvas></div>
+    <div class="universityIndicators__content-tabs" data-chart-tabs>
+      <div
+        class="universityIndicators__content-box active"
+        data-chart-tab="item-1"
+        style="--tab-span-color: #2b8cd9"
+      >
+        <div class="universityIndicators__content-title">Teaching ranking <span>40%</span></div>
+        <div class="universityIndicators__content-benefits">
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">World rank</div>
+            <div class="universityIndicators__content-itemRank">2</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Score</div>
+            <div class="universityIndicators__content-itemRank">99.840</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Country rank</div>
+            <div class="universityIndicators__content-itemRank">1</div>
+          </div>
+
+          <div class="universityIndicators__content-item icon">
+            <div class="universityIndicators__content-itemIcon">
+              <picture><source srcset="images/icons/achivements/diamond.webp" type="image/webp"><img src="images/icons/achivements/diamond.png" alt="diamond" /></picture>
+            </div>
+            <div class="universityIndicators__content-itemName">Diamond league</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="universityIndicators__content-box"
+        data-chart-tab="item-2"
+        style="--tab-span-color: #48c1c0"
+      >
+        <div class="universityIndicators__content-title">Research ranking <span>40%</span></div>
+        <div class="universityIndicators__content-benefits">
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">World rank</div>
+            <div class="universityIndicators__content-itemRank">2</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Score</div>
+            <div class="universityIndicators__content-itemRank">99.840</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Country rank</div>
+            <div class="universityIndicators__content-itemRank">1</div>
+          </div>
+
+          <div class="universityIndicators__content-item icon">
+            <div class="universityIndicators__content-itemIcon">
+              <picture><source srcset="images/icons/achivements/diamond.webp" type="image/webp"><img src="images/icons/achivements/diamond.png" alt="diamond" /></picture>
+            </div>
+            <div class="universityIndicators__content-itemName">Diamond league</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="universityIndicators__content-box"
+        data-chart-tab="item-3"
+        style="--tab-span-color: #97ca62"
+      >
+        <div class="universityIndicators__content-title">Research ranking <span>10%</span></div>
+        <div class="universityIndicators__content-benefits">
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">World rank</div>
+            <div class="universityIndicators__content-itemRank">2</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Score</div>
+            <div class="universityIndicators__content-itemRank">99.840</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Country rank</div>
+            <div class="universityIndicators__content-itemRank">1</div>
+          </div>
+
+          <div class="universityIndicators__content-item icon">
+            <div class="universityIndicators__content-itemIcon">
+              <picture><source srcset="images/icons/achivements/diamond.webp" type="image/webp"><img src="images/icons/achivements/diamond.png" alt="diamond" /></picture>
+            </div>
+            <div class="universityIndicators__content-itemName">Diamond league</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="universityIndicators__content-box"
+        data-chart-tab="item-4"
+        style="--tab-span-color: #ffc36c"
+      >
+        <div class="universityIndicators__content-title">
+          Financial sustainability ranking <span>10%</span>
+        </div>
+        <div class="universityIndicators__content-benefits">
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">World rank</div>
+            <div class="universityIndicators__content-itemRank">2</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Score</div>
+            <div class="universityIndicators__content-itemRank">99.840</div>
+          </div>
+          <div class="universityIndicators__content-item">
+            <div class="universityIndicators__content-itemName">Country rank</div>
+            <div class="universityIndicators__content-itemRank">1</div>
+          </div>
+
+          <div class="universityIndicators__content-item icon">
+            <div class="universityIndicators__content-itemIcon">
+              <picture><source srcset="images/icons/achivements/diamond.webp" type="image/webp"><img src="images/icons/achivements/diamond.png" alt="diamond" /></picture>
+            </div>
+            <div class="universityIndicators__content-itemName">Diamond league</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="universityIndicators__table-box" data-chart-table-box>
+    <div class="universityIndicators__table" data-chart-table="item-1">
+      <div class="universityIndicators__table-row universityIndicators__table-row--head">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Name
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          Weight
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          Rank
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          Score
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Academic staff per students
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>
+          8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>
+          157
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>
+          87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Academic staff per bachelor degrees awarded
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>60
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Doctoral degrees awarded per academic staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span> 52
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span> 87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Doctoral degrees awarded per bachelor degrees awarded
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>25
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Online visibility
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>1
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>100.000
+        </div>
+      </div>
+    </div>
+    <div class="universityIndicators__table" data-chart-table="item-2">
+      <div class="universityIndicators__table-row universityIndicators__table-row--head">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Name
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          Weight
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          Rank
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          Score
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Citations per academic and research staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>
+          8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>
+          157
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>
+          87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Share of graduate degrees awarded
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>60
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Normalized citation impact
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span> 52
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span> 87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Papers per academic and research staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>25
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Social media visibility
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>8%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>1
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>100.000
+        </div>
+      </div>
+    </div>
+    <div class="universityIndicators__table" data-chart-table="item-3">
+      <div class="universityIndicators__table-row universityIndicators__table-row--head">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Name
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          Weight
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          Rank
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          Score
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Share of international academic staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>
+          2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>
+          157
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>
+          87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Share of international students
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>60
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Share of international co-authored papers
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span> 52
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span> 87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          New media impact
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>25
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          International level
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>1
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>100.000
+        </div>
+      </div>
+    </div>
+    <div class="universityIndicators__table" data-chart-table="item-4">
+      <div class="universityIndicators__table-row universityIndicators__table-row--head">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Name
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          Weight
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          Rank
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          Score
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Institutional income per academic staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>
+          2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>
+          157
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>
+          87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Institutional income per students
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>60
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Research income per academic and research staff
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span> 52
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span> 87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Research income per institutional income
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>25
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>87.083
+        </div>
+      </div>
+      <div class="universityIndicators__table-row">
+        <div class="universityIndicators__table-item universityIndicators__table-item--name">
+          Financial Sustainability Level
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--weight">
+          <span>Weight</span>2%
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--rank">
+          <span>Rank</span>1
+        </div>
+        <div class="universityIndicators__table-item universityIndicators__table-item--score">
+          <span>Score</span>100.000
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+            <!-- University Location component -->
+            <div class="universityLocation university-item" id="universityLocation">
+  <h4 class="universityLocation__title title-4">Location</h4>
+  <div class="universityLocation__place-wrapper" data-location="wrapper">
+    <div class="universityLocation__place-box" data-location="box">
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">Harvard Business School</div>
+        <div class="universityLocation__place-description">117 Western Ave, Boston, MA</div>
+      </div>
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">Harvard College</div>
+        <div class="universityLocation__place-description">
+          1350 Massachusetts Ave, Cambridge, MA
+        </div>
+      </div>
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">
+          Harvard Kenneth C. Griffin Graduate School of Arts and Sciences
+        </div>
+        <div class="universityLocation__place-description">
+          1350 Massachusetts Ave, Cambridge, MA
+        </div>
+      </div>
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">Harvard Business School</div>
+        <div class="universityLocation__place-description">117 Western Ave, Boston, MA</div>
+      </div>
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">Harvard College</div>
+        <div class="universityLocation__place-description">
+          1350 Massachusetts Ave, Cambridge, MA
+        </div>
+      </div>
+      <div class="universityLocation__place" data-location="item">
+        <div class="universityLocation__place-title">
+          Harvard Kenneth C. Griffin Graduate School of Arts and Sciences
+        </div>
+        <div class="universityLocation__place-description">
+          1350 Massachusetts Ave, Cambridge, MA
+        </div>
+      </div>
+    </div>
+    <a href="#" class="universityOverview__readMore" data-location="button">
+      <span>Watch more</span>
+      <svg
+        width="12"
+        height="13"
+        viewBox="0 0 12 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 5L6 8L9 5"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </div>
+  <div id="universityLocation__map">
+    <picture><source srcset="images/content/map-placeholder.webp" type="image/webp"><img src="images/content/map-placeholder.jpg" alt="" /></picture>
+  </div>
+</div>
+
+          </div>
+          <div class="u-aside" data-aside="block">
+            <div class="universityAside">
+  <div class="universityAside__title">Content</div>
+  <div class="universityAside__links">
+    
+    <a href="#universityOverview" class="universityAside__item" data-aside="link">
+      Overview
+    </a>
+    
+    <a href="#universityMission" class="universityAside__item" data-aside="link">
+      Mission Statement
+    </a>
+    
+    <a href="#universityRankings" class="universityAside__item" data-aside="link">
+      Rankings
+    </a>
+    
+    <a href="#universityIndicators" class="universityAside__item" data-aside="link">
+      Indicators
+    </a>
+    
+    <a href="#universityLocation" class="universityAside__item" data-aside="link">
+      Location
+    </a>
+    
+  </div>
+</div>
+
+            <div class="universityAsideButtons">
+  <a href="#" class="universityAsideButtons__item">
+    Save
+    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M19.8751 13.5006C19.3918 13.5006 19.0001 13.8924 19.0001 14.3756V19.5005H3.99994V14.3756C3.99994 13.8924 3.60819 13.5006 3.12494 13.5006H1.875C1.39175 13.5006 1 13.8924 1 14.3756V21.0003C0.999943 21.1973 1.0387 21.3924 1.11407 21.5745C1.18944 21.7565 1.29993 21.922 1.43924 22.0613C1.57855 22.2007 1.74395 22.3112 1.92599 22.3866C2.10803 22.4621 2.30314 22.5009 2.50019 22.5009H20.4994C20.6965 22.5009 20.8917 22.4621 21.0738 22.3867C21.2559 22.3113 21.4214 22.2007 21.5608 22.0613C21.7001 21.9219 21.8106 21.7564 21.886 21.5743C21.9614 21.3921 22.0001 21.1969 22 20.9998V14.3756C22 13.8924 21.6082 13.5006 21.125 13.5006H19.8751Z"
+        fill="#919EAB"
+      />
+      <path
+        d="M17.4999 12H14.4999V2.375C14.4999 1.89175 14.1082 1.5 13.6249 1.5H9.29282C8.80957 1.5 8.41782 1.89175 8.41782 2.375V12H5.49969L10.8813 17.3812C11.223 17.7229 11.777 17.7229 12.1187 17.3812L17.4999 12Z"
+        fill="#919EAB"
+      />
+    </svg>
+  </a>
+  <a href="#" class="universityAsideButtons__item">
+    Print
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M5.587 4.45072V5.5828H4.66666C3.6942 5.5828 2.76157 5.96911 2.07394 6.65674C1.38631 7.34438 1 8.27701 1 9.24947V15.6661C1 16.3955 1.28973 17.0949 1.80546 17.6107C2.32118 18.1264 3.02065 18.4161 3.75 18.4161H5.58333V19.3328C5.58333 20.0621 5.87306 20.7616 6.38879 21.2773C6.90451 21.7931 7.60398 22.0828 8.33333 22.0828H15.6667C16.396 22.0828 17.0955 21.7931 17.6112 21.2773C18.1269 20.7616 18.4167 20.0621 18.4167 19.3328V18.4161H20.25C20.9793 18.4161 21.6788 18.1264 22.1945 17.6107C22.7103 17.0949 23 16.3955 23 15.6661V9.24947C23 8.27701 22.6137 7.34438 21.926 6.65674C21.2384 5.96911 20.3058 5.5828 19.3333 5.5828H18.4167V4.4388C18.4167 4.10745 18.3513 3.77935 18.2244 3.47327C18.0975 3.16719 17.9115 2.88914 17.677 2.65501C17.4426 2.42088 17.1642 2.23527 16.858 2.1088C16.5517 1.98234 16.2235 1.91749 15.8922 1.91797L8.10416 1.92989C7.43623 1.93086 6.79599 2.19688 6.32403 2.66952C5.85208 3.14216 5.587 3.78279 5.587 4.45072ZM17.0417 4.4388V5.5828H6.962V4.45072C6.962 3.81822 7.4735 3.3058 8.10599 3.30489L15.894 3.29297C16.0446 3.29273 16.1938 3.32219 16.333 3.37966C16.4723 3.43714 16.5988 3.5215 16.7054 3.62793C16.812 3.73435 16.8966 3.86075 16.9543 3.99989C17.012 4.13903 17.0417 4.28818 17.0417 4.4388ZM8.33333 13.3745H15.6667C16.0313 13.3745 16.3811 13.5193 16.6389 13.7772C16.8968 14.0351 17.0417 14.3848 17.0417 14.7495V19.3328C17.0417 19.6975 16.8968 20.0472 16.6389 20.3051C16.3811 20.5629 16.0313 20.7078 15.6667 20.7078H8.33333C7.96866 20.7078 7.61892 20.5629 7.36106 20.3051C7.10319 20.0472 6.95833 19.6975 6.95833 19.3328V14.7495C6.95833 14.3848 7.10319 14.0351 7.36106 13.7772C7.61892 13.5193 7.96866 13.3745 8.33333 13.3745Z"
+        fill="#919EAB"
+      />
+    </svg>
+  </a>
+</div>
+
+            <div class="a">ADS</div>
+            <div class="a">ADS</div>
+          </div>
+        </div>
+        <!-- Footer component -->
+        <footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <a href="/" class="footer__top-logo">
+        <picture><source srcset="images/global/big-logo.webp" type="image/webp"><img src="images/global/big-logo.png" alt="logo" /></picture>
+      </a>
+      <div class="footer__top-content">
+        <div class="footer__top-col footer__top-contacts">
+          <a href="tel:995322193369" class="footer__top-call">+995 322 19 33 69</a>
+          <a href="mailto:info@roundranking.com" class="footer__top-mail">info@roundranking.com</a>
+        </div>
+        <div class="footer__top-col footer__top-address">
+          0177 Georgia, Tbilisi, Saburtalo district, Nutsubidze <br />
+          plateau, IV micro / district, building 21
+        </div>
+      </div>
+    </div>
+    <div class="footer__box">
+      <div class="footer__rankings">
+        <h6 class="footer__rankings-title">Rankings</h6>
+        <div class="footer__rankings-box">
+          <a href="#" class="footer__rankings-link">Rankings Overview</a>
+          <a href="#" class="footer__rankings-link">Rankings by Indicators</a>
+          <a href="#" class="footer__rankings-link">World University Ranking</a>
+          <a href="#" class="footer__rankings-link">Reputation Ranking</a>
+          <a href="#" class="footer__rankings-link">Dimension Rankings</a>
+          <a href="#" class="footer__rankings-link">Academic Ranking</a>
+          <a href="#" class="footer__rankings-link">Subject Rankings</a>
+          <a href="#" class="footer__rankings-link">Methodology</a>
+          <a href="#" class="footer__rankings-link">Country Rankings</a>
+          <a href="#" class="footer__rankings-link">About RUR Ranking</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Universities</a>
+        <a href="#" class="footer__link">Countries Overview</a>
+        <a href="#" class="footer__link">Countries Map</a>
+        <a href="#" class="footer__link">News</a>
+        <a href="#" class="footer__link">About us</a>
+        <a href="#" class="footer__link">Contacts</a>
+        <a href="#" class="footer__link">Cookie policy</a>
+        <a href="#" class="footer__link">Terms & conditions</a>
+        <a href="#" class="footer__link">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+    <script src="js/main.min.js?_v=20230920175641" defer></script>
+  </body>
+</html>

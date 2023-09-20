@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Country Overview</title>
+
+  <meta name="description" content="..." />
+
+  <!-- meta for IOS -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230920175641"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.min.css?_v=20230920175641" type="text/css" media="all" />
+  <link rel="shortcut icon" href="images/global/favicon.svg" type="image/x-icon" />
+</head>
+
+  <body class="article-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      <header class="header">
+  <div class="header__inner container">
+    <a href="#" class="header__logo">
+      <picture><source srcset="images/global/logo.webp" type="image/webp"><img src="images/global/logo.png" alt="logo" /></picture>
+    </a>
+    <nav class="header__menu">
+      <div class="header__menu-linkWrapper">
+        <a href="#" class="header__menu-link"><span>Rankings</span></a>
+        <div class="header__menu-dropdown">
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Rankings Overview</a>
+            <a href="#" class="header__menu-dropdownLink">World University Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Dimension Rankings</a>
+            <a href="#" class="header__menu-dropdownLink">Subject Rankings</a>
+            <a href="#" class="header__menu-dropdownLink">Country Rankings</a>
+          </div>
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Rankings by Indicators</a>
+            <a href="#" class="header__menu-dropdownLink">Reputation Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Academic Ranking</a>
+            <a href="#" class="header__menu-dropdownLink">Methodology</a>
+            <a href="#" class="header__menu-dropdownLink">About RUR Ranking</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header__menu-link"><span>Universities</span></a>
+      <div class="header__menu-linkWrapper">
+        <a href="#" class="header__menu-link"><span>World Map</span></a>
+        <div class="header__menu-dropdown">
+          <div class="header__menu-dropdownCol">
+            <a href="#" class="header__menu-dropdownLink">Countries Overview</a>
+            <a href="#" class="header__menu-dropdownLink">Countries Map</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header__menu-link"><span>News</span></a>
+      <a href="#" class="header__menu-link"><span>About us</span></a>
+      <a href="#" class="header__menu-link"><span>Contacts</span></a>
+      <button
+        class="header__menu-link header__menu-link--search"
+        data-search="open"
+        data-header="close"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 15.75L12.4875 12.4875"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button class="header__menu-link header__menu-link--burger" data-burger="open">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.25 9H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 4.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 13.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="header__mobile">
+  <div class="header__mobile-backdrop" data-header="close"></div>
+  <div class="header__mobile-box">
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        Rankings
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          About RUR Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">Universities</a>
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        World Map
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World Map
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">News</a>
+    <a href="#" class="header__mobile-link" data-header="close">About us</a>
+    <a href="#" class="header__mobile-link" data-header="close">Contacts</a>
+  </div>
+</div>
+
+      <!-- Search component -->
+      <div class="search closed" data-search="wrapper">
+  <div class="search-overlay" data-search="close"></div>
+  <div class="search__inner container">
+    <div class="search__field closed">
+      <div class="search__field-box">
+        <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
+        <input
+          type="text"
+          class="search__field-input"
+          data-search="input"
+          placeholder="Find University"
+        />
+        <div class="search__field-controls">
+          <div class="search__field-select searchSelect" data-search="selectWrapper">
+            <div class="searchSelect__button" data-search="selectButton">
+              Search
+              <div class="searchSelect__button-value">
+                <span>Everywhere</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 7.5L6 4.5L3 7.5"
+                    stroke="#2B8CD9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="searchSelect__dropdown">
+              <div class="searchSelect__item active" data-search="selectItem">Everywhere</div>
+              <div class="searchSelect__item" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item" data-search="selectItem">News</div>
+            </div>
+          </div>
+          <div class="search__field-button" data-search="searchButton">Search</div>
+        </div>
+      </div>
+      <div class="search__field-close" data-search="close">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="38" height="38" rx="8" fill="white" />
+          <path
+            d="M23.5 14.5L14.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14.5 14.5L23.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="search__list" data-search="list">
+      <div class="search__list-wrapper">
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-1.webp" type="image/webp"><img src="images/content/search/item-1.png" alt="" /></picture>
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <picture><source srcset="images/content/search/item-2.webp" type="image/webp"><img src="images/content/search/item-2.png" alt="" /></picture>
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="content">
+        <div class="page-head">
+          <div class="breadcrumbs-wrapper container">
+  <ul class="breadcrumbs">
+    
+    <li class="breadcrumbs__item"><a href="#">Home</a></li>
+    
+    <li class="breadcrumbs__item"><a href="#">Countries Overview</a></li>
+    
+  </ul>
+</div>
+
+          <div class="container">
+            <h1 class="title-1-head page-head__title">
+              Countries Overview
+            </h1>
+          </div>
+        </div>
+        <div class="c-wrapper container">
+          <div class="countryOverviewFilter">
+  <div class="countryOverviewFilter__box">
+    <select
+      id="countryOverviewFilter-year"
+      class="countryOverviewFilter__select d-page-select page-select"
+    >
+      <option value="" disabled selected>Year</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+      <option value="2014">2014</option>
+      <option value="2013">2013</option>
+      <option value="2012">2012</option>
+      <option value="2011">2011</option>
+      <option value="2010">2010</option>
+    </select>
+    <select
+      id="countryOverviewFilter-ranking"
+      class="countryOverviewFilter__select d-page-select page-select"
+    >
+      <option value="" disabled selected>Ranking</option>
+      <option value="world_rank">World rank</option>
+      <option value="country_rank">Country rank</option>
+      <option value="university_score">University score</option>
+    </select>
+    <select
+      id="countryOverviewFilter-region"
+      class="countryOverviewFilter__select d-page-select page-select"
+    >
+      <option value="" disabled selected>Region</option>
+      <option value="usa">USA</option>
+      <option value="china">China</option>
+      <option value="uk">United Kindom</option>
+    </select>
+    <select
+      id="countryOverviewFilter-subject"
+      class="countryOverviewFilter__select d-page-select page-select"
+    >
+      <option value="" disabled selected>Subject</option>
+      <option value="usa">Science</option>
+      <option value="china">Math</option>
+      <option value="uk">History</option>
+    </select>
+  </div>
+  <div class="countryOverviewFilter__footer">
+    <div class="countryOverviewFilter__footer-name">Country</div>
+    <a href="#" class="countryOverviewFilter__footer-filter">
+      <div class="countryOverviewFilter__footer-filterName">Universities</div>
+      <div class="countryOverviewFilter__footer-filterButton">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="18" height="18" rx="4" fill="white" />
+          <path
+            d="M15 9L13.9425 7.9425L9.75 12.1275V3H8.25V12.1275L4.065 7.935L3 9L9 15L15 9Z"
+            fill="#2B8CD9"
+          />
+        </svg>
+      </div>
+    </a>
+  </div>
+</div>
+
+          
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+          <div class="countryOverviewItem">
+  <div class="countryOverviewItem__content">
+    <div class="countryOverviewItem__content-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_759_5146)">
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12C0.521719 12 12 10.4348 12 10.4348L24 12Z"
+            fill="#D80027"
+          />
+          <path d="M0 12C0 5.37262 5.37262 0 12 0C18.6274 0 24 5.37262 24 12" fill="#0052B4" />
+          <path
+            d="M8.87023 8.34785C8.87023 7.48343 8.16945 6.78265 7.30503 6.78265C6.90402 6.78265 6.53853 6.93358 6.26155 7.18151V6.26088H6.78327V5.2174H6.26155V4.69568H5.21806V5.2174H4.69634V6.26088H5.21806V7.18151C4.94108 6.93358 4.57559 6.78265 4.17458 6.78265C3.31016 6.78265 2.60938 7.48343 2.60938 8.34785C2.60938 8.8113 2.81098 9.22755 3.13109 9.51419V10.4348H8.34847V9.51419C8.66867 9.22755 8.87023 8.8113 8.87023 8.34785Z"
+            fill="#FFDA44"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_759_5146">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    Bosnia And Herzegovina
+  </div>
+  <div class="countryOverviewItem__count">100</div>
+</div>
+
+
+          <div class="countryOverviewFooter">
+  <div class="countryOverviewFooter__text">Rows per page:</div>
+  <select
+    id="countryOverviewFooter-count"
+    class="countryOverviewFooter__select d-page-select page-select"
+  >
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+  </select>
+  <div class="countryOverviewFooter__text">6-10 of 11</div>
+  <div class="countryOverviewFooter__arrows">
+    <div
+      class="countryOverviewFooter__arrow countryOverviewFooter__arrow--prev countryOverviewFooter__arrow--disabled"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+      >
+        <path
+          d="M11.5247 15.8333C11.2726 15.8342 11.0336 15.7208 10.8747 15.525L6.84973 10.525C6.59697 10.2175 6.59697 9.77415 6.84973 9.46665L11.0164 4.46665C11.3109 4.11227 11.837 4.06377 12.1914 4.35832C12.5458 4.65287 12.5943 5.17893 12.2997 5.53332L8.57473 9.99998L12.1747 14.4667C12.3828 14.7164 12.4266 15.0644 12.287 15.358C12.1474 15.6515 11.8498 15.8371 11.5247 15.8333Z"
+          fill="#212B36"
+        />
+      </svg>
+    </div>
+    <div class="countryOverviewFooter__arrow countryOverviewFooter__arrow--next">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+      >
+        <path
+          d="M8.33285 15.8333C8.13814 15.8337 7.94944 15.7659 7.79952 15.6416C7.62909 15.5004 7.52189 15.2971 7.50157 15.0766C7.48124 14.8562 7.54947 14.6367 7.69118 14.4666L11.4245 9.99997L7.82452 5.52497C7.68471 5.35281 7.61929 5.13202 7.64275 4.91149C7.66621 4.69095 7.77662 4.48887 7.94952 4.34997C8.12382 4.19661 8.35421 4.12291 8.58516 4.14664C8.81612 4.17037 9.0267 4.28937 9.16618 4.47497L13.1912 9.47497C13.4439 9.78248 13.4439 10.2258 13.1912 10.5333L9.02452 15.5333C8.85496 15.7378 8.59805 15.8493 8.33285 15.8333Z"
+          fill="#212B36"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <!-- Footer component -->
+        <footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <a href="/" class="footer__top-logo">
+        <picture><source srcset="images/global/big-logo.webp" type="image/webp"><img src="images/global/big-logo.png" alt="logo" /></picture>
+      </a>
+      <div class="footer__top-content">
+        <div class="footer__top-col footer__top-contacts">
+          <a href="tel:995322193369" class="footer__top-call">+995 322 19 33 69</a>
+          <a href="mailto:info@roundranking.com" class="footer__top-mail">info@roundranking.com</a>
+        </div>
+        <div class="footer__top-col footer__top-address">
+          0177 Georgia, Tbilisi, Saburtalo district, Nutsubidze <br />
+          plateau, IV micro / district, building 21
+        </div>
+      </div>
+    </div>
+    <div class="footer__box">
+      <div class="footer__rankings">
+        <h6 class="footer__rankings-title">Rankings</h6>
+        <div class="footer__rankings-box">
+          <a href="#" class="footer__rankings-link">Rankings Overview</a>
+          <a href="#" class="footer__rankings-link">Rankings by Indicators</a>
+          <a href="#" class="footer__rankings-link">World University Ranking</a>
+          <a href="#" class="footer__rankings-link">Reputation Ranking</a>
+          <a href="#" class="footer__rankings-link">Dimension Rankings</a>
+          <a href="#" class="footer__rankings-link">Academic Ranking</a>
+          <a href="#" class="footer__rankings-link">Subject Rankings</a>
+          <a href="#" class="footer__rankings-link">Methodology</a>
+          <a href="#" class="footer__rankings-link">Country Rankings</a>
+          <a href="#" class="footer__rankings-link">About RUR Ranking</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Universities</a>
+        <a href="#" class="footer__link">Countries Overview</a>
+        <a href="#" class="footer__link">Countries Map</a>
+        <a href="#" class="footer__link">News</a>
+        <a href="#" class="footer__link">About us</a>
+        <a href="#" class="footer__link">Contacts</a>
+        <a href="#" class="footer__link">Cookie policy</a>
+        <a href="#" class="footer__link">Terms & conditions</a>
+        <a href="#" class="footer__link">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+    <script src="js/main.min.js?_v=20230920175641" defer></script>
+  </body>
+</html>

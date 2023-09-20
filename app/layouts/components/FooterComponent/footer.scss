@@ -143,4 +143,140 @@
       color: $accent;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 80px 0;
+    border-radius: 20px 20px 0px 0px;
+
+    &__top {
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      display: block;
+    }
+    &__top-content {
+      display: block;
+    }
+    &__top-logo {
+      width: 200px;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+
+    &__top-contacts {
+      max-width: 233px;
+      margin-right: 62px;
+    }
+
+    &__top-call,
+    &__top-mail,
+    &__top-address {
+      font-size: 18px;
+      padding-left: 30px;
+      margin-bottom: 20px;
+
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__top-mail {
+      color: $accent;
+    }
+
+    &__top-address {
+    }
+
+    &__box {
+      display: block;
+    }
+    &__rankings {
+      padding-top: 24px;
+      padding-bottom: 18px;
+      padding-left: 28px;
+      padding-right: 28px;
+
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    &__rankings-title {
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+    &__rankings-box {
+      gap: 12px 0;
+    }
+    &__rankings-link {
+      font-size: 16px;
+      line-height: 22px;
+      padding-right: 10px;
+    }
+
+    &__links {
+      grid-gap: 14px 30px;
+    }
+    &__link {
+      max-height: 70px;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding-top: 80px;
+    padding-bottom: 32px;
+
+    &__top {
+      padding: 24px 20px 24px 28px;
+      margin-bottom: 10px;
+    }
+
+    &__top-logo {
+      width: 137.752px;
+      height: 64px;
+    }
+    &__top-call,
+    &__top-mail,
+    &__top-address {
+      font-size: 14px;
+    }
+
+    &__rankings {
+      margin-bottom: 12px;
+    }
+    &__rankings-box {
+      display: block;
+    }
+    &__rankings-title {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+    &__rankings-link {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    &__links {
+      display: grid;
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 12px;
+    }
+    &__link {
+      padding: 20px 28px;
+      font-size: 14px;
+      line-height: 1.2;
+      max-height: 50px;
+
+      grid-column: span 2;
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        grid-column: span 1;
+      }
+    }
+  }
 }

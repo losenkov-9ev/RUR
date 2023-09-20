@@ -156,5 +156,142 @@
 
   .universityOverview__readMore {
     padding: 16px;
+    display: none;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__controls {
+      margin-bottom: 20px;
+      gap: 12px;
+
+      .d-button {
+        font-size: 15px;
+      }
+    }
+    &__box {
+      padding: 12px;
+      border-radius: 10px;
+    }
+    &__item {
+      padding: 12px;
+      padding-top: 16px;
+      border-radius: 7px;
+      margin-bottom: 12px;
+
+      &:not(.universityPrograms__item--subitem) {
+        border: 1px solid transparent;
+      }
+
+      &:not(.universityPrograms__item--subitem).opened {
+        border: 1px solid $accent;
+      }
+
+      &--subitem {
+        padding: 16px;
+        margin-top: 12px;
+      }
+    }
+    &__item-headBox {
+      gap: 8px;
+      max-width: 100%;
+      width: 100%;
+      justify-content: space-between;
+      padding-right: 14px;
+    }
+    &__item-headTitle {
+      font-size: 18px;
+      padding-left: 4px;
+    }
+    &__item-headCount {
+      font-size: 18px;
+    }
+    &__item-content {
+      gap: 8px;
+    }
+    &__item-contentBox {
+      gap: 8px;
+    }
+    &__item-contentItem {
+      padding: 12px 16px;
+      border-radius: 7px;
+    }
+    &__item-contentItem-title {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    &__item-contentItem-value {
+      font-size: 16px;
+    }
+
+    .universityOverview__readMore {
+      padding: 16px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      padding: 10px;
+    }
+    &__item {
+      margin-bottom: 8px;
+      padding-top: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-width: 2px;
+    }
+    &__item-headTitle {
+      font-size: 14px;
+      padding-left: 0;
+    }
+    &__item-headCount {
+      font-size: 14px;
+    }
+    &__item-headIcon {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__item-contentBox {
+      flex-direction: column;
+      gap: 8px;
+    }
+    &__item-contentItem {
+      padding: 12px 16px;
+    }
+    &__item-contentItem-title {
+      font-size: 12px;
+    }
+    &__item-contentItem-value {
+      font-size: 13px;
+    }
+    &__item-contentButton {
+      padding: 10px 16px;
+      max-width: 100%;
+      width: 100%;
+      font-size: 14px;
+    }
+    &__item-content {
+      &::before {
+        content: ' /';
+        opacity: 0;
+        line-height: 1;
+        font-size: 8px;
+      }
+    }
+    &__controls-item {
+      padding: 10px 12px;
+      font-size: 12px !important;
+      white-space: nowrap;
+    }
+    &__controls {
+      overflow-x: auto;
+      position: relative;
+    }
   }
 }

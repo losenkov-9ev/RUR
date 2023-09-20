@@ -61,7 +61,6 @@ export class SearchManager {
     this.searchList.classList.add('opened');
     this.searchWrapper.classList.add('list-opened');
     await this.delay(300);
-    this.searchButton.style.transform = 'translateX(1000px)';
   }
 
   async hideSearchList() {

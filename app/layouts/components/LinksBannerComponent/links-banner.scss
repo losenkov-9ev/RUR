@@ -63,4 +63,54 @@
   &__item-arrow {
     margin-bottom: -8px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__inner {
+      padding: 0 20px;
+      border-radius: 20px;
+      margin: 0;
+      display: block;
+    }
+    &__item {
+      padding: 24px;
+      border-radius: 20px;
+      font-size: 24px;
+      margin: 0;
+      max-width: 91%;
+      width: 100%;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__item + .linksBanner__item {
+      margin: 0;
+      margin-top: 12px;
+    }
+    &__item-content {
+      gap: 18px;
+
+      img {
+        width: 54px;
+        height: 54px;
+      }
+    }
+    &__item-arrow {
+      margin-bottom: -8px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__item {
+      padding: 20px 28px;
+    }
+    &__item-content {
+      font-size: 16px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }

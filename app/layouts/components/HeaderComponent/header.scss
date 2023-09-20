@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   padding: 12px 0;
   background: #fff;
   border-bottom: 1px solid $divider;
@@ -218,6 +218,26 @@
         svg {
           width: 18px;
           height: 18px;
+
+          path {
+            transition: all 0.3s;
+          }
+        }
+
+        &.active svg path {
+          &:first-child {
+            // 2nd path element
+            opacity: 0;
+          }
+          &:last-child {
+            // 3th path element
+            transform: translate(6px, 25px) rotate(-135deg);
+          }
+
+          &:nth-child(2) {
+            transform: translate(19px, 6px) rotate(135deg);
+            // 1st path element
+          }
         }
       }
       &--search {
@@ -244,6 +264,94 @@
   @media (max-width: $breakpoint-medium) {
     &__logo {
       width: 150px;
+    }
+  }
+}
+
+.header__mobile {
+  display: none;
+  @media (max-width: $breakpoint-large) {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    opacity: 0;
+    transform: translateY(-1000px);
+
+    transition: all 0.3s;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &-box {
+      padding: 16px;
+      border-radius: 12px;
+      background: #fff;
+      margin: 0 20px;
+      margin-top: 11px;
+      position: relative;
+      max-height: calc(var(--doc-height) - 15vh);
+      overflow: auto;
+    }
+    &-backdrop {
+      position: fixed;
+      top: 0;
+      bottom: -100px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 35, 69, 0.2);
+    }
+    &-link {
+      padding: 13px 16px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      background-color: $bg-gray;
+      display: block;
+
+      color: $text;
+      font-size: 18px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    &-accordeon {
+      .methodologyAccordeon__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+      }
+      .methodologyAccordeon__body {
+        padding: 0;
+        padding-top: 10px;
+      }
+      border-radius: 10px !important;
+      padding: 10px 16px;
+      padding-bottom: 0;
+
+      &.opened {
+        font-weight: 500;
+      }
+    }
+    &-accordeon__link {
+      padding: 6px 12px;
+      border-radius: 10px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+
+      color: #212b36;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
     }
   }
 }

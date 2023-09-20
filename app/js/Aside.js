@@ -2,7 +2,7 @@ import { Header } from './header.js';
 
 export class Aside extends Header {
   constructor(withMenu = true) {
-    super();
+    super(true);
 
     this.withMenu = withMenu;
 
@@ -16,7 +16,9 @@ export class Aside extends Header {
     this.scrollObserver.subscribe(this.headerToggleEvent.bind(this));
     this.topMargin = 20;
 
-    this.initAside();
+    if (window.innerWidth >= 991) {
+      this.initAside();
+    }
   }
 
   initAside() {
@@ -24,7 +26,7 @@ export class Aside extends Header {
     this.$aside.style.height = this.asideHeight + 'px';
 
     this.changeAsidePosition(this.topMargin);
-    this.withMenu && this.eventListeners();
+    this.withMenu && this.asideEventListeners();
   }
 
   headerToggleEvent(isScrolled) {
@@ -37,7 +39,7 @@ export class Aside extends Header {
     this.$aside.style.top = value + 'px';
   }
 
-  eventListeners() {
+  asideEventListeners() {
     this.$aside.addEventListener('click', (e) => {
       const $target = e.target.closest('[data-aside="link"]');
       if ($target) {

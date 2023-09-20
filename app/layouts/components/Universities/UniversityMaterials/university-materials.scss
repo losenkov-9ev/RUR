@@ -42,4 +42,48 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__slide {
+      padding: 6px;
+      border-radius: 10px;
+      gap: 8px;
+    }
+    &__item {
+      border-radius: 7px;
+      padding: 5px;
+      padding-right: 16px;
+    }
+    &__item-content {
+      gap: 16px;
+      font-size: 16px;
+    }
+    &__item-controls {
+      gap: 16px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    .universityGallery__title {
+      font-size: 20px;
+    }
+    &__item {
+      padding-right: 8px;
+    }
+    &__item-icon {
+      width: 30px;
+      height: 30px;
+    }
+    &__item-content {
+      font-size: 12px;
+      gap: 8px;
+      padding-right: 8px;
+    }
+    &__item-controls {
+      gap: 8px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }

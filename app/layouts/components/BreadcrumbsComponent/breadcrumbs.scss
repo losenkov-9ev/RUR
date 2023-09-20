@@ -41,4 +41,37 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    margin-top: 14px;
+    margin-bottom: 20px;
+
+    &__item {
+      font-size: 15px;
+      padding-right: 20px;
+      margin-right: 16px;
+
+      &::before {
+        width: 4px;
+        height: 4px;
+      }
+
+      &:last-of-type {
+        font-size: 14px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__item {
+      font-size: 12px;
+      margin-right: 12px;
+      padding-right: 12px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      &:last-of-type {
+        font-size: 12px;
+      }
+    }
+  }
 }

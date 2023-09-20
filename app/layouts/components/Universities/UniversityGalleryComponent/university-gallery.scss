@@ -91,4 +91,52 @@
       background-color: #97ca62;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__head {
+      margin-bottom: 20px;
+    }
+    &__arrows {
+      margin-left: 16px;
+      gap: 8px;
+
+      a:not(.swiper-button-disabled) {
+        &:active {
+          transform: translateY(1px);
+        }
+      }
+    }
+    &__arrow {
+      &:active {
+        transform: translateY(1px);
+      }
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    &__item {
+      img {
+        border-radius: 15px;
+      }
+    }
+    &__slider-pagination {
+      gap: 10px;
+      bottom: 20px;
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+      }
+      .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-large) {
+    &__item img {
+      aspect-ratio: 5 / 4;
+    }
+  }
 }

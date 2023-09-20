@@ -4,7 +4,7 @@
   }
   &__place {
     padding-left: 16px;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
   }
   &__place-title {
     color: $text;
@@ -27,12 +27,8 @@
     }
   }
   &__place-box {
-    height: 165px;
     overflow: hidden;
     transition: all 0.3s;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
   }
   &__place-description {
     color: rgba($text, 0.8);
@@ -41,10 +37,60 @@
     line-height: 120%;
   }
   .universityOverview__readMore {
-    margin-top: 15px;
+    margin-top: 0px;
   }
 
   &__place-wrapper {
     margin-bottom: 22px;
+  }
+
+  [data-location='button'].opened {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__place {
+      padding-left: 16px;
+      padding-bottom: 15px;
+    }
+    &__place-title {
+      font-size: 18px;
+      margin-bottom: 4px;
+
+      &::before {
+        left: -16px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+    &__place-box {
+      height: 165px;
+    }
+    &__place-description {
+      font-size: 16px;
+    }
+
+    &__place-wrapper {
+      margin-bottom: 22px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__place-title {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    &__place-description {
+      font-size: 12px;
+    }
+    #universityLocation__map img {
+      border-radius: 15px;
+      object-fit: cover;
+      aspect-ratio: 3 / 4;
+    }
   }
 }

@@ -3,6 +3,13 @@
     padding-top: 120px;
     margin-top: -20px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    .newsCards {
+      padding-top: 80px;
+      margin-top: -20px;
+    }
+  }
 }
 
 .newsCards {
@@ -59,5 +66,41 @@
 
   .a {
     margin-top: 40px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 60px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__arrows {
+      gap: 8px;
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      a:not(.swiper-button-disabled) {
+        &:hover {
+          svg rect {
+          }
+          svg path {
+            stroke: #fff;
+          }
+        }
+        &:active {
+          transform: translateY(1px);
+        }
+      }
+    }
+
+    .a {
+      margin-top: 40px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 40px 0;
   }
 }

@@ -47,4 +47,50 @@
     line-height: 16.8px; /* 120% */
     text-transform: uppercase;
   }
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 410px;
+    padding: 16px 16px 25px 16px;
+    border-radius: 20px;
+
+    &__image {
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    &__title {
+      height: 61px;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    &__date {
+      top: 29px;
+      left: 29px;
+      padding: 11px;
+      border-radius: 5px;
+    }
+    &__date-day {
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+    &__date-month {
+      font-size: 14px;
+      line-height: 16.8px; /* 120% */
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__title {
+      height: 48px;
+    }
+    &__title,
+    &__date-day {
+      font-size: 18px;
+    }
+    &__date-month {
+      font-size: 12px;
+    }
+    &__date {
+      padding: 10px 12px 8px 12px;
+    }
+  }
 }

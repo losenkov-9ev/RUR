@@ -1,6 +1,5 @@
 поставить карту
 добавить IntersectionObserver
-исправить открывашку в universityLocation
 исправить открывашку в UniversityPrograms
 исправить поведение в аккордеоне в UniversityPrograms
 добавить слово component в названиях папок Universities, а то я забыл

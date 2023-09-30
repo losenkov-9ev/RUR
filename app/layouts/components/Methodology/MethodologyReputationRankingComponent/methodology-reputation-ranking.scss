@@ -23,4 +23,32 @@
       margin-right: 8px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__box {
+      gap: 16px;
+      margin: 16px 0;
+    }
+    &__item {
+      padding: 5px 4px;
+      border-radius: 7px;
+
+      font-size: 16px;
+
+      &-icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 8px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      flex-direction: column;
+      gap: 5px;
+    }
+    &__item {
+      font-size: 14px;
+    }
+  }
 }

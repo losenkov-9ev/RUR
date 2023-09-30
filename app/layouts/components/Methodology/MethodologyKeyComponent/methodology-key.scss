@@ -36,4 +36,41 @@
       left: 40px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__box {
+      grid-gap: 12px;
+      margin: 16px 0;
+    }
+    &__item {
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 18px;
+      padding-left: 64px;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+        top: 28px;
+        left: 40px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &__item {
+      padding: 12px 10px;
+      padding-left: 32px;
+      font-size: 14px;
+      &::before {
+        left: 16px;
+        top: 20px;
+        transform: translateY(0);
+      }
+    }
+  }
 }

@@ -28,4 +28,31 @@
       background-color: $accent;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__list {
+      padding-left: 12px;
+      margin: 12px 0;
+    }
+
+    &__list-item + .articleLinks__list-item {
+      margin-top: 10px;
+    }
+    &__list-item {
+      padding-left: 18px;
+      font-size: 18px;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    &__list-item {
+      padding-left: 18px;
+      font-size: 16px;
+    }
+  }
 }

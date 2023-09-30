@@ -45,4 +45,62 @@
       height: 18px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    margin: 0 -20px;
+    &__box {
+      padding: 24px 20px;
+    }
+    &__select.d-page-select {
+      height: 56px;
+      border-radius: 8px;
+      border: 1px solid rgba(145, 158, 171, 0.21);
+    }
+    &__footer {
+      background-color: #f1f3f5;
+      padding: 16px;
+    }
+    &__footer-name {
+      font-size: 13px;
+      line-height: 24px;
+    }
+    &__footer-filterName {
+      font-size: 13px;
+      line-height: 24px;
+      margin-right: 50px;
+    }
+    &__footer-filterButton {
+      margin-bottom: -4px;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 295px;
+      .nice-select {
+        max-width: 100%;
+        width: 100%;
+
+        .list {
+          max-height: 200px;
+        }
+        .option {
+          padding: 8px 10px;
+        }
+      }
+      select {
+        display: none !important;
+      }
+    }
+    &__footer-filterName {
+      margin-right: 8px;
+    }
+  }
 }

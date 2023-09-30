@@ -27,4 +27,39 @@
     font-weight: 400;
     line-height: 150%;
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 48px 40px 40px 40px;
+    border-radius: 20px;
+    font-size: 22px;
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+      margin-right: 28px;
+      flex: none;
+    }
+    &__box {
+      margin-bottom: 16px;
+    }
+    &__author {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 18px;
+    font-size: 16px;
+
+    &__icon {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+    &__box {
+      margin-bottom: 16px;
+      display: block;
+    }
+    &__author {
+      font-size: 18px;
+    }
+  }
 }

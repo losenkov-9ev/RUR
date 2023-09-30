@@ -38,4 +38,28 @@
       background-color: $accent;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    height: auto;
+    padding-bottom: 30px;
+    &__item {
+      height: auto;
+      img {
+        border-radius: 20px;
+        aspect-ratio: 3 / 2;
+      }
+    }
+    &__pagination {
+      gap: 12px;
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+      }
+      .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }

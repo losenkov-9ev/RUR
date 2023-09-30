@@ -34,4 +34,36 @@
       margin-right: 8px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 10px;
+    background: $accent;
+    padding: 16px;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 20px;
+
+      span {
+        font-size: 18px;
+        padding: 0 5px;
+        height: 27px;
+        min-width: 27px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 12px;
+    font-size: 12px;
+    &__title {
+      font-size: 14px;
+    }
+  }
 }

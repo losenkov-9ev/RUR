@@ -1,4 +1,23 @@
-<div class="rankingAsideFilter">
+<div class="rankingAsideFilter-backdrop" data-filter="backdrop"></div>
+<div class="rankingAsideFilter" data-filter="wrapper">
+  <div class="rankingAsideFilter__mobileClose" data-filter="close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M18 6L6 18"
+        stroke="#CFCFCF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="#CFCFCF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
   <div class="rankingAsideFilter__title">Filter</div>
   <select id="rankingAsideFilter-year" class="rankingAsideFilter__select d-page-select page-select">
     <option value="" disabled selected>Year</option>
@@ -57,4 +76,5 @@
       Public
     </label>
   </div>
+  <button class="rankingAsideFilter__mobileButton" data-filter="close">Search</button>
 </div>

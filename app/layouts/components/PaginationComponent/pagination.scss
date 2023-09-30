@@ -40,4 +40,37 @@
       font-weight: 600;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    gap: 6px;
+    padding-top: 15px;
+
+    a.pagination__item:hover {
+      border: 1px solid $accent;
+    }
+    &__item {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__item {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+
+      font-size: 16px;
+      line-height: 24px;
+
+      &:nth-child(6) {
+        display: none;
+      }
+    }
+  }
 }

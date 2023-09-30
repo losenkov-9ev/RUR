@@ -27,4 +27,44 @@
       border-radius: 50%;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__item + .articleList__item {
+      margin-top: 24px;
+    }
+    &__item-title {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    &.dots .articleList__item-title {
+      padding-left: 25px;
+      &::before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__item + .articleList__item {
+      margin-top: 20px;
+    }
+    &__item-title {
+      font-size: 16px;
+    }
+    &.dots .articleList__item-title {
+      padding-left: 16px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
 }

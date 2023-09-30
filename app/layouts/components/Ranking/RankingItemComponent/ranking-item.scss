@@ -84,4 +84,112 @@
     font-weight: 600;
     line-height: normal;
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
+    }
+
+    &__image {
+      width: 60px;
+      height: 60px;
+      margin-right: 25px;
+    }
+    &__name {
+      font-size: 18px;
+      margin-bottom: 11px;
+    }
+    &__location {
+      margin-bottom: 11px;
+      font-size: 16px;
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin-right: 9px;
+      }
+    }
+    &__ranks {
+      gap: 12px;
+    }
+    &__ranks-item {
+      padding: 4px 6px 4px 12px;
+      border-radius: 8px;
+      gap: 8px;
+      font-size: 14px;
+    }
+    &__ranks-itemCount {
+      height: 24px;
+      padding: 0 6px;
+      border-radius: 4px;
+      font-size: 16px;
+      min-width: 24px;
+    }
+    &__ranks-itemScore {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    display: block;
+    padding: 18px;
+
+    &__image {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+    &__name {
+      margin-bottom: 8px;
+    }
+    &__location {
+      margin-bottom: 15px;
+      font-size: 14px;
+      align-items: flex-start;
+      img {
+        width: 10px;
+        height: 10px;
+        margin-top: 4px;
+        margin-right: 6px;
+      }
+    }
+    &__ranks {
+      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-gap: 5px;
+    }
+    &__ranks-item {
+      font-size: 14px;
+      display: block;
+      text-align: center;
+      .rankingItem__ranks-itemCount {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 6px;
+      }
+      &:nth-of-type(3) {
+        .rankingItem__ranks-itemCount {
+          background-color: #48c1c0;
+        }
+      }
+      &:last-of-type {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+    }
+    &__ranks-item {
+      font-size: 16px;
+
+      padding: 7px 10px 10px 10px;
+      border-radius: 8px;
+    }
+  }
 }

@@ -3,4 +3,11 @@
   .countryOverviewFilter__box {
     margin: 0 -20px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 20px;
+    .countryOverviewFilter__box {
+      margin: 0 -20px;
+    }
+  }
 }

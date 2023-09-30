@@ -50,4 +50,56 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    gap: 24px;
+    padding: 10px 8px 10px 24px;
+    margin: 0 -20px;
+    border-top: 1px solid rgba(145, 158, 171, 0.24);
+
+    &__select.d-page-select {
+      width: 40px;
+      height: 24px;
+
+      &::after {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__arrows {
+      gap: 8px;
+    }
+    &__arrow {
+      padding: 8px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    justify-content: space-between;
+    padding: 10px;
+    gap: 0;
+    select {
+      display: none;
+    }
+
+    &__select {
+      .current {
+        font-size: 14px;
+      }
+      .option {
+        padding: 4px 16px !important;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    &__arrow {
+      padding: 0;
+    }
+  }
 }

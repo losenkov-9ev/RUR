@@ -33,4 +33,41 @@
     line-height: 22px;
     width: 144px;
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 16px;
+    margin: 0 -20px;
+    border-bottom: 1px solid #f4f6f8;
+
+    &__content {
+      font-size: 16px;
+      line-height: 22px;
+
+      svg,
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__content-icon {
+      margin-right: 12px;
+      margin-bottom: -6px;
+    }
+    &__count {
+      font-size: 16px;
+      line-height: 22px;
+      width: 144px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 16px 12px;
+    &__count {
+      width: auto;
+      margin-left: 10px;
+    }
+    &__content-icon {
+      margin-right: 8px;
+    }
+  }
 }

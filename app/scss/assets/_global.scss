@@ -79,7 +79,8 @@ body {
 .news-page,
 .article-page,
 .contacts-page,
-.map-page {
+.map-page,
+.country-page {
   background-color: $bg-gray;
 }
 
@@ -102,6 +103,11 @@ body {
   .pageSearch {
     margin-bottom: 30px;
   }
+  @media (max-width: $breakpoint-large) {
+    .pageSearch {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .article-page {
@@ -121,6 +127,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: $breakpoint-large) {
+    margin: 0 -20px;
+
+    padding: 20px;
+    border-radius: 20px;
+    gap: 32px;
+  }
 }
 
 .u-aside-wrapper {
@@ -188,10 +202,18 @@ body {
 }
 
 .c-wrapper {
-  border-radius: 16px;
   background: #fff;
   margin-top: 45px;
   margin-bottom: 120px;
+  border-radius: 16px;
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 16px;
+    width: auto;
+    margin: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
 }
 
 .about-page .articleList__title {
@@ -208,6 +230,11 @@ body {
 }
 .participation-page .page-head__box {
   max-width: 715px;
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .methodologyDistribution ul {
   padding-left: 24px;
@@ -220,6 +247,12 @@ body {
   font-weight: 600;
   color: #e26b6b !important;
   text-transform: lowercase;
+
+  @media (max-width: $breakpoint-large) {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
 }
 
 .map-page .page-head {
@@ -232,6 +265,33 @@ body {
   .page-head {
     margin-bottom: 140px;
     padding-bottom: 60px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .page-head__form {
+      margin-bottom: 0px;
+    }
+    .page-head {
+      margin-bottom: 0px;
+      padding-bottom: 40px;
+    }
+  }
+}
+.home-page .linksBanner {
+  @media (max-width: $breakpoint-large) {
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+}
+.news-page .page-head {
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 20px;
+    &__title {
+      font-size: 36px;
+    }
+    .breadcrumbs {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -433,6 +493,195 @@ body {
       }
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    .breadcrumbs {
+      padding-bottom: 20px;
+    }
+
+    padding-top: 38px;
+    padding-bottom: 86px;
+
+    &__form {
+      max-width: 100%;
+
+      padding: 40px 30px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__form-title {
+      margin-bottom: 12px;
+    }
+    &__form-text {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    &__form-button {
+      font-size: 18px;
+      line-height: 24px;
+
+      padding: 16px;
+      border-radius: 8px;
+    }
+    &__form-inputBox {
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    &__form-input {
+      border-radius: 8px;
+      padding: 16px 12px;
+      font-size: 16px;
+      line-height: 24px;
+      border: 1px solid transparent;
+
+      &:focus {
+        border: 1px solid $accent;
+      }
+    }
+
+    &__contacts {
+      padding: 24px;
+      border-radius: 20px;
+      margin-top: 38px;
+
+      .footer__top-mail,
+      .footer__top-call {
+        margin-bottom: 22px;
+      }
+    }
+    &__contacts-button {
+      margin-top: 30px;
+      padding: 16px 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 24px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__benefits {
+      margin-top: 38px;
+    }
+    &__benefitsText {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+    &__benefitsBox {
+      gap: 8px;
+
+      .methodologyKey__item {
+        padding-left: 40px;
+
+        &::before {
+          left: 24px;
+        }
+      }
+    }
+
+    &__box {
+      max-width: 682px;
+    }
+
+    &__image {
+      width: 498px;
+      height: 474px;
+
+      img {
+        border-radius: 20px;
+      }
+    }
+
+    &__text {
+      font-size: 18px;
+      margin-top: 40px;
+
+      p + p {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    padding-bottom: 40px;
+    &__text {
+      margin-top: 20px;
+      font-size: 14px;
+      p + p {
+        margin-top: 8px;
+      }
+    }
+
+    &__form {
+      padding: 20px;
+    }
+    &__form-title {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    &__form-text {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    &__form-button {
+      font-size: 14px;
+    }
+    &__form-inputBox {
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    &__form-input {
+      border-radius: 8px;
+      padding: 16px 12px;
+      font-size: 14px;
+      line-height: 24px;
+      border: 1px solid transparent;
+
+      &:focus {
+        border: 1px solid $accent;
+      }
+    }
+
+    &__contacts {
+      padding: 20px;
+      margin-top: 16px;
+    }
+    &__contacts-button {
+      margin-top: 20px;
+
+      padding: 4px 12px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+
+      transition: all 0.3s;
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          transition: all 0.3s;
+        }
+      }
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+
+        svg path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
 }
 
 [data-readMore='text'].opened {
@@ -451,4 +700,45 @@ body {
 
 section {
   overflow-x: clip !important;
+}
+
+[data-fancybox-close] {
+  width: 54px;
+  height: 54px;
+  top: 0 !important;
+  right: -76px !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  background-color: $bg-gray !important;
+
+  svg {
+    width: 28px;
+    height: 28px;
+
+    path {
+      stroke: #222;
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    width: 54px;
+    height: 54px;
+    top: -76px !important;
+    right: 0px !important;
+
+    transform: scale(0.8, 0.8);
+
+    svg {
+      width: 28px;
+      height: 28px;
+
+      path {
+        stroke: #222;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    top: -56px !important;
+    transform: scale(0.6, 0.6);
+  }
 }

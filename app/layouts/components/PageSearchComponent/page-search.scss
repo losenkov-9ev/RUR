@@ -32,4 +32,28 @@
       line-height: 24px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    margin-top: -16px;
+    margin-bottom: 20px;
+    &__inputWrapper {
+      .icon {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    &__input {
+      padding: 14px 6px 14px 14px;
+      padding-left: 50px;
+      border-radius: 8px;
+
+      font-size: 14px;
+      line-height: 140%;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+  }
 }

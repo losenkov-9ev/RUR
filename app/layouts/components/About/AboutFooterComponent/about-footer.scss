@@ -7,7 +7,6 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 120%;
-    margin-bottom: 24px;
     margin-bottom: 12px;
   }
   &__box {
@@ -22,5 +21,39 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 150%;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__subtitle {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    &__box {
+      margin-bottom: 24px;
+    }
+    &__banner {
+      padding: 20px 40px;
+      border-radius: 10px;
+
+      font-size: 24px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__title {
+      font-size: 20px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__banner {
+      padding: 20px;
+      border-radius: 10px;
+
+      font-size: 16px;
+    }
   }
 }

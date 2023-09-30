@@ -20,4 +20,22 @@
       font-weight: 600;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 10px;
+    padding: 16px;
+    &__icon {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 8px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__text {
+      font-size: 14px;
+    }
+  }
 }

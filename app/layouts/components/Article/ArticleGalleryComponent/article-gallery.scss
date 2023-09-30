@@ -24,4 +24,26 @@
       border-radius: 20px;
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &__topImage {
+      height: auto;
+      margin-bottom: 32px;
+
+      img {
+        border-radius: 20px;
+        object-fit: cover;
+        aspect-ratio: 3 / 2;
+      }
+    }
+    &__bottomImages {
+      gap: 12px;
+    }
+    &__bottomImage {
+      max-height: 450px;
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
 }

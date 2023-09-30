@@ -41,15 +41,15 @@
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <div class="article-content">
-              @@include('./layouts/components/About/AboutBannerComponent/about-banner.html')
-              @@include('./layouts/components/About/AboutBenefitsComponent/about-benefits.html')
-              @@include('./layouts/components/About/AboutListComponent/about-list.html')
-              @@include('./layouts/components/About/AboutMethodology/about-methodology.html')
-              @@include('./layouts/components/About/AboutFooterComponent/about-footer.html')
+              @@include('./layouts/components/_About/AboutBannerComponent/about-banner.html')
+              @@include('./layouts/components/_About/AboutBenefitsComponent/about-benefits.html')
+              @@include('./layouts/components/_About/AboutListComponent/about-list.html')
+              @@include('./layouts/components/_About/AboutMethodology/about-methodology.html')
+              @@include('./layouts/components/_About/AboutFooterComponent/about-footer.html')
             </div>
           </div>
           <div class="u-aside" data-aside="block">
-            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+            @@include('./layouts/components/AsideComponent/aside.html', {
               "items": [
                 {
                   "link": "#aboutData",

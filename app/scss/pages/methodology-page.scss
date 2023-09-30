@@ -1,0 +1,15 @@
+.methodology-page .page-head__box {
+  max-width: 905px;
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.methodologyDistribution ul {
+  padding-left: 24px;
+
+  @media (max-width: $breakpoint-large) {
+    padding-left: 24px;
+  }
+}

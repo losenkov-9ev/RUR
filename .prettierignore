@@ -12,6 +12,7 @@ article-links.html
 article-footer.html
 country-overview.html
 about.html
+aside.html
 about-banner.html
 about-list.html
 about-methodology.html
@@ -29,7 +30,7 @@ methodology-reputation.html
 methodology-academic.html
 methodology-reputation-ranking.html
 methodology-key.html
-participation.html
+_participation.html
 participation-top.html
 participation-info.html
 participation-form.html

@@ -1,0 +1,8 @@
+.participation-page .page-head__box {
+  max-width: 715px;
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 100%;
+    width: 100%;
+  }
+}

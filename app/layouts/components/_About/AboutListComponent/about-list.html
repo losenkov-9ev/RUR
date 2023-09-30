@@ -1,0 +1,29 @@
+<div class="aboutList">
+  <h5 class="aboutList__title">Key rankings</h5>
+  @@include('../../_Article/ArticleTextComponent/article-text.html', {
+    "text": "Round University Ranking is the comprehensive system of world university rankings which includes 4 main rankings with prospectives for expansions and also sub-rankings within the 4 key rankings:"
+  })
+  <div class="aboutList__wrapper">
+    @@include('../../_Article/ArticleListComponent/article-list.html', {
+      "type": "numeric",
+      "items": [
+        {
+          "title": "1. RUR Overall Rankings",
+          "text": "Overall Ranking evaluates instituional performance by 20 indicators which are grouped in 4 dimensions. In turn each dimension of Overall ranking forms a separate ranking where 5 metrics of each 4 groups are included. The list of RUR rankings by dimensions is the following: <ul><li>Teaching Ranking;</li><li>Research Ranking;</li><li>International Diversity Ranking;</li><li>Financial Sustainability Ranking.</li></ul>"
+        },
+        {
+          "title": "2. RUR Subject Rankings",
+          "text": "The methodology of subject rankings is identical to the methodology of the overall ranking. In rankings by 6 broad subject areas we use the same 20 indicators, grouped in 4 dimension areas. What differentiate these two sets of rankings is the raw data used in each of the group. <br><br>Each of the subject rankings falls into 5 rankings: overall (20 indicators) and 4 dimension rankings (5 indicators per each ranking). <br><br>List of RUR Subject Rankings: <ul><li>Humanities</li><li>Life Sciences;</li><li>Natural Sciences;</li><li>Technical Sciences;</li><li>Social Sciences;</li><li>Medical Sciences.</li></ul>"
+        },
+        {
+          "title": "3. RUR Reputation Rankings",
+          "text": "RUR Reputation Rankings are aimed to measure universities brand, influence of a particular institution globally. This ranking assess institutions by only two indicators (teaching and research reputation) with the same weight of 50% per each indicator."
+        },
+        {
+          "title": "4. RUR Research Perfomance Ranking",
+          "text": "RUR Research Performance Ranking evaluates institution’s performance in terms of its scientific effectiveness, quality and recognition of researches conducted in certain university. The selection of scientometric indicators, some of which coincides with RUR Research sub ranking metrics, is used in this ranking. The list of indicators is presented below: <ul><li>Normalizaed citation impact;</li><li> Citation per papers;</li><li>Papers per academic and research staff;</li><li>Research reputation;</li><li>International co-authored papers.</li></ul>"
+        },
+      ]
+    })
+  </div>
+</div>

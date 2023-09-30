@@ -1,0 +1,125 @@
+@import './participation-page.scss';
+@import './methodology-page.scss';
+@import './contacts-page.scss';
+@import './ranking-page.scss';
+@import './article-page.scss';
+@import './about-page.scss';
+@import './news-page.scss';
+@import './home-page.scss';
+@import './map-page.scss';
+
+// page boxes and wrappers
+.article-content {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: $breakpoint-large) {
+    margin: 0 -20px;
+
+    padding: 20px;
+    border-radius: 20px;
+    gap: 32px;
+  }
+}
+
+.university-item {
+  border-radius: 20px;
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 20px;
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.u-aside-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 100px;
+
+  @media (max-width: $breakpoint-large) {
+    flex-direction: column;
+  }
+}
+.u-aside {
+  position: sticky;
+  top: 0;
+  transition: all 0.3s;
+  max-width: 300px;
+  width: 100%;
+
+  .a {
+    margin-bottom: 20px;
+    height: 334px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    order: -1;
+    max-width: 100%;
+    width: 100%;
+    position: static;
+    margin-top: -10px;
+
+    .a {
+      height: 69px;
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+.u-box {
+  max-width: 960px;
+  width: 100%;
+  .a {
+    height: 123px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.c-wrapper {
+  background: #fff;
+  margin-top: 45px;
+  margin-bottom: 120px;
+  border-radius: 16px;
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 16px;
+    width: auto;
+    margin: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+// other pages styles
+.university-page,
+.ranking-page,
+.news-page,
+.article-page,
+.contacts-page,
+.map-page,
+.country-page {
+  background-color: $bg-gray;
+}
+
+.participation-page,
+.contacts-page {
+  .page-head__wrapper {
+    align-items: flex-start;
+  }
+}

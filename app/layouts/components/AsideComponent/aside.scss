@@ -1,0 +1,99 @@
+.aside {
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+
+  &__title {
+    margin-bottom: 12px;
+
+    color: rgba($text, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__item {
+    padding: 10px 12px;
+    display: block;
+    border-radius: 8px;
+    background: $bg-gray;
+
+    color: $text;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+      color: $accent;
+      li {
+        color: $text;
+      }
+    }
+  }
+  &__item + .aside__item {
+    margin-top: 6px;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+  li {
+    font-size: 14px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+
+    &__title {
+      margin-bottom: 12px;
+
+      color: rgba($text, 0.8);
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &__item {
+      padding: 10px 12px;
+      display: block;
+      border-radius: 8px;
+      background: $bg-gray;
+
+      color: $text;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s;
+      &:hover {
+        color: $accent;
+        li {
+          color: $text;
+        }
+      }
+    }
+    &__item + .aside__item {
+      margin-top: 6px;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__title {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    &__item {
+      font-size: 14px;
+    }
+    .aside__item + &__item {
+      margin-top: 8px;
+    }
+  }
+}

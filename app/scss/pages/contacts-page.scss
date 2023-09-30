@@ -1,0 +1,19 @@
+.contacts-page {
+  .page-head__form {
+    margin-bottom: -230px;
+  }
+  .page-head {
+    margin-bottom: 140px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .page-head__form {
+      margin-bottom: 0px;
+    }
+    .page-head {
+      margin-bottom: 0px;
+      padding-bottom: 40px;
+    }
+  }
+}

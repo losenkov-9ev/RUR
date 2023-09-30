@@ -37,13 +37,13 @@
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <div class="article-content">
-              @@include('./layouts/components/Methodology/MethodologyReputationRankingComponent/methodology-reputation-ranking.html')
-              @@include('./layouts/components/Methodology/MethodologyKeyComponent/methodology-key.html')
+              @@include('./layouts/components/_Methodology/MethodologyReputationRankingComponent/methodology-reputation-ranking.html')
+              @@include('./layouts/components/_Methodology/MethodologyKeyComponent/methodology-key.html')
               <div class="methodologyDistribution">
                 <h4 class="methodologyAbout__title title-4">
                   The geographical distribution of the respondent's votes:
                 </h4>
-                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                   "text": "<ul><li>North America – 36%;</li><li>South and Central America – 6%;</li><li>Europe – 28%;</li><li>Asia – 20%;</li><li>Africa – 5%;</li><li>Oceania – 5%.</li></ul>"
                 })
               </div>
@@ -51,7 +51,7 @@
                 <h4 class="methodologyAbout__title title-4">
                   The distribution of respondents’ votes by subject areas:
                 </h4>
-                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                   "text": "<ul><li>Social sciences – 20%;</li><li>Engineering sciences – 20%;</li><li>Medical sciences – 19%;</li><li>Natural Sciences – 17%;</li><li>Life sciences – 14%;</li><li>Humanities – 10%.</li></ul>"
                 })
               </div>
@@ -59,7 +59,7 @@
                 <h4 class="methodologyAbout__title title-4">
                   Data sources of the reputational survey
                 </h4>
-                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                   "text": "The initial information collected through a special questionnaire, participation in which is by invitation only, lies in the basis of the reputational survey. In other words, the universities are unable to recommend external experts, as it is practiced in a number of other rankings."
                 })
               </div>
@@ -68,7 +68,7 @@
                   The respondent is asked to indicate the following information in the questionnaire:
                 </h4>
 
-                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                   "text": "<ul><li>Current university, for which he worked for or with which he has collaborated recently (however, it is not permitted to vote for your own university);</li><li>Geographic region with which the respondent is familiar to by the greatest degree (one of 13 aggregated regions);</li><li>Narrow subject category (in accordance with the scheme, 250 narrow subject categories by Web of Science Core Collection);</li><li>Narrow subject category (in accordance with the scheme, 250 narrow subject categories by Web of Science Core Collection);</li><li>Current university, for which he worked for or with which he has collaborated recently (however, it is not permitted to vote for your own university);</li></ul>"
                 })
               </div>
@@ -76,14 +76,14 @@
                 <h4 class="methodologyAbout__title title-4">
                   Respondent’s profile:
                 </h4>
-                @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+                @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                   "text": "<ul><li>The average respondent is a representative of the academic sector: faculty (72%), researchers (13%), university management (13%), PhD students (3%), and other positions (5%).</li><li>Average working experience - 17 to 20 years.</li></ul>"
                 })
               </div>
             </div>
           </div>
           <div class="u-aside" data-aside="block">
-            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+            @@include('./layouts/components/AsideComponent/aside.html', {
               "items": [
                 {
                   "link": "#aboutData",

@@ -25,41 +25,41 @@
           ]
         })
         <!-- University Top component -->
-        @@include('./layouts/components/Universities/UniversityTopComponent/university-top.html', {
+        @@include('./layouts/components/_Universities/UniversityTopComponent/university-top.html', {
           "socialMedia": true
         })
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <!-- University Overview component -->
-            @@include('./layouts/components/Universities/UniversityOverviewComponent/university-overview.html', {
+            @@include('./layouts/components/_Universities/UniversityOverviewComponent/university-overview.html', {
               withVideo: true,
             })
 
             <!-- University Mission component -->
-            @@include('./layouts/components/Universities/UniversityMissionComponent/university-mission.html', {
+            @@include('./layouts/components/_Universities/UniversityMissionComponent/university-mission.html', {
               withImage: false
             })
 
             <!-- University Gallery component -->
-            @@include('./layouts/components/Universities/UniversityGalleryComponent/university-gallery.html')
+            @@include('./layouts/components/_Universities/UniversityGalleryComponent/university-gallery.html')
 
             <!-- University Rankings component -->
-            @@include('./layouts/components/Universities/UniversityRankingsComponent/university-rankings.html')
+            @@include('./layouts/components/_Universities/UniversityRankingsComponent/university-rankings.html')
             
             <!-- University Indicators component -->
-            @@include('./layouts/components/Universities/UniversityIndicatorsComponent/university-indicators.html')
+            @@include('./layouts/components/_Universities/UniversityIndicatorsComponent/university-indicators.html')
             
             <!-- University Programs component -->
-            @@include('./layouts/components/Universities/UniversityPrograms/university-programs.html')
+            @@include('./layouts/components/_Universities/UniversityProgramsComponent/university-programs.html')
             
             <!-- University Materials component -->
-            @@include('./layouts/components/Universities/UniversityMaterials/university-materials.html')
+            @@include('./layouts/components/_Universities/UniversityMaterialsComponent/university-materials.html')
             
             <!-- University Location component -->
-            @@include('./layouts/components/Universities/UniversityLocationComponent/university-location.html')
+            @@include('./layouts/components/_Universities/UniversityLocationComponent/university-location.html')
           </div>
           <div class="u-aside" data-aside="block">
-            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+            @@include('./layouts/components/AsideComponent/aside.html', {
               "items": [
                 {
                   "link": "#universityOverview",
@@ -87,7 +87,7 @@
                 }
               ]
             })
-            @@include('./layouts/components/Universities/UniversityAsideButtonsComponent/university-aside-buttons.html')
+            @@include('./layouts/components/_Universities/UniversityAsideButtonsComponent/university-aside-buttons.html')
             <div class="a">ADS</div>
             <div class="a">ADS</div>
           </div>

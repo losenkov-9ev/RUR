@@ -1,0 +1,33 @@
+.news-page {
+  .u-aside-wrapper {
+    margin-top: 50px;
+  }
+  .u-aside {
+    .a {
+      height: 80vh;
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .u-aside-wrapper {
+      margin-top: 40px;
+    }
+    .page-head {
+      padding-bottom: 20px;
+      &__title {
+        font-size: 36px;
+      }
+      .breadcrumbs {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.news-links-banner {
+  margin-bottom: 100px;
+
+  @media (max-width: $breakpoint-large) {
+    margin-bottom: 40px;
+  }
+}

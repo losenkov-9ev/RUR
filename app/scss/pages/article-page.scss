@@ -1,0 +1,15 @@
+.article-page {
+  .u-aside-wrapper {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .u-aside .a {
+    height: 600px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .u-aside-wrapper {
+      margin-top: 40px;
+    }
+  }
+}

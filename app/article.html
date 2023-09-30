@@ -36,11 +36,11 @@
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-box" data-aside="content">
             <div class="article-content">
-              @@include('./layouts/components/Article/ArticleTextComponent/article-text.html', {
+              @@include('./layouts/components/_Article/ArticleTextComponent/article-text.html', {
                 "text": "We are delighted to announce the release of the 14th edition of the Round University Ranking (RUR), an international university ranking, on May 25, 2025. This edition marks a substantial increase in the number of participating universities. Whereas slightly over 1000 universities participated in 2022, the current year boasts an increased participation of over 1200 universities. We extend our sincere appreciation to the universities for their active collaboration and engagement. <br>Significant changes have been implemented in both the data sources utilized for the ranking and the methodology employed this year. Please see the overview of these changes below."
               })
-              @@include('./layouts/components/Article/ArticleBlockquoteComponent/article-blockquote.html')
-              @@include('./layouts/components/Article/ArticleListComponent/article-list.html', {
+              @@include('./layouts/components/_Article/ArticleBlockquoteComponent/article-blockquote.html')
+              @@include('./layouts/components/_Article/ArticleListComponent/article-list.html', {
                 "type": "numeric",
                 "items": [
                 {
@@ -57,8 +57,8 @@
                 }
                 ]
               })
-              @@include('./layouts/components/Article/ArticleGalleryComponent/article-gallery.html')
-              @@include('./layouts/components/Article/ArticleListComponent/article-list.html', {
+              @@include('./layouts/components/_Article/ArticleGalleryComponent/article-gallery.html')
+              @@include('./layouts/components/_Article/ArticleListComponent/article-list.html', {
                 "type": "dots",
                 "items": [
                 {
@@ -75,13 +75,13 @@
                 }
                 ]
               })
-              @@include('./layouts/components/Article/ArticleSliderComponent/article-slider.html')
-              @@include('./layouts/components/Article/ArticleLinksComponent/article-links.html')
-              @@include('./layouts/components/Article/ArticleFooterComponent/article-footer.html')
+              @@include('./layouts/components/_Article/ArticleSliderComponent/article-slider.html')
+              @@include('./layouts/components/_Article/ArticleLinksComponent/article-links.html')
+              @@include('./layouts/components/_Article/ArticleFooterComponent/article-footer.html')
             </div>
           </div>
           <div class="u-aside" data-aside="block">
-            @@include('./layouts/components/Universities/UniversityAsideComponent/university-aside.html', {
+            @@include('./layouts/components/AsideComponent/aside.html', {
               "items": [
                 {
                   "link": "#articleBlockquote",

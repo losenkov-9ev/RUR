@@ -1,73 +1,74 @@
 // components
-@import './components/HeaderComponent/header.scss';
-@import './components/FooterComponent/footer.scss';
+@import './components/CountriesMapComponent/countries-map.scss';
 @import './components/LinksBannerComponent/links-banner.scss';
-@import './components/NewsCardComponent/news-card.scss';
-@import './components/SearchComponent/search.scss';
 @import './components/BreadcrumbsComponent/breadcrumbs.scss';
 @import './components/PageSearchComponent/page-search.scss';
-@import './components/NewsItemComponent/news-item.scss';
 @import './components/PaginationComponent/pagination.scss';
+@import './components/PageHeadComponent/page-head.scss';
+@import './components/HeaderComponent/header.scss';
+@import './components/FooterComponent/footer.scss';
+@import './components/SearchComponent/search.scss';
+@import './components/AsideComponent/aside.scss';
+
+// News
+@import './components/_News/NewsCardComponent/news-card.scss';
+@import './components/_News/NewsItemComponent/news-item.scss';
 
 // Universities
-@import './components/Universities/UniversityTopComponent/university-top.scss';
-@import './components/Universities/UniversityOverviewComponent/university-overview.scss';
-@import './components/Universities/UniversityMissionComponent/university-mission.scss';
-@import './components/Universities/UniversityRankingsComponent/university-rankings.scss';
-@import './components/Universities/UniversityIndicatorsComponent/university-indicators.scss';
-@import './components/Universities/UniversityLocationComponent/university-location.scss';
-@import './components/Universities/UniversityAsideComponent/university-aside.scss';
-@import './components/Universities/UniversityGalleryComponent/university-gallery.scss';
-@import './components/Universities/UniversityPrograms/university-programs.scss';
-@import './components/Universities/UniversityMaterials/university-materials.scss';
-@import './components/Universities/UniversityAsideButtonsComponent/university-aside-buttons.scss';
-@import './components/Universities/UniversitySelectComponent/university-select.scss';
+@import './components/_Universities/UniversityAsideButtonsComponent/university-aside-buttons.scss';
+@import './components/_Universities/UniversityIndicatorsComponent/university-indicators.scss';
+@import './components/_Universities/UniversityMaterialsComponent/university-materials.scss';
+@import './components/_Universities/UniversityProgramsComponent/university-programs.scss';
+@import './components/_Universities/UniversityOverviewComponent/university-overview.scss';
+@import './components/_Universities/UniversityRankingsComponent/university-rankings.scss';
+@import './components/_Universities/UniversityLocationComponent/university-location.scss';
+@import './components/_Universities/UniversityMissionComponent/university-mission.scss';
+@import './components/_Universities/UniversityGalleryComponent/university-gallery.scss';
+@import './components/_Universities/UniversitySelectComponent/university-select.scss';
+@import './components/_Universities/UniversityTopComponent/university-top.scss';
 
 // Rankings
-@import './components/Ranking/RankingFilterComponent/ranking-filter.scss';
-@import './components/Ranking/RankingItemComponent/ranking-item.scss';
-@import './components/Ranking/RankingAsideFilterComponent/ranking-aside-filter.scss';
+@import './components/_Ranking/RankingAsideFilterComponent/ranking-aside-filter.scss';
+@import './components/_Ranking/RankingFilterComponent/ranking-filter.scss';
+@import './components/_Ranking/RankingItemComponent/ranking-item.scss';
 
 // Article
-@import './components/Article/ArticleTextComponent/article-text.scss';
-@import './components/Article/ArticleAccentComponent/article-accent.scss';
-@import './components/Article/ArticleBlockquoteComponent/article-blockquote.scss';
-@import './components/Article/ArticleListComponent/article-list.scss';
-@import './components/Article/ArticleGalleryComponent/article-gallery.scss';
-@import './components/Article/ArticleSliderComponent/article-slider.scss';
-@import './components/Article/ArticleLinksComponent/article-links.scss';
-@import './components/Article/ArticleFooterComponent/article-footer.scss';
+@import './components/_Article/ArticleBlockquoteComponent/article-blockquote.scss';
+@import './components/_Article/ArticleGalleryComponent/article-gallery.scss';
+@import './components/_Article/ArticleSliderComponent/article-slider.scss';
+@import './components/_Article/ArticleAccentComponent/article-accent.scss';
+@import './components/_Article/ArticleFooterComponent/article-footer.scss';
+@import './components/_Article/ArticleLinksComponent/article-links.scss';
+@import './components/_Article/ArticleTextComponent/article-text.scss';
+@import './components/_Article/ArticleListComponent/article-list.scss';
 
 // Country Overview
-@import './components/CountryOverview/CountryOverviewFilterComponent/country-overview-filter.scss';
-@import './components/CountryOverview/CountryOverviewItemComponent/country-overview-item.scss';
-@import './components/CountryOverview/CountryOverviewFooterComponent/country-overview-footer.scss';
+@import './components/_CountryOverview/CountryOverviewFilterComponent/country-overview-filter.scss';
+@import './components/_CountryOverview/CountryOverviewFooterComponent/country-overview-footer.scss';
+@import './components/_CountryOverview/CountryOverviewItemComponent/country-overview-item.scss';
 
 // About
-@import './components/About/AboutBannerComponent/about-banner.scss';
-@import './components/About/AboutBenefitsComponent/about-benefits.scss';
-@import './components/About/AboutListComponent/about-list.scss';
-@import './components/About/AboutMethodology/about-methodology.scss';
-@import './components/About/AboutFooterComponent/about-footer.scss';
+@import './components/_About/AboutBenefitsComponent/about-benefits.scss';
+@import './components/_About/AboutMethodology/about-methodology.scss';
+@import './components/_About/AboutBannerComponent/about-banner.scss';
+@import './components/_About/AboutFooterComponent/about-footer.scss';
+@import './components/_About/AboutListComponent/about-list.scss';
 
 // Methodology
-@import './components/Methodology/MethodologyTopCompoment/methodology-top.scss';
-@import './components/Methodology/MethodologyItemComponent/methodology-item.scss';
-@import './components/Methodology/MethodologyDevelopmentComponent/methodology-development.scss';
-@import './components/Methodology/MethodologySelectingComponent/methodology-selecting.scss';
-@import './components/Methodology/MethodologyAboutComponent/methodology-about.scss';
-@import './components/Methodology/MethodologyIndicatorsComponent/methodology-indicators.scss';
-@import './components/Methodology/MethodologyReputationRankingComponent/methodology-reputation-ranking.scss';
-@import './components/Methodology/MethodologyKeyComponent/methodology-key.scss';
+@import './components/_Methodology/MethodologyReputationRankingComponent/methodology-reputation-ranking.scss';
+@import './components/_Methodology/MethodologyDevelopmentComponent/methodology-development.scss';
+@import './components/_Methodology/MethodologyIndicatorsComponent/methodology-indicators.scss';
+@import './components/_Methodology/MethodologySelectingComponent/methodology-selecting.scss';
+@import './components/_Methodology/MethodologyAboutComponent/methodology-about.scss';
+@import './components/_Methodology/MethodologyItemComponent/methodology-item.scss';
+@import './components/_Methodology/MethodologyTopCompoment/methodology-top.scss';
+@import './components/_Methodology/MethodologyKeyComponent/methodology-key.scss';
 
 // Participation
-@import './components/Participation/ParticipationTopComponent/participation-top.scss';
-@import './components/Participation/ParticipationInfoComponent/participation-info.scss';
-
-// Map
-@import './components/CountriesMapComponent/countries-map.scss';
+@import './components/_Participation/ParticipationInfoComponent/participation-info.scss';
+@import './components/_Participation/ParticipationTopComponent/participation-top.scss';
 
 // sections
-@import './sections/TopSection/top.scss';
-@import './sections/BenefitsSection/benefits.scss';
 @import './sections/NewsCardsSection/news-cards.scss';
+@import './sections/BenefitsSection/benefits.scss';
+@import './sections/TopSection/top.scss';

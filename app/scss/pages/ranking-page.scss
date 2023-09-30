@@ -1,0 +1,10 @@
+.ranking-page {
+  .pageSearch {
+    margin-bottom: 30px;
+  }
+  @media (max-width: $breakpoint-large) {
+    .pageSearch {
+      margin-bottom: 0;
+    }
+  }
+}

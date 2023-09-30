@@ -1,0 +1,7 @@
+.map-page .page-head {
+  padding-bottom: 60px;
+
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 40px;
+  }
+}

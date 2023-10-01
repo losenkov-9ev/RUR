@@ -2,8 +2,8 @@
 RUR - многостраничный сайт, являлся реальным заказом на фрилансе и опубликован в публичном доступе для того чтобы показать мои навыки владения версткой, SCSS и чистым JS
 
 ## Карта сайта
-| № | Страница | Резервная ссылка | Описание |
-|:-:|:---------|:-----------------|:---------|
+| № | Страница | Резервная&nbsp;ссылка | Описание |
+|:-:|:---------|:-----------------:|:---------|
 | 1 | <a href="https://losenkov.dev/works/RUR/" target="_blank">Главная</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/" target="_blank">ссылка</a> | Страница с основными данными и функциями проекта. Здесь можно ознакомиться с общей информацией о проекте "RUR". |
 | 2 | <a href="https://losenkov.dev/works/RUR/university-extended.html" target="_blank">Университет (Расширенный)</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/university-extended.html" target="_blank">ссылка</a> | Расширенная информация о университете в проекте "RUR". Подробные данные и характеристики. |
 | 3 | <a href="https://losenkov.dev/works/RUR/university-main.html" target="_blank">Университет (Основной)</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/university-main.html" target="_blank">ссылка</a> | Основная информация о университете в проекте "RUR". Краткое описание и ключевые характеристики. |

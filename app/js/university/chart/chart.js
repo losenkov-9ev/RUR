@@ -1,10 +1,11 @@
-import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import Chart from 'chart.js/auto';
+
 import { options } from './options.js';
 import { data } from './data.js';
 
-import { Tabs } from '../../tabs.js';
-import { getRGBAColor, setRGBAColor } from '../../utils.js';
+import { getRGBAColor, setRGBAColor } from '../../utils/changeRGBA.js';
+import { Tabs } from '../../views/tabs.js';
 
 export let chartTabsInstance;
 export async function doughnutChart() {

@@ -1,34 +1,23 @@
-import { isWebp, checkPage } from './utils.js';
-import { Header } from './header.js';
-import { initArticleSlider, initNewsSlider, initTopSlider } from './sliders.js';
-import { readMore } from './readMore.js';
-import { SearchManager } from './search.js';
-import { Aside } from './Aside.js';
+import { validateParticipationForm, validateContactsForm } from './utils/validation.js';
+
+import { getScrollbarWidth } from './utils/getScrollbarWidth.js';
+import { getDocumentHeight } from './utils/getDocumentHeight.js';
+import { checkPage } from './utils/checkPage.js';
+import { readMore } from './utils/readMore.js';
+import { isWebp } from './utils/isWebp.js';
+
+import { initArticleSlider, initNewsSlider, initTopSlider } from './views/sliders.js';
+import { rankingFilter } from './views/rankingFilter.js';
+import { SearchManager } from './views/search.js';
+import { accordeon } from './views/accordeon.js';
+import { Header } from './views/header.js';
+import { Aside } from './views/Aside.js';
 
 import NiceSelect from './plugins/nice-select2.js';
-import { validateParticipationForm, validateContactsForm } from './validation.js';
 
-const doc = document.documentElement;
-const documentHeight = () => {
-  doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
-};
-
-const scrollbarWidth = () => {
-  let div = document.createElement('div');
-
-  div.style.overflowY = 'scroll';
-  div.style.width = '50px';
-  div.style.height = '50px';
-
-  document.body.append(div);
-  let scrollWidth = div.offsetWidth - div.clientWidth;
-
-  div.remove();
-  doc.style.setProperty('--scrollbar-width', `${scrollWidth}px`);
-};
 isWebp();
-documentHeight();
-scrollbarWidth();
+getDocumentHeight();
+getScrollbarWidth();
 
 const header = new Header();
 new SearchManager();
@@ -40,14 +29,7 @@ new SearchManager();
 
 document.onclick = (e) => {
   readMore(e);
-
-  if (e.target.closest('.methodologyAccordeon__head')) {
-    const $wrapper = e.target.closest('.methodologyAccordeon__item');
-    const $body = $wrapper.querySelector('.methodologyAccordeon__body');
-
-    $wrapper.classList.toggle('opened');
-    $body.style.maxHeight = $wrapper.classList.contains('opened') ? $body.scrollHeight + 'px' : 0;
-  }
+  accordeon(e);
 };
 
 document.querySelectorAll('.page-select').forEach(($s) => {
@@ -75,37 +57,7 @@ if (checkPage('home-page')) {
 } else if (checkPage('news-page')) {
   new Aside(false);
 } else if (checkPage('ranking-page')) {
-  const $backdrop = document.querySelector('[data-filter="backdrop"]');
-  const $wrapper = document.querySelector('[data-filter="wrapper"]');
-  const $button = document.querySelector('[data-filter="button"]');
-
-  const openFilter = () => {
-    $backdrop.style.display = 'block';
-    setTimeout(() => {
-      $backdrop.classList.add('opened');
-    }, 10);
-
-    $wrapper.classList.add('opened');
-    document.body.classList.add('popup-opened');
-  };
-
-  const closeFilter = () => {
-    $backdrop.classList.remove('opened');
-    setTimeout(() => {
-      $backdrop.style.display = 'none';
-    }, 300);
-
-    $wrapper.classList.remove('opened');
-    document.body.classList.remove('popup-opened');
-  };
-
-  $button.addEventListener('click', openFilter);
-  $backdrop.addEventListener('click', closeFilter);
-
-  $wrapper.addEventListener('click', (e) => {
-    e.target.closest('[data-filter="close"]') && closeFilter();
-  });
-
+  rankingFilter();
   new Aside(false);
 } else if (checkPage('article-page')) {
   new Aside(true);

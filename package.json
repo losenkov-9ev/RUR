@@ -9,7 +9,8 @@
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",
-		"svgSprive": "gulp svgSpriteTask"
+		"svgSprive": "gulp svgSpriteTask",
+		"lint:styles": "stylelint ./app/**/*.scss"
 	},
 	"author": "FLS",
 	"license": "ISC",
@@ -63,6 +64,8 @@
 		"gulp-zip": "latest",
 		"inputmask": "^5.0.7",
 		"sass": "latest",
+		"stylelint": "^15.10.3",
+		"stylelint-config-standard-scss": "^11.0.0",
 		"swiper": "^8.3.2",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",

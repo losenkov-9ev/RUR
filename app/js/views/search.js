@@ -32,11 +32,11 @@ export class SearchManager {
   }
 
   async openSearch() {
-    document.body.classList.add('popup-opened');
     this.isOpened = true;
 
     this.searchWrapper.style.display = 'block';
     await this.delay(0);
+    document.body.classList.add('popup-opened');
     this.searchWrapper.classList.remove('closed');
     await this.delay(300);
     this.searchWrapper.querySelector('.search__field').classList.remove('closed');

@@ -1,7 +1,0 @@
-поставить карту
-добавить IntersectionObserver
-исправить открывашку в UniversityPrograms
-исправить поведение в аккордеоне в UniversityPrograms
-подключить style-lint
-сдлелать красивые дропдауны в select'ах
-отрефакторить js

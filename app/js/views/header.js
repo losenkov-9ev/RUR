@@ -1,5 +1,5 @@
-import { popover } from './utils.js';
-import { ScrollObserver } from './ScrollObserver.js';
+import { popover } from '../views/popover.js';
+import { ScrollObserver } from '../utils/ScrollObserver.js';
 
 export class Header {
   constructor(isCalledByExtendedClass) {

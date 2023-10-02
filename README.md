@@ -30,3 +30,8 @@ ___
 | 14 | <a href="https://losenkov.dev/works/RUR/_participation.html" target="_blank">Участие</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/_participation.html" target="_blank">ссылка</a> | Информация о возможностях участия в проекте |
 | 15 | <a href="https://losenkov.dev/works/RUR/participation-form.html" target="_blank">Участие&nbsp;(форма)</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/participation-form.html" target="_blank">ссылка</a> | Форма для участия в проекте "RUR". Заполните данные и примите участие в исследованиях и оценках университетов. |
 | 16 | <a href="https://losenkov.dev/works/RUR/contacts.html" target="_blank">Контакты</a> | <a href="https://losenkov-9ev.github.io/RUR/dist/contacts.html" target="_blank">ссылка</a> | Свяжитесь с нами через контактную информацию. Вопросы, предложения и обратная связь. |
+
+## Контакты
+Свызаться со мной:
+* [Личный Сайт](https://losenkov.dev/)
+* [Telegram](https://t.me/losenkov_dev/)

@@ -3,8 +3,12 @@
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -20px;
-  border-bottom: 1px solid #f4f6f8;
+  background-color: #fff;
+  border: none;
+
+  & + & {
+    margin-top: 5px;
+  }
 
   &__content {
     display: flex;

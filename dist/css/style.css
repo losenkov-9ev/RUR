@@ -2580,6 +2580,21 @@ section {
   }
 }
 
+.c-wrapper {
+  padding-bottom: 1.35417vmax;
+}
+
+.map-country {
+  padding: 0 0.3125vmax;
+  background-color: #f1f3f5;
+  border-radius: 0.52083vmax;
+}
+@media (max-width: 992px) {
+  .map-country {
+    background-color: transparent;
+  }
+}
+
 .linksBanner__inner {
   display: flex;
   justify-content: space-between;
@@ -7420,9 +7435,6 @@ section {
   }
 }
 
-.countryOverviewFilter {
-  margin: 0 -1.04167vmax;
-}
 .countryOverviewFilter__box {
   padding: 1.25vmax 1.04167vmax;
   display: flex;
@@ -7470,7 +7482,7 @@ section {
 }
 @media (max-width: 992px) {
   .countryOverviewFilter {
-    margin: 0 -20px;
+    margin: 0 -24px;
   }
   .countryOverviewFilter__box {
     padding: 24px 20px;
@@ -7533,15 +7545,15 @@ section {
   align-items: center;
   gap: 1.25vmax;
   padding: 0.52083vmax 0.41667vmax 0.52083vmax 1.25vmax;
-  margin: 0 -1.04167vmax;
-  border-top: 1px solid rgba(145, 158, 171, 0.24);
+  border-top: none;
+  margin-top: 0px;
 }
 .countryOverviewFooter__select.d-page-select {
   width: 2.08333vmax;
   padding: 0;
   height: 1.25vmax;
   border-radius: 0;
-  background-color: #fff;
+  background-color: transparent;
   margin: 0;
   color: #212b36;
 }
@@ -7628,8 +7640,11 @@ section {
   padding: 0.83333vmax;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -1.04167vmax;
-  border-bottom: 1px solid #f4f6f8;
+  background-color: #fff;
+  border: none;
+}
+.countryOverviewItem + .countryOverviewItem {
+  margin-top: 0.26042vmax;
 }
 .countryOverviewItem__content {
   display: flex;

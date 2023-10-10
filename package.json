@@ -9,8 +9,7 @@
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",
-		"svgSprive": "gulp svgSpriteTask",
-		"lint:styles": "stylelint ./app/**/*.scss"
+		"svgSprive": "gulp svgSpriteTask"
 	},
 	"author": "FLS",
 	"license": "ISC",

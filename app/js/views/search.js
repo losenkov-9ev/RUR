@@ -3,12 +3,15 @@ export class SearchManager {
     this.isOpened = false;
 
     this.searchWrapper = document.querySelector('[data-search="wrapper"]');
-    this.searchList = this.searchWrapper.querySelector('[data-search="list"]');
-    this.searchButton = this.searchWrapper.querySelector('[data-search="searchButton"]');
-    this.searchOpenButton = document.querySelector('[data-search="open"]');
-    this.searchInput = this.searchWrapper.querySelector('[data-search="input"]');
 
-    this.init();
+    if (this.searchWrapper) {
+      this.searchList = this.searchWrapper.querySelector('[data-search="list"]');
+      this.searchButton = this.searchWrapper.querySelector('[data-search="searchButton"]');
+      this.searchOpenButton = document.querySelector('[data-search="open"]');
+      this.searchInput = this.searchWrapper.querySelector('[data-search="input"]');
+
+      this.init();
+    }
   }
 
   init() {

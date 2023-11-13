@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Admin-main</title>
+
+  <meta name="description" content="..." />
+
+  <!-- meta for IOS -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
+  <link rel="shortcut icon" href="images/global/favicon.svg" type="image/x-icon" />
+</head>
+
+  <body class="admin-page admin-main">
+    <div class="wrapper">
+      <!-- Header component -->
+      <header class="header">
+  <div class="header__inner container">
+    <a href="#" class="header__logo">
+      <img src="images/global/logo.png" alt="logo" />
+    </a>
+    <nav class="header__menu">
+      <a href="#" class="header__menu-link"><span>Profiles Data</span></a>
+      <a href="#" class="header__menu-link"><span>Ranking Data</span></a>
+      <a href="#" class="header__menu-link"><span>Caveat</span></a>
+      <a href="#" class="header__menu-link"><span>Contact Persons</span></a>
+      <a href="#" class="header__menu-link"><span>Review, print & submit</span></a>
+      <a href="#" class="header__menu-link"><span>Help & Support</span></a>
+      <button
+        class="header__menu-link header__menu-link--search"
+        data-search="open"
+        data-header="close"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 15.75L12.4875 12.4875"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button class="header__menu-link header__menu-link--logout">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.75 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V3.75C2.25 3.35218 2.40804 2.97064 2.68934 2.68934C2.97064 2.40804 3.35218 2.25 3.75 2.25H6.75"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 12.75L15.75 9L12 5.25"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 9H6.75"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button class="header__menu-link header__menu-link--burger" data-burger="open">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.25 9H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 4.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 13.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="header__mobile">
+  <div class="header__mobile-backdrop" data-header="close"></div>
+  <div class="header__mobile-box">
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        Rankings
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          About RUR Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">Universities</a>
+    <div class="header__mobile-accordeon header__mobile-link methodologyAccordeon__item">
+      <div class="methodologyAccordeon__head">
+        World Map
+        <div class="methodologyAccordeon__toggler">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+            <path
+              d="M21.25 14L16 19.25L10.75 14"
+              stroke="#2B8CD9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="methodologyAccordeon__body">
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings Overview
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World University Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Dimension Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Subject Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Country Rankings
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Rankings by Indicators
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Reputation Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Academic Ranking
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          Methodology
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a href="#" class="header__mobile-accordeon__link" data-header="close">
+          World Map
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 8.0625L14.4375 12L10.5 15.9375"
+              stroke="#2B8CD9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="header__mobile-link" data-header="close">News</a>
+    <a href="#" class="header__mobile-link" data-header="close">About us</a>
+    <a href="#" class="header__mobile-link" data-header="close">Contacts</a>
+  </div>
+</div>
+
+      <div class="search closed" data-search="wrapper">
+  <div class="search-overlay" data-search="close"></div>
+  <div class="search__inner container">
+    <div class="search__field closed">
+      <div class="search__field-box">
+        <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
+        <input
+          type="text"
+          class="search__field-input"
+          data-search="input"
+          placeholder="Find University"
+        />
+        <div class="search__field-controls">
+          <div class="search__field-select searchSelect" data-search="selectWrapper">
+            <div class="searchSelect__button" data-search="selectButton">
+              Search
+              <div class="searchSelect__button-value">
+                <span>Everywhere</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 7.5L6 4.5L3 7.5"
+                    stroke="#2B8CD9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="searchSelect__dropdown">
+              <div class="searchSelect__item active" data-search="selectItem">Everywhere</div>
+              <div class="searchSelect__item" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item" data-search="selectItem">News</div>
+            </div>
+          </div>
+          <div class="search__field-button" data-search="searchButton">Search</div>
+        </div>
+      </div>
+      <div class="search__field-close" data-search="close">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="38" height="38" rx="8" fill="white" />
+          <path
+            d="M23.5 14.5L14.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14.5 14.5L23.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="search__list" data-search="list">
+      <div class="search__list-wrapper">
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="content"></div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

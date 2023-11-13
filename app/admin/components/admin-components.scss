@@ -1,0 +1,5 @@
+.admin-page {
+  @import './HeaderLoginComponent/admin-header-login.scss';
+  @import './LoginDefaultInputComponent/login-default-input.scss';
+  @import './LoginPasswordInputComponent/login-password-input.scss';
+}

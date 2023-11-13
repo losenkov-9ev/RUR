@@ -10,7 +10,7 @@ import { Tabs } from '../views/tabs.js';
 
 import { Fancybox } from '@fancyapps/ui';
 
-export const initUniversity = () => {
+export const init = () => {
   if (checkPage('university-main-page') || checkPage('university-extended-page')) {
     doughnutChart();
     const $rankings = document.querySelector('[data-university="rankings"]');

@@ -2,6 +2,7 @@ import { validateParticipationForm, validateContactsForm } from './utils/validat
 
 import { getScrollbarWidth } from './utils/getScrollbarWidth.js';
 import { getDocumentHeight } from './utils/getDocumentHeight.js';
+import { loadModule } from './utils/loadModule.js';
 import { checkPage } from './utils/checkPage.js';
 import { readMore } from './utils/readMore.js';
 import { isWebp } from './utils/isWebp.js';
@@ -24,7 +25,8 @@ new SearchManager();
 
 // header paddings
 ['.content', '.search'].forEach((selector) => {
-  document.querySelector(selector).style.paddingTop = header.headerHeight + 'px';
+  const $hItem = document.querySelector(selector);
+  $hItem && ($hItem.style.paddingTop = header.headerHeight + 'px');
 });
 
 document.onclick = (e) => {
@@ -41,19 +43,6 @@ document.querySelectorAll('.page-select').forEach(($s) => {
 if (checkPage('home-page')) {
   initTopSlider();
   initNewsSlider();
-} else if (checkPage('university-page')) {
-  async function loadUniversity() {
-    try {
-      const universityModule = await import('./university/university.js');
-      const initUniversityFn = universityModule.initUniversity;
-
-      initUniversityFn();
-    } catch (error) {
-      console.error('Ошибка при загрузке модуля:', error);
-    }
-  }
-
-  loadUniversity();
 } else if (checkPage('news-page')) {
   new Aside(false);
 } else if (checkPage('ranking-page')) {
@@ -66,4 +55,28 @@ if (checkPage('home-page')) {
   validateParticipationForm();
 } else if (checkPage('contacts-page')) {
   validateContactsForm();
+
+  // асинхронная загрузка js модулей (исправить по DRY)
+} else if (checkPage('university-page')) {
+  (async function () {
+    try {
+      const _module = await import('./university/university.js');
+      const initModuleFn = _module.init;
+
+      initModuleFn();
+    } catch (error) {
+      console.error('Ошибка при загрузке модуля:', error);
+    }
+  })();
+} else if (checkPage('admin-page')) {
+  (async function () {
+    try {
+      const _module = await import('../admin/js/admin-main.js');
+      const initModuleFn = _module.init;
+
+      initModuleFn();
+    } catch (error) {
+      console.error('Ошибка при загрузке модуля:', error);
+    }
+  })();
 }

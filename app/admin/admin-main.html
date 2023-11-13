@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-main"})
+  <body class="admin-page admin-main">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content"></div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

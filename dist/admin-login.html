@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Admin-login</title>
+
+  <meta name="description" content="..." />
+
+  <!-- meta for IOS -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
+  <link rel="shortcut icon" href="images/global/favicon.svg" type="image/x-icon" />
+</head>
+
+  <body class="admin-page admin-login">
+    <div class="wrapper">
+      <!-- Header component -->
+      <header class="header">
+  <div class="header__inner container">
+    <a href="#" class="header__logo">
+      <img src="images/global/logo.png" alt="logo" />
+    </a>
+    <a href="#" class="header__menu-link"><span>Help & Support</span></a>
+  </div>
+  <div data-burger="open"></div>
+</header>
+<div class="header__mobile"></div>
+
+      <div class="content">
+        <div class="adminLogin" data-login="wrapper">
+  <div class="adminLogin__inner container">
+    <div class="adminLogin__box" data-login="main">
+      <h4 class="adminLogin__title title-4">Log in to the system</h4>
+      <div class="adminLogin__info">
+        You can get a login and password by leaving a request on our <a href="#">website</a> or by
+        writing to the mail <a href="mailto:info@roundranking.com">info@roundranking.com</a>
+      </div>
+      <div class="adminLogin__inputBox">
+        <div class="loginDefaultInput" data-input="custom">
+  <input type="text" placeholder="Username" />
+  <label>Username</label>
+  <div class="loginDefaultInput-errorMessage">You didn't fill in the field</div>
+</div>
+
+        <div class="loginDefaultInput loginPasswordInput" data-input="custom">
+  <input type="password" placeholder="Password" />
+  <label>Password</label>
+  <div class="loginPasswordInput__toggleVisibility" data-input="toggleVisibility">
+    <img class="show" src="images/icons/show-password.svg" alt="" />
+    <img class="hide" src="images/icons/hide-password.svg" alt="" />
+  </div>
+  <div class="loginDefaultInput-errorMessage">You didn't fill in the field</div>
+</div>
+
+      </div>
+      <button class="adminLogin__button d-button" data-login="button">Log in</button>
+      <a href="#" class="adminLogin__forgot" data-login="forgot">Forgot your password?</a>
+    </div>
+    <div class="adminLogin__box" data-login="recovery">
+      <a href="#" class="adminLogin__goBack" data-login="back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 4L6 8L10 12" stroke="#2B8CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back
+      </a>
+      <h4 class="adminLogin__title title-4">Password Recovery</h4>
+      <div class="adminLogin__info">
+        Leave your email and we will send you a link to restore access
+      </div>
+      <div class="adminLogin__inputBox">
+        <div class="loginDefaultInput" data-input="custom">
+  <input type="text" placeholder="E-mail" />
+  <label>E-mail</label>
+  <div class="loginDefaultInput-errorMessage">You didn't fill in the field</div>
+</div>
+
+      </div>
+      <button class="adminLogin__button d-button" data-login="button">Recover Password</button>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+.loginDefaultInput {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  &.loginDefaultInput-error {
+    padding-bottom: 22px;
+    &:hover::before {
+      opacity: 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: transparent;
+    border-radius: 8px;
+
+    border: 1px solid $accent;
+    opacity: 0;
+    transition: all 0.1s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  input {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(145, 158, 171, 0.08);
+    border: none;
+    padding: 16px 12px;
+    color: rgba(#212b36, 0) !important;
+    font-size: 0;
+    transition: all 0.1s;
+    border: 2px solid transparent;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &.loginDefaultInput-error input {
+    background: rgba(255, 86, 48, 0.08);
+  }
+
+  input,
+  label {
+    color: #919eab;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    user-select: none;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+
+  &.loginDefaultInput-error label {
+    transform: translateY(-100%);
+  }
+
+  input:focus {
+    border: 2px solid $accent;
+  }
+  &.loginDefaultInput-error input:focus {
+    border: 2px solid transparent;
+  }
+
+  input:focus,
+  input.loginDefaultInput-field {
+    color: rgba(#212b36, 1) !important;
+    font-size: 16px;
+    padding-bottom: 8px;
+    padding-top: 24px;
+  }
+
+  input:focus + label,
+  input.loginDefaultInput-field + label {
+    color: #212b36;
+    font-size: 12px;
+    transform: translate(0, 0);
+    top: 9px;
+    line-height: 100%;
+  }
+
+  &.loginDefaultInput-error {
+    input:focus + label,
+    input.loginDefaultInput-field + label {
+      color: #ff5630;
+    }
+  }
+
+  .loginDefaultInput-errorMessage {
+    opacity: 0;
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    height: 18px;
+    color: #ff5630;
+    transition: opacity 0.3s;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  &.loginDefaultInput-error .loginDefaultInput-errorMessage {
+    font-size: 12px;
+    opacity: 1;
+  }
+}

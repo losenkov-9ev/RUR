@@ -122,4 +122,82 @@
     font-size: 12px;
     opacity: 1;
   }
+
+  @media (max-width: $breakpoint-large) {
+    &.loginDefaultInput-error {
+      padding-bottom: 22px;
+    }
+
+    &::before {
+      right: 0px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      border-radius: 8px;
+
+      border: 1px solid $accent;
+    }
+
+    input {
+      border-radius: 8px;
+      padding: 16px 12px;
+      border: 2px solid transparent;
+    }
+
+    input,
+    label {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    label {
+      left: 12px;
+    }
+
+    input:focus {
+      border: 2px solid $accent;
+    }
+    &.loginDefaultInput-error input:focus {
+      border: 2px solid transparent;
+    }
+
+    input:focus,
+    input.loginDefaultInput-field {
+      font-size: 16px;
+      padding-bottom: 8px;
+      padding-top: 24px;
+    }
+
+    input:focus + label,
+    input.loginDefaultInput-field + label {
+      font-size: 12px;
+      top: 9px;
+    }
+
+    .loginDefaultInput-errorMessage {
+      left: 8px;
+      height: 18px;
+      line-height: 18px;
+    }
+    &.loginDefaultInput-error .loginDefaultInput-errorMessage {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__inputBox {
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    input,
+    label {
+      font-size: 14px;
+      line-height: 150%;
+
+      &::placeholder {
+        line-height: 150%;
+        font-size: 14px;
+      }
+    }
+  }
 }

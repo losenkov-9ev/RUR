@@ -1,0 +1,30 @@
+.rankingDataTableItem {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 0 16px;
+
+  &.subitem {
+    margin-left: 32px;
+  }
+  & + .rankingDataTableItem {
+    margin-top: 5px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 7px;
+    padding: 0 16px;
+
+    &.subitem {
+      margin-left: 32px;
+    }
+    & + .rankingDataTableItem {
+      margin-top: 5px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 0;
+    &.subitem {
+      margin: 0;
+    }
+  }
+}

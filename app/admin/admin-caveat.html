@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-Caveat"})
+  <body class="admin-page admin-caveat-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Caveat
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  These are statements about data that may need explanation or further clarification. This is not a requirement, but <br>it is an opportunity for you to provide statements that will help users better understand the data you are <br>providing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="admin-box">
+            @@include('./components/_Caveat/CaveatNotesComponent/caveat-notes.html')
+          </div>
+          <div class="admin-box">
+            @@include('./components/_Caveat/CaveatTableComponent/caveat-table.html')
+          </div>
+          <div class="admin-box">
+            @@include('./components/_Caveat/CaveatStatementComponent/caveat-statement.html')
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

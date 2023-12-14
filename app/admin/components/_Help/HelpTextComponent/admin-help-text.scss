@@ -1,0 +1,237 @@
+.adminHelpText {
+  padding-top: 30px;
+  padding-right: 4px;
+  position: relative;
+  height: auto;
+  transition: all 0.3s;
+
+  color: #222;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  .rankingDataItem__head {
+    padding-top: 0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    display: block;
+  }
+  .rankingDataItem__head-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.opened {
+    height: 950px;
+  }
+  overflow: hidden;
+
+  &__paragraph {
+    margin-top: 12px;
+  }
+  &__headBox {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  &__download {
+    padding: 10px 21px;
+    border-radius: 8px;
+    background: #f4f6f8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: -6px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  &__inner {
+    max-height: 900px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 16px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(#637381, 0.48);
+      border-radius: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(#637381, 0.7);
+    }
+  }
+
+  &__column {
+    display: flex;
+    gap: 32px;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    border-bottom: 1px solid rgba(202, 208, 215, 0.5);
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+  &__column-title {
+    width: 25%;
+    flex: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 27px */
+  }
+  &__column-content {
+    width: 75%;
+    p {
+      margin-bottom: 8px;
+    }
+    ul {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding-top: 30px;
+    padding-right: 4px;
+    font-size: 18px;
+
+    .rankingDataItem__head {
+    }
+    .rankingDataItem__head-inner {
+    }
+    &.opened {
+      height: 950px;
+    }
+
+    &__paragraph {
+      margin-top: 12px;
+    }
+    &__headBox {
+      gap: 24px;
+    }
+    &__download {
+      padding: 10px 21px;
+      border-radius: 8px;
+      gap: 6px;
+
+      font-size: 16px;
+      margin-bottom: -6px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__inner {
+      max-height: 900px;
+      padding-right: 16px;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+      }
+    }
+
+    &__column {
+      gap: 32px;
+      padding-bottom: 24px;
+      padding-top: 24px;
+      border-bottom: 1px solid rgba(202, 208, 215, 0.5);
+    }
+    &__column-title {
+      width: 25%;
+      font-size: 18px;
+    }
+    &__column-content {
+      p {
+        margin-bottom: 8px;
+      }
+      ul {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 16px;
+    padding-right: 4px;
+
+    &__download {
+      display: none;
+
+      &.mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 10px;
+        font-size: 10px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &__paragraph {
+      font-size: 12px;
+      line-height: 150%;
+      margin-top: 8px;
+    }
+    &__column {
+      flex-direction: column;
+      gap: 12px;
+      max-width: 100%;
+      width: 100%;
+    }
+    &__column-title {
+      gap: 17px;
+      max-width: 100%;
+      width: 100%;
+      font-size: 16px;
+    }
+    &__column-content {
+      max-width: 100%;
+      width: 100%;
+      font-size: 14px;
+      line-height: 150%;
+
+      ul {
+        padding-left: 24px;
+      }
+    }
+  }
+}

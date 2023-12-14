@@ -4,7 +4,7 @@ import { locationToggler } from './locationToggler.js';
 import { checkPage } from '../utils/checkPage.js';
 import { doughnutChart } from './chart/chart.js';
 
-import { popover } from '../views/popover.js';
+import { Popover } from '../views/popover.js';
 import { Aside } from '../views/Aside.js';
 import { Tabs } from '../views/tabs.js';
 
@@ -15,7 +15,7 @@ export const init = () => {
     doughnutChart();
     const $rankings = document.querySelector('[data-university="rankings"]');
 
-    popover({
+    new Popover({
       $mainArray: $rankings.querySelectorAll(
         '.universityRankings__row:not(.universityRankings__row--head)',
       ),

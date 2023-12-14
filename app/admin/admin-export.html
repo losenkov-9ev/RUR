@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-export" })
+  <body class="admin-page admin-ranking-data admin-export-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Review Ranking Data Section
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          @@include('./components/ExportComponent/admin-export.html')
+        </div>
+        <div class="container">
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-1.png",
+            "title": "Overall Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-2.png",
+            "title": "Humanities Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-3.png",
+            "title": "Life Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-4.png",
+            "title": "Medical Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-5.png",
+            "title": "Natural Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-6.png",
+            "title": "Social Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item-filled.html', {
+            "icon": "@img/icons/admin-ranking/item-7.png",
+            "title": "Technical Sciences Data"
+          })
+        </div>
+      </div>
+      @@include('./components/_Modals/SubmitModalComponent/submit-modal.html')
+      @@include('./components/_Modals/UnlockModalComponent/unlock-modal.html')
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

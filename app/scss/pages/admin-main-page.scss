@@ -1,0 +1,29 @@
+.admin-main {
+  .adminMain__box {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .adminMain__box {
+      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      padding-bottom: 100px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    .adminMain__box {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      padding-bottom: 60px;
+    }
+  }
+}

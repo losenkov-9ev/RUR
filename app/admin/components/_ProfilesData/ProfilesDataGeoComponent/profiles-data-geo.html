@@ -1,0 +1,28 @@
+<div class="profilesDataGeo admin-box-item">
+  <h6 class="profilesDataDescription__title admin-box-item-title">Geolocation of buildings</h6>
+  <p class="profilesDataDescription__text">You can add several buildings and branches</p>
+  
+  <div class="profilesDataGeo__box profilesDataBrief__box">
+    <div class="profilesDataBrief__column">
+      @@include('../../_DataUI/DataInputComponent/data-input.html', {
+        "tip": "Title",
+        "counter": "",
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, totam?"
+      })
+    </div>
+    <div class="profilesDataBrief__column">
+      @@include('../../_DataUI/DataInputComponent/data-input.html', {
+        "tip": "Geolocation Coordinates",
+        "counter": "",
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, totam?"
+      })
+    </div>
+  </div>
+  <button class="profilesDataGeo__add">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 3.75V14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.75 9H14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Add a field
+  </button>
+</div>

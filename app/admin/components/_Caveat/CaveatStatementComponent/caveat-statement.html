@@ -1,0 +1,21 @@
+<div class="caveatStatement">
+  <h4 class="caveatStatement__title title-4">Caveat Statement</h4>
+  <p class="caveatStatement__text">In English. Maximum characters: 2000.</p>
+
+  <div class="caveatStatement__editor">
+    <div id="editor"></div>
+  </div>
+  <div class="caveatStatement__counter">
+    <div class="caveatStatement__counter-item">Characters Left: <span data-caveat-counter="characters">2000</span></div>
+    <div class="caveatStatement__counter-item">Upload file: <span data-caveat-counter="file">0</span></div>
+  </div>
+  @@include('../../_DataUI/DataUploadComponent/data-upload-large.html', {
+    "type": "doc",
+    "text": "Drag and drop files here or click to upload.",
+    "label": "Allowed *pdf, *.doc, *.png, <br>Max size of 30 MB"
+  })
+  <button class="caveatStatement__button d-button">
+    Add New Caveat Statement
+  </button>
+</div>
+

@@ -1,0 +1,33 @@
+.profilesDataBrief {
+  &__box {
+    display: flex;
+    gap: 40px;
+  }
+  &__column {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__box {
+      gap: 16px;
+    }
+    &__column {
+      gap: 14px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      flex-direction: column;
+      gap: 12px;
+    }
+    &__column {
+      gap: 12px;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="modal micromodal-slide" id="submit-modal" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container modal__form-wrapper" role="dialog" aria-modal="true">
+      <form class="modal__form" data-form="modal">
+        <img class="modal__form-icon" src="@img/icons/modal-info.svg" alt="icon" />
+        <div class="modal__form-head">
+          <h4 class="modal__form-title title-4">Data Submission</h4>
+          <p class="modal__form-text">
+            After submitting the data further updates in “Ranking Data” section will be unavailable.
+          </p>
+        </div>
+        <div class="modal__form-box">
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Overall" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Humanities" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Life Sciences" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Medical Sciences" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Natural Sciences" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Social Sciences" })
+          @@include('../SubmitModalItemComponent/submit-modal-item.html', { "title": "Technical Sciences" })
+        </div>
+        <button class="modal__form-button d-button" data-micromodal-close>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

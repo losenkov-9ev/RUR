@@ -1,0 +1,46 @@
+.submitModalItem {
+  border-radius: 10px;
+  background: #f4f6f8;
+  padding: 16px;
+  &__title {
+    color: #222;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+  &__checkWrapper {
+    padding: 8px;
+    padding-top: 10px;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  &__checkWrapper + .submitModalItem__checkWrapper {
+    margin-top: 8px;
+  }
+
+  &:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 10px;
+    padding: 16px;
+    &__title {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    &__checkWrapper {
+      padding: 8px;
+      padding-top: 10px;
+      border-radius: 6px;
+    }
+
+    &__checkWrapper + .submitModalItem__checkWrapper {
+      margin-top: 8px;
+    }
+  }
+}

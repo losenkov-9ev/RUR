@@ -74,4 +74,77 @@
       margin-top: -1px;
     }
   }
+
+  [data-login='recovery'] .d-button {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    height: calc(var(--doc-height) - 100px);
+    &__inner {
+    }
+    &__box {
+      max-width: 629px;
+      padding: 40px 30px;
+      border-radius: 20px;
+    }
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__info {
+      font-size: 16px;
+    }
+
+    &__inputBox {
+      margin: 24px 0;
+      gap: 20px;
+    }
+
+    &__button {
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    &__forgot {
+      font-size: 16px;
+    }
+    &__goBack {
+      font-size: 16px;
+      gap: 4px;
+      margin-bottom: 12px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-top: -1px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      padding: 24px 16px;
+    }
+    &__inputBox {
+      margin: 20px 0;
+      gap: 12px;
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 8px;
+    }
+    &__info {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &__forgot {
+      font-size: 12px;
+    }
+
+    &__goBack {
+      font-size: 14px;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+  }
 }

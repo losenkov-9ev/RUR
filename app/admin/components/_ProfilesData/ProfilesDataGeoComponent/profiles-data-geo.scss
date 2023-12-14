@@ -1,0 +1,68 @@
+.profilesDataGeo {
+  &__box {
+    margin-bottom: 12px;
+  }
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222 !important;
+
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+
+    border-radius: 10px;
+    border: 1px dashed rgba(145, 158, 171, 0.48);
+    background-color: transparent;
+    transition: all 0.3s;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+      margin-top: -2px;
+
+      path {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      border: 1px solid $accent;
+      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+      svg path {
+        stroke: $accent;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__box {
+      margin-bottom: 12px;
+    }
+    &__add {
+      padding: 20px;
+
+      border-radius: 10px;
+      border: 1px dashed rgba(145, 158, 171, 0.48);
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+        margin-top: -2px;
+      }
+      &:hover {
+        border: 1px solid $accent;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    &__add {
+      padding: 16px 20px;
+      font-size: 14px;
+    }
+  }
+}

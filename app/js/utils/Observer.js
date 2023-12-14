@@ -1,4 +1,4 @@
-export class ScrollObserver {
+export class Observer {
   constructor() {
     this.listeners = [];
   }
@@ -11,9 +11,9 @@ export class ScrollObserver {
     this.listeners = this.listeners.filter((l) => l !== listener);
   }
 
-  notify(isScrolled) {
+  notify(notification) {
     this.listeners.forEach((listener) => {
-      listener(isScrolled);
+      listener(notification);
     });
   }
 }

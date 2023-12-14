@@ -1,0 +1,119 @@
+.adminHelpForm {
+  display: flex;
+  align-items: flex-start;
+  padding: 60px;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 145px;
+  border-radius: 20px;
+  background: linear-gradient(269deg, #97ca62 -16.86%, #2b8cd9 100.85%), #d9d9d9;
+
+  &__content {
+    color: #fff;
+    max-width: 649px;
+    width: 100%;
+  }
+  &__content-title {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 113%;
+    margin-bottom: 24px;
+  }
+  &__content-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  &__content-mail {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 16px;
+
+    color: #fff;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__field {
+    border-radius: 20px;
+    background: #fff;
+    max-width: 521px;
+    padding: 40px 30px;
+    width: 100%;
+  }
+  &__field-title {
+    margin-bottom: 24px;
+  }
+  textarea {
+    height: 130px !important;
+    border: 2px solid transparent;
+  }
+  &__field-button {
+    margin-top: 24px;
+    padding: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 32px 20px;
+    margin-top: 100px;
+    margin-bottom: 145px;
+    border-radius: 20px;
+
+    &__content {
+      max-width: 300px;
+    }
+    &__content-title {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__content-text {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+    &__content-mail {
+      gap: 10px;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 18px;
+    }
+
+    &__field {
+      border-radius: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      padding: 40px 30px;
+    }
+    &__field-title {
+      margin-bottom: 24px;
+    }
+    textarea {
+      height: 130px !important;
+      border: 2px solid transparent;
+    }
+    &__field-button {
+      margin-top: 24px;
+      padding: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    gap: 20px;
+
+    &__field,
+    &__content {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

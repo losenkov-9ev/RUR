@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-help" })
+  <body class="admin-page admin-help-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Help & Support
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          @@include('./components/_Help/HelpTextComponent/admin-help-text.html', {
+            "title": "RUR Data Guidebook"
+          })
+          @@include('./components/_Help/HelpTextComponent/admin-help-text.html', {
+            "title": "Profiles Data Guidebook"
+          })
+          @@include('./components/_Help/HelpTextComponent/admin-help-text.html', {
+            "title": "RUR Methodology"
+          })
+          @@include('./components/_Help/HelpTableComponent/admin-help-table.html', {
+            "title": "Web of Science Subject Areas Scheme"
+          })
+          @@include('./components/_Help/HelpTableComponent/admin-help-table.html', {
+            "title": "Scopus Subject Areas Scheme"
+          })
+          @@include('./components/_Help/HelpTableComponent/admin-help-table.html', {
+            "title": "Lens Subject Areas Scheme"
+          })
+
+          @@include('./components/_Help/HelpFormComponent/admin-help-form.html')
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

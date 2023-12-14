@@ -1,5 +1,43 @@
 .admin-page {
   @import './HeaderLoginComponent/admin-header-login.scss';
+  @import './HeaderAdminComponent/header.scss';
   @import './LoginDefaultInputComponent/login-default-input.scss';
   @import './LoginPasswordInputComponent/login-password-input.scss';
+  @import './MainItemComponent/main-item.scss';
+
+  @import './_DataUI/DataInputComponent/data-input.scss';
+  @import './_DataUI/DataUploadComponent/data-upload.scss';
+  @import './_DataUI/DataTextareaComponent/data-textarea.scss';
+  @import './_DataUI/DataSelectComponent/data-select.scss';
+
+  @import './_ProfilesData/ProfilesDataHeadComponent/profiles-data-head.scss';
+  @import './_ProfilesData/ProfilesDataTopComponent/profiles-data-top.scss';
+  @import './_ProfilesData/ProfilesDataBriefComponent/profiles-data-brief.scss';
+  @import './_ProfilesData/ProfilesDataDescriptionComponent/profiles-data-description.scss';
+  @import './_ProfilesData/ProfilesDataGeoComponent/profiles-data-geo.scss';
+  @import './_ProfilesData/ProfilesDataGalleryComponent/profiles-data-gallery.scss';
+  @import './_ProfilesData/ProfilesDataProgramsComponent/profiles-data-programs.scss';
+  @import './_ProfilesData/ProfilesDataMaterialsComponent/profiles-data-materials.scss';
+  @import './_RankingData/RankingDataBarComponent/ranking-data-bar.scss';
+
+  @import './_RankingData/RankingDataItemComponet/ranking-data-item.scss';
+  @import './_RankingData/_RankingDataTable/RankingDataTableComponent/ranking-data-table.scss';
+  @import './_RankingData/_RankingDataTable/RankingDataTableItemComponent/ranking-data-table-item.scss';
+
+  @import './ContactRecipient/contact-recipient.scss';
+
+  @import './_Caveat/CaveatNotesComponent/caveat-notes.scss';
+  @import './_Caveat/CaveatTableComponent/caveat-table.scss';
+  @import './_Caveat/CaveatStatementComponent/caveat-statement.scss';
+
+  @import './ExportComponent/admin-export.scss';
+
+  @import './_Modals/modal.scss';
+  @import './_Modals/SubmitModalComponent/submit-modal.scss';
+  @import './_Modals/UnlockModalComponent/unlock-modal.scss';
+  @import './_Modals/SubmitModalItemComponent/submit-modal-item.scss';
+
+  @import './_Help/HelpTextComponent/admin-help-text.scss';
+  @import './_Help/HelpTableComponent/admin-help-table.scss';
+  @import './_Help/HelpFormComponent/admin-help-form.scss';
 }

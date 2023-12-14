@@ -1,0 +1,273 @@
+.dataUpload {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  overflow: hidden;
+  &.no-label {
+    width: auto;
+  }
+  &.no-label .dataUpload__field {
+    width: 129px;
+    height: 125px;
+  }
+  &__field:not(.uploaded) {
+    &:hover {
+      border: 1px solid $accent;
+      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__field {
+    width: 106px;
+    height: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    border-radius: 10px;
+    border: 1px dashed rgba(145, 158, 171, 0.48);
+    background: rgba(145, 158, 171, 0.08);
+    flex-direction: column;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+    &.highlight {
+      border: 1px solid rgba(145, 158, 171, 0.7);
+    }
+  }
+  &__field-delete {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__field.uploaded {
+    .dataUpload__field-text,
+    .dataUpload__field-icon {
+      opacity: 0;
+    }
+
+    .dataUpload__field-uploadedImage {
+      opacity: 1;
+    }
+    &:hover {
+      .dataUpload__field-delete {
+        opacity: 1;
+      }
+    }
+  }
+  &__field-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+    transition: all 0.3s;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__field-text {
+    color: #919eab;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    transition: all 0.3s;
+  }
+  input {
+    display: none;
+  }
+  label {
+    color: #637381;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 12px;
+  }
+  &.no-label label {
+    display: none;
+  }
+
+  &__field-uploadedImage {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    left: 1px;
+    bottom: 1px;
+
+    object-fit: cover;
+    width: 98%;
+    height: 98%;
+
+    border-radius: 10px;
+
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  @media (max-width: $breakpoint-large) {
+    width: 180px;
+
+    &.no-label .dataUpload__field {
+      width: 129px;
+      height: 125px;
+    }
+    &__field:not(.uploaded) {
+      &:hover {
+        border: 1px solid $accent;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+      }
+    }
+    &__field {
+      width: 106px;
+      height: 106px;
+
+      border-radius: 10px;
+      border: 1px dashed rgba(145, 158, 171, 0.48);
+
+      &.highlight {
+        border: 1px solid rgba(145, 158, 171, 0.7);
+      }
+    }
+    &__field-delete {
+      border-radius: 10px;
+    }
+    &__field-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 4px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &__field-text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    label {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 12px;
+    }
+
+    &__field-uploadedImage {
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
+
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    gap: 12px;
+
+    &.no-label .dataUpload__field {
+      width: 64px;
+      height: 64px;
+      flex: none;
+    }
+    &__field:not(.uploaded) {
+      &:hover {
+        border: 1px solid $accent;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+      }
+    }
+    &__field {
+      flex: none;
+      width: 64px;
+      height: 64px;
+
+      border-radius: 10px;
+      border: 1px dashed rgba(145, 158, 171, 0.48);
+
+      &.highlight {
+        border: 1px solid rgba(145, 158, 171, 0.7);
+      }
+    }
+    &__field-delete {
+      border-radius: 10px;
+    }
+    &__field-icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__field-text {
+      font-size: 8.453px;
+      line-height: 13.283px;
+    }
+    label {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 12px;
+    }
+
+    &__field-uploadedImage {
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
+
+      border-radius: 10px;
+    }
+  }
+}
+
+.dataUploadLarge {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  .dataUpload__field {
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    flex: 1;
+  }
+  .dataUpload__field-uploadedImage {
+    width: 99.3%;
+    height: 99.3%;
+  }
+  .dataUpload__field-text {
+    color: #283764;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  label {
+    margin-top: 6px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .dataUpload__field {
+      padding: 20px;
+    }
+    .dataUpload__field-text {
+      font-size: 12px;
+      text-align: center;
+    }
+    label {
+      margin-top: 6px;
+    }
+  }
+}

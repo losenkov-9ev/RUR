@@ -1,3 +1,14 @@
 .header {
   border-bottom: none;
+
+  @media (max-width: $breakpoint-large) {
+    &__menu-link.mobile {
+      display: block !important;
+      padding: 8px 15px !important;
+      span {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
 }

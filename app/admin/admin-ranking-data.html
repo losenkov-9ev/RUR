@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-ranking" })
+  <body class="admin-page admin-ranking-data">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Ranking Data
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  Use this page to provide key institutional data. The data is broken down on 7 subject categories. The “Overall” data category is the prime one and it is obligatory to submit. This data is used in RUR <a href="https://roundranking.com/ranking/world-university-rankings.html">RUR Word University Ranking</a>. Other 6 subject areas data are used for relevant <a href="https://roundranking.com/ranking/subject-rankings.html">RUR Subject Rankings</a>.
+                </p>
+                <p>
+                  Key Notes:
+                </p>
+                <ul>
+                  <li>
+                    Please provide financial data in your national currency, which is: PKR.
+                  </li>
+                  <li>
+                    If your national currency is incorrect, please contact us at: <a href="rankings@roundranking.com">rankings@roundranking.com</a>.
+                  </li>
+                  <li>
+                    All the data except financial shall be provided as FTE (Full Time Equivalents). Please, see more details about "Full Time Equivalent (FTE)" Counting in <a href="https://data.roundranking.com/help-support.html">Help & Support</a> section.
+                  </li>
+                  <li>
+                    The reported year refers to the end of calendar or academic year. For example, 2020 calendar is equal with 2019-2020 academic year .
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          @@include('./components/_RankingData/RankingDataBarComponent/ranking-data-bar.html')
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-1.png",
+            "title": "Overall Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-2.png",
+            "title": "Humanities Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-3.png",
+            "title": "Life Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-4.png",
+            "title": "Medical Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-5.png",
+            "title": "Natural Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-6.png",
+            "title": "Social Sciences Data"
+          })
+          @@include('./components/_RankingData/RankingDataItemComponet/ranking-data-item.html', {
+            "icon": "@img/icons/admin-ranking/item-7.png",
+            "title": "Technical Sciences Data"
+          })
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

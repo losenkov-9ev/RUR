@@ -1,0 +1,68 @@
+.contactRecipient {
+  &__button {
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: 1px solid #e7edf2;
+    background-color: transparent;
+
+    color: #919eab;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #ff5630;
+      border: 1px solid #ff5630;
+      svg path {
+        stroke: #fff;
+      }
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__button {
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: 1px solid #e7edf2;
+      font-size: 16px;
+      gap: 8px;
+      margin-top: 24px;
+
+      &:hover {
+        border: 1px solid #ff5630;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    &__button {
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+      font-size: 14px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

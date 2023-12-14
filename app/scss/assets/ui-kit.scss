@@ -286,6 +286,7 @@
   height: 10px;
   background-color: $accent; /* Color for selected state */
   border-radius: 50%;
+
   @media (max-width: $breakpoint-large) {
     width: 10px;
     height: 10px;
@@ -362,5 +363,98 @@
         height: 24px;
       }
     }
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 30px; /* Расстояние между текстом и чекбоксом */
+  user-select: none;
+
+  i {
+    color: #919eab;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-left: 4px;
+  }
+  b {
+    color: #222;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    font-size: 16px;
+    padding-left: 30px;
+
+    i {
+      font-size: 16px;
+      margin-left: 4px;
+    }
+    b {
+      font-size: 16px;
+    }
+  }
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: $accent; /* Синий фон */
+  border: 1px solid $accent; /* Белая рамка */
+  border-radius: 4px;
+  margin-top: -3px;
+
+  @media (max-width: $breakpoint-large) {
+    height: 24px;
+    width: 24px;
+    border: 1px solid $accent; /* Белая рамка */
+    border-radius: 4px;
+    margin-top: -3px;
+  }
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+
+  width: 5px;
+  height: 10px;
+  border: solid #fff; /* Белая стрелочка */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+
+  @media (max-width: $breakpoint-large) {
+    width: 5px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+  }
+}
+.custom-checkbox input:not(:checked) ~ .checkmark {
+  border: 1px solid #c3d0dd;
+  background-color: #fff;
+
+  @media (max-width: $breakpoint-large) {
+    border: 1px solid #c3d0dd;
   }
 }

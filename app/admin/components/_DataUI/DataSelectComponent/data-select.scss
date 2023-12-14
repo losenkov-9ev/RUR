@@ -1,0 +1,39 @@
+.dataSelect {
+  padding: 16px 20px;
+  padding-right: 24px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  height: 56px;
+
+  &:not(.nice-select) {
+    display: none;
+  }
+  span {
+    color: #222;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 16px 20px;
+    padding-right: 24px;
+    height: 56px;
+
+    &.nice-select {
+      .option {
+        padding: 10px;
+      }
+      .list {
+        max-height: 400px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    &.nice-select {
+      padding: 12px 12px;
+      height: 49px;
+      .current {
+        font-size: 14px;
+      }
+    }
+  }
+}

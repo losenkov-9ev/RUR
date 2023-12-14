@@ -1,5 +1,5 @@
-import { popover } from '../views/popover.js';
-import { ScrollObserver } from '../utils/ScrollObserver.js';
+import { Popover } from '../views/popover.js';
+import { Observer } from '../utils/Observer.js';
 
 export class Header {
   constructor(isCalledByExtendedClass) {
@@ -8,7 +8,7 @@ export class Header {
 
     this.headerHeight = this.$header.clientHeight;
     this.previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    this.scrollObserver = new ScrollObserver();
+    this.scrollObserver = new Observer();
 
     this.$burger = document.querySelector('[data-burger="open"]');
     this.$headerMobile = document.querySelector('.header__mobile');
@@ -19,7 +19,7 @@ export class Header {
   init() {
     this.initListeners();
     !this.isCalledByExtendedClass && this.headerMobileListeners();
-    popover({
+    new Popover({
       $mainArray: this.$header.querySelectorAll('.header__menu-linkWrapper'),
       dropdownSelector: '.header__menu-dropdown',
       display: 'flex',

@@ -1,48 +1,93 @@
-import { customInput } from './utils/custom-input.js';
 import { checkPage } from '../../js/utils/checkPage.js';
+import { Popover } from '../../js/views/popover.js';
+
+import { adminLoginInit } from './admin-login.js';
+import { adminInput } from './views/admin-input.js';
+import { AdminMaterials } from './views/admin-materials.js';
+import { adminTableFilter } from './views/admin-table-filter.js';
+import { AdminFileUploader } from './views/admin-upload-files.js';
+import { AdminCaveatFiles } from './views/adminCaveat/AdminCaveatFiles.js';
+import { AdminRankingAccordion } from './views/adminRanking/admin-ranking-accordion.js';
+import { AdminRankingBar } from './views/adminRanking/admin-ranking-bar.js';
+import { editor } from './views/editor/editor.js';
+
+import MicroModal from 'micromodal';
 
 export const init = () => {
+  const adminPopover = new Popover({
+    $mainArray: document.querySelectorAll('.dataInput__info'),
+    dropdownSelector: '.dataInput__info-popover',
+  });
+
   if (checkPage('admin-login')) {
-    customInput();
+    adminLoginInit();
+  }
 
-    document.addEventListener('click', handleClick);
+  if (checkPage('admin-profiles-data')) {
+    new AdminMaterials();
+  }
 
-    function handleClick(e) {
-      const loginWrapper = e.target.closest('[data-login="wrapper"]');
-      const forgotButton = e.target.closest('[data-login="forgot"]');
-      const backButton = e.target.closest('[data-login="back"]');
-      const loginButton = e.target.closest('[data-login="button"]');
+  if (checkPage('admin-profiles-data-abbreviated')) {
+    new AdminFileUploader();
+  }
 
-      if (loginButton) {
-        handleLoginError(loginWrapper);
-      }
+  if (checkPage('admin-profiles-page')) {
+    document.querySelector('.profilesDataGeo__add').addEventListener('click', (e) => {
+      const $box = e.target.closest('.profilesDataGeo').querySelector('.profilesDataGeo__box');
+      $box.insertAdjacentHTML('afterend', $box.outerHTML);
 
-      const mainForm = loginWrapper.querySelector('[data-login="main"]');
-      const recoveryForm = loginWrapper.querySelector('[data-login="recovery"]');
+      adminPopover.update('.dataInput__info');
+    });
+  }
 
-      if (forgotButton && loginWrapper) {
-        e.preventDefault();
-        fadeOutAndSwitch(mainForm, recoveryForm);
-      } else if (backButton && loginWrapper) {
-        e.preventDefault();
-        fadeOutAndSwitch(recoveryForm, mainForm);
-      }
-    }
+  if (checkPage('admin-ranking-data')) {
+    new AdminRankingAccordion();
+    new AdminRankingBar();
+  }
 
-    function handleLoginError(wrapper) {
-      const inputs = wrapper.querySelectorAll('[data-input="custom"]');
-      inputs.forEach((input) => input.classList.add('loginDefaultInput-error'));
-    }
+  if (checkPage('admin-contact-page')) {
+    document.querySelector('.profilesDataGeo__add').addEventListener('click', (e) => {
+      const $box = document.querySelector('.contactRecipient');
+      $box.closest('.add-items-wrapper').insertAdjacentHTML('beforeend', $box.outerHTML);
 
-    function fadeOutAndSwitch(outElement, inElement) {
-      outElement.style.opacity = 0;
-      setTimeout(() => {
-        outElement.style.display = 'none';
-        inElement.style.display = 'block';
-        setTimeout(() => {
-          inElement.style.opacity = 1;
-        }, 40);
-      }, 300);
+      adminPopover.update('.dataInput__info');
+    });
+    document.addEventListener('click', (e) => {
+      const $target = e.target.closest('[data-contact-recipient="delete"]');
+      const itemsCount = document.querySelectorAll('.contactRecipient').length;
+
+      $target && itemsCount > 1 && $target.closest('.contactRecipient').remove();
+    });
+  }
+
+  if (checkPage('admin-caveat-page')) {
+    editor();
+    new AdminCaveatFiles();
+  }
+
+  if (checkPage('admin-export-page')) {
+    try {
+      MicroModal.init({
+        awaitCloseAnimation: true,
+      });
+    } catch (e) {
+      console.log('micromodal error: ', e);
     }
   }
+
+  if (checkPage('admin-help-page')) {
+    new AdminRankingAccordion();
+    const adminTableHelpPopover = new Popover({
+      $mainArray: document.querySelectorAll(
+        '.rankingDataTable__head-item.adminHelpTable__row-item--area',
+      ),
+      dropdownSelector: '.adminHelpTable__popover',
+      display: 'block',
+      onClick: true,
+    });
+
+    adminTableFilter();
+  }
+
+  adminInput();
 };

@@ -8,6 +8,8 @@
 @import './home-page.scss';
 @import './map-page.scss';
 
+@import './admin-main-page.scss';
+
 // page boxes and wrappers
 .article-content {
   padding: 30px;
@@ -106,6 +108,155 @@
   }
 }
 
+.admin-box {
+  border-radius: 20px;
+  background: #fff;
+  padding: 40px;
+  max-width: 100%;
+  width: 100%;
+  & + .admin-box {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 20px;
+    padding: 24px;
+    & + .admin-box {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 20px;
+    & + .admin-box {
+      margin-top: 28px;
+    }
+  }
+}
+
+.admin-profiles-page {
+  @media (max-width: $breakpoint-medium) {
+    .admin-box {
+      background: transparent;
+      padding: 0;
+    }
+    .admin-box-item {
+      background-color: #fff;
+      padding: 24px;
+      border: none !important;
+      margin-bottom: 48px;
+      border-radius: 8px;
+
+      &.first-item {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+    }
+  }
+}
+
+.admin-box-item {
+  padding: 40px 0;
+  max-width: 100%;
+  width: 100%;
+
+  & + .admin-box-item {
+    border-top: 1px solid rgba(202, 208, 215, 0.5);
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 40px 0;
+
+    & + .admin-box-item {
+      border-top: 1px solid rgba(202, 208, 215, 0.5);
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 24px 0;
+  }
+}
+
+.admin-profiles-data__button {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 95px;
+  display: block !important;
+
+  @media (max-width: $breakpoint-large) {
+    margin-top: 50px;
+    margin-bottom: 95px;
+  }
+  @media (max-width: $breakpoint-medium) {
+    margin-top: -28px;
+    margin-bottom: 70px;
+    max-width: 100%;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+.admin-box-item-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+
+  @media (max-width: $breakpoint-large) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+}
+
+.admin-ranking-data {
+  padding-bottom: 52px;
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 70px;
+  }
+}
+
+.admin-contact-page {
+  padding-bottom: 110px;
+
+  .profilesDataGeo__add {
+    margin-top: 32px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 110px;
+
+    .profilesDataGeo__add {
+      margin-top: 32px;
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    .profilesDataHead {
+      padding: 0 !important;
+    }
+    .profilesDataGeo__add {
+      margin-top: 0;
+    }
+  }
+}
+
+.admin-caveat-page {
+  padding-bottom: 50px;
+
+  @media (max-width: $breakpoint-large) {
+    padding-bottom: 100px;
+  }
+}
+
 // other pages styles
 .university-page,
 .ranking-page,
@@ -116,6 +267,24 @@
 .country-page,
 .admin-page {
   background-color: $bg-gray;
+}
+
+.admin-page {
+  .page-head__box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .page-head {
+    margin-bottom: 50px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .page-head {
+      margin-bottom: 48px;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .participation-page,

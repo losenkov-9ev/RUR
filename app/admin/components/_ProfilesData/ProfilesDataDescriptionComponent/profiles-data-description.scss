@@ -1,0 +1,26 @@
+.profilesDataDescription {
+  &__title {
+    margin-bottom: 6px;
+    padding-bottom: 0;
+  }
+  &__text {
+    margin-bottom: 19px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 6px;
+    }
+    &__text {
+      margin-bottom: 19px;
+    }
+    &__box {
+      gap: 14px;
+    }
+  }
+}

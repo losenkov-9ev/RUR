@@ -8,6 +8,11 @@
     justify-content: space-between;
   }
 
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
   &__form {
     max-width: 521px;
     width: 100%;

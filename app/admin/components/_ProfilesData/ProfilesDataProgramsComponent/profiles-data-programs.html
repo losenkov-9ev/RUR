@@ -1,0 +1,67 @@
+<div class="profilesDataPrograms">
+  <div class="profilesDataPrograms__box admin-box-item">
+    <h4 class="profilesDataPrograms__title title-4">@@title</h4>
+    <div class="profilesDataPrograms__inner">
+      <div class="profilesDataPrograms__col">
+        @@include('../../_DataUI/DataSelectComponent/data-select.html', {
+          "tip": "Degree",
+          "id": "profilesDataPrograms-select-degree",
+          "options": ["Bachelor course", "Magister course"],
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+        @@include('../../_DataUI/DataInputComponent/data-input.html', {
+          "tip": "Title",
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+        @@include('../../_DataUI/DataInputComponent/data-input.html', {
+          "tip": "Duration",
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+      </div>
+      <div class="profilesDataPrograms__col">
+        @@include('../../_DataUI/DataSelectComponent/data-select.html', {
+          "tip": "Direction",
+          "id": "profilesDataPrograms-select-direction",
+          "options": ["Business & economics", "Biology", "Computer Science", "Education"],
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+        @@include('../../_DataUI/DataSelectComponent/data-select.html', {
+          "tip": "Form of training",
+          "id": "profilesDataPrograms-select-fot",
+          "options": ["Correspondence / Full-time ", "Part-time", "Remove"],
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+        @@include('../../_DataUI/DataInputComponent/data-input.html', {
+          "tip": "Cost",
+          "counter": "",
+          "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+        })
+      </div>
+    </div>
+    <div class="profilesDataPrograms__row">
+      
+      @@include('../../_DataUI/DataInputComponent/data-input.html', {
+        "tip": "Link",
+        "counter": "",
+        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+      })
+      @@include('../../_DataUI/DataInputComponent/data-input.html', {
+        "tip": "Direction",
+        "counter": "500",
+        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quia."
+      })
+      <button class="profilesDataGeo__add">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 3.75V14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3.75 9H14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Add a field
+      </button>
+    </div>
+  </div>
+</div>

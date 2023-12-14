@@ -1,0 +1,146 @@
+.rankingDataItem {
+  border-radius: 20px;
+  background: #fff;
+  padding: 0 30px;
+  margin-top: 30px;
+  padding-bottom: 1px;
+
+  .rankingDataItem__angle {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+    svg {
+      width: 42px;
+      height: 42px;
+      rect {
+        fill: $bg-gray;
+        transition: all 0.3s;
+      }
+      path {
+        stroke: $accent;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &.opened {
+    .rankingDataItem__angle {
+      transform: rotate(0deg) translateY(2px);
+      svg {
+        rect {
+          fill: $accent;
+          transition: all 0.3s;
+        }
+        path {
+          stroke: #fff;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 30px 0;
+  }
+  &__head-icon {
+    width: 48px;
+    height: 48px;
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      display: none;
+    }
+  }
+
+  &.filled {
+    .rankingDataItem__title svg {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  &__button {
+    margin-left: auto;
+    padding: 14px 32px;
+    transform: translateY(-24px);
+  }
+
+  @media (max-width: $breakpoint-large) {
+    border-radius: 20px;
+    padding: 0 16px;
+    margin-top: 12px;
+    padding-bottom: 1px;
+
+    &.opened {
+      .rankingDataItem__angle {
+        transform: rotate(0deg) translateY(2px);
+      }
+    }
+
+    .rankingDataItem__angle svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__head {
+      gap: 15px;
+      padding: 12px 0;
+    }
+    &__head-icon {
+      width: 32px;
+      height: 32px;
+      margin-bottom: -2px;
+    }
+    &__title {
+      gap: 12px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &__button {
+      padding: 14px 32px;
+      transform: translateY(-24px);
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    padding: 0 12px;
+
+    .dataInput__info-popover {
+      top: 0;
+      left: -180px;
+      z-index: 10;
+    }
+
+    &__head {
+      padding: 12px 0;
+      gap: 8px;
+    }
+    &__title {
+      font-size: 16px;
+    }
+    &__button {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}

@@ -7,7 +7,30 @@
       @@include('./components/HeaderAdminComponent/header.html')
       @@include('../layouts/components/SearchComponent/search.html')
 
-      <div class="content"></div>
+      <div class="content">
+        <div class="adminMain__box container">
+          @@include('./components/MainItemComponent/main-item.html', {
+            "title": "Profiles Data",
+            "text": "Edit your university profile information that will be displayed at roundranking.com."
+          })
+          @@include('./components/MainItemComponent/main-item.html', {
+            "title": "Ranking Data",
+            "text": "Use this page to submit the data for RUR World University Rankings. Filling the information in this section is obligatory for participating in Round University Ranking."
+          })
+          @@include('./components/MainItemComponent/main-item.html', {
+            "title": "Caveat",
+            "text": "Submit statements about your university data that may need explanations or further clarification."
+          })
+          @@include('./components/MainItemComponent/main-item.html', {
+            "title": "Contact Persons",
+            "text": "Edit your university's contact information."
+          })
+          @@include('./components/MainItemComponent/main-item.html', {
+            "title": "Review, Print & Submit",
+            "text": "You can review, save and download the data submitted in “RUR Data Section. Click on “Submit” button on this page to finalize your registration for the upcoming RUR World University Ranking"
+          })
+        </div>
+      </div>
     </div>
     <script src="js/main.min.js" defer></script>
   </body>

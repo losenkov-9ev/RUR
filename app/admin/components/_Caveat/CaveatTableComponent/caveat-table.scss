@@ -1,0 +1,191 @@
+.caveatTable {
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__box {
+    padding: 0px 6px 6px 6px;
+    border-radius: 10px;
+    background: $bg-gray;
+  }
+  &__row {
+    display: flex;
+    align-items: stretch;
+    &:not(.caveatTable__head) {
+      border-radius: 7px;
+      background: #fff;
+    }
+  }
+  &__row + .caveatTable__row {
+    margin-top: 5px;
+  }
+
+  &__item-attachment,
+  &__item-delete {
+    span {
+      display: none;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+
+    &:not(.caveatTable__headItem) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 9px 16px;
+
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        align-self: stretch;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &.opened {
+          display: block;
+        }
+      }
+    }
+    &:not(.caveatTable__headItem) + .caveatTable__item:not(.caveatTable__headItem) {
+      border-left: 1px solid #edeeee;
+    }
+  }
+  &__item-date {
+    max-width: 170px;
+  }
+  &__item-content {
+    max-width: 751px;
+  }
+  &__item-delete {
+    max-width: 190px;
+  }
+  &__item-attachment {
+    max-width: 107px;
+  }
+  &__headItem {
+    color: #5f6262;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  [data-readMore='button'] {
+    margin-top: 4px;
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+    &.opened {
+      color: #c1c1c1;
+
+      svg path {
+        stroke: #c1c1c1;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__box {
+      padding: 0px 6px 6px 6px;
+      border-radius: 10px;
+    }
+    &__row {
+      &:not(.caveatTable__head) {
+        border-radius: 7px;
+      }
+    }
+    &__row + .caveatTable__row {
+      margin-top: 5px;
+    }
+    &__item {
+      font-size: 16px;
+
+      &:not(.caveatTable__headItem) {
+        padding: 9px 16px;
+      }
+      &:not(.caveatTable__headItem) + .caveatTable__item:not(.caveatTable__headItem) {
+        border-left: 1px solid #edeeee;
+      }
+    }
+    &__item-date {
+      max-width: 170px;
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+    }
+    &__item-content {
+      max-width: 751px;
+    }
+    &__item-delete {
+      max-width: 190px;
+    }
+    &__item-attachment {
+      max-width: 107px;
+    }
+    &__headItem {
+      padding: 16px;
+      font-size: 13px;
+    }
+
+    [data-readMore='button'] {
+      margin-top: 4px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    &__box {
+      padding: 6px;
+      padding-top: 2px;
+    }
+    &__row {
+      display: block;
+    }
+    &__item-date {
+      color: #919eab;
+      font-size: 14px;
+      padding: 6px 8px;
+      background: #fff;
+      font-weight: 400;
+      line-height: 150%;
+      max-width: 100%;
+      width: 100%;
+    }
+    &__item-attachment,
+    &__item-delete {
+      span {
+        display: block;
+        color: #919eab;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 36px;
+      }
+    }
+    &__item:not(.caveatTable__headItem) + .caveatTable__item:not(.caveatTable__headItem) {
+      border: none;
+      border-top: 1px solid #edeeee;
+      max-width: 100%;
+      width: 100%;
+    }
+    &__item:not(.caveatTable__headItem) p {
+      -webkit-line-clamp: 3;
+    }
+    &__head {
+      display: none;
+    }
+  }
+}

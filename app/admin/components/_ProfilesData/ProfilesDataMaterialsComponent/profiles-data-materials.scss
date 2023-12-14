@@ -1,0 +1,33 @@
+.profilesDataMaterials {
+  &__items {
+    margin-top: 24px;
+  }
+  &__emptyFiles {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    color: #637381;
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    &__items {
+      margin-top: 24px;
+    }
+    &__emptyFiles {
+      height: 52px;
+      font-size: 16px;
+    }
+  }
+  @media (max-width: $breakpoint-medium) {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-top: 24px;
+    .profilesDataPrograms__title,
+    &__description {
+      padding: 0 24px;
+    }
+  }
+}

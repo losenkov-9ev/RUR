@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-contacts"})
+  <body class="admin-page admin-contact-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Contact Persons
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  You can change contact details of persons who will receive notifications from RUR Ranking team: new rankings <br> releases, news, updates etc.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="admin-box">
+            <div class="add-items-wrapper">
+              @@include('./components/_ProfilesData/ProfilesDataHeadComponent/profiles-data-head.html', {
+                "title": "Contact information"
+              })
+              @@include('./components/ContactRecipient/contact-recipient.html')
+              @@include('./components/ContactRecipient/contact-recipient.html')
+            </div>
+            
+            <button class="profilesDataGeo__add">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 3.75V14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.75 9H14.25" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Add a recipient
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

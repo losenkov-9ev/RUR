@@ -14,7 +14,7 @@ export const adminLoginInit = () => {
     const recoveryForm = loginWrapper.querySelector('[data-login="recovery"]');
 
     if (loginButton) {
-      handleLoginError(loginWrapper);
+      // handleLoginError(loginWrapper);
     }
 
     if (forgotButton) {

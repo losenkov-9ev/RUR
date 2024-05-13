@@ -9,7 +9,9 @@ import { AdminFileUploader } from './views/admin-upload-files.js';
 import { AdminCaveatFiles } from './views/adminCaveat/AdminCaveatFiles.js';
 import { AdminRankingAccordion } from './views/adminRanking/admin-ranking-accordion.js';
 import { AdminRankingBar } from './views/adminRanking/admin-ranking-bar.js';
-import { editor } from './views/editor/editor.js';
+import { defaultOptions as editorDefaultOptions } from './views/editor/defaultOptions.js';
+import { Editor } from './views/editor/editor.js';
+import { ProfilesEditor } from './views/editor/profilesEditor.js';
 
 import MicroModal from 'micromodal';
 
@@ -25,10 +27,44 @@ export const init = () => {
 
   if (checkPage('admin-profiles-data')) {
     new AdminMaterials();
+
+    [...document.querySelectorAll('.caveatStatement__editor')].forEach(($el) => {
+      const options = {
+        ...editorDefaultOptions,
+        editorElementSelector: `[data-selector="${$el.getAttribute('data-selector')}"]`,
+        editorID: `#${$el.querySelector('.editor').getAttribute('id')}`,
+      };
+
+      new ProfilesEditor(options);
+    });
   }
 
   if (checkPage('admin-profiles-data-abbreviated')) {
     new AdminFileUploader();
+
+    [...document.querySelectorAll('.caveatStatement__editor')].forEach(($el) => {
+      const options = {
+        ...editorDefaultOptions,
+        editorElementSelector: `[data-selector="${$el.getAttribute('data-selector')}"]`,
+        editorID: `#${$el.querySelector('.editor').getAttribute('id')}`,
+      };
+
+      new ProfilesEditor(options);
+    });
+  }
+
+  if (checkPage('admin-profiles-data-default')) {
+    new AdminFileUploader();
+
+    [...document.querySelectorAll('.caveatStatement__editor')].forEach(($el) => {
+      const options = {
+        ...editorDefaultOptions,
+        editorElementSelector: `[data-selector="${$el.getAttribute('data-selector')}"]`,
+        editorID: `#${$el.querySelector('.editor').getAttribute('id')}`,
+      };
+
+      new ProfilesEditor(options);
+    });
   }
 
   if (checkPage('admin-profiles-page')) {
@@ -42,26 +78,32 @@ export const init = () => {
 
   if (checkPage('admin-ranking-data')) {
     new AdminRankingAccordion();
-    new AdminRankingBar();
+    // new AdminRankingBar();
   }
 
   if (checkPage('admin-contact-page')) {
-    document.querySelector('.profilesDataGeo__add').addEventListener('click', (e) => {
-      const $box = document.querySelector('.contactRecipient');
-      $box.closest('.add-items-wrapper').insertAdjacentHTML('beforeend', $box.outerHTML);
-
-      adminPopover.update('.dataInput__info');
-    });
+    // document.querySelector('.profilesDataGeo__add').addEventListener('click', (e) => {
+    //   const $box = document.querySelector('.contactRecipient');
+    //   $box.closest('.add-items-wrapper').insertAdjacentHTML('beforeend', $box.outerHTML);
+    //   adminPopover.update('.dataInput__info');
+    // });
     document.addEventListener('click', (e) => {
       const $target = e.target.closest('[data-contact-recipient="delete"]');
       const itemsCount = document.querySelectorAll('.contactRecipient').length;
 
-      $target && itemsCount > 1 && $target.closest('.contactRecipient').remove();
+      if ($target) {
+        itemsCount > 1
+          ? $target.closest('.contactRecipient').remove()
+          : $target
+              .closest('.contactRecipient')
+              .querySelectorAll('input')
+              .forEach(($i) => ($i.value = ''));
+      }
     });
   }
 
   if (checkPage('admin-caveat-page')) {
-    editor();
+    new Editor();
     new AdminCaveatFiles();
   }
 

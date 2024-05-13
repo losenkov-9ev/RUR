@@ -9,6 +9,9 @@
   border-radius: 20px;
   background: linear-gradient(269deg, #97ca62 -16.86%, #2b8cd9 100.85%), #d9d9d9;
 
+  .dataInput__field {
+    margin-bottom: 12px;
+  }
   &__content {
     color: #fff;
     max-width: 649px;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../layouts/global/head.html', {"title": "Admin-profiles"})
+  <body class="admin-page admin-profiles-data-default admin-profiles-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      @@include('./components/HeaderAdminComponent/header.html')
+      @@include('../layouts/components/SearchComponent/search.html')
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Profiles Data
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  You can put or edit the data that will be displayed in your university profile using this page. Use the fields below to edit the text data and picture icons to upload images of your university logo & campus. If you already have profile at Roundranking.com all changes will be displayed automatically in Universities page.
+                </p>
+                <p>
+                  The information in this page is obligatory for participation in the ranking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="admin-box">
+            @@include('./components/_ProfilesData/ProfilesDataHeadComponent/profiles-data-head.html', {
+              "title": "Basic information"
+            })
+            @@include('./components/_ProfilesData/ProfilesDataTopComponent/profiles-data-top.html')
+            @@include('./components/_ProfilesData/ProfilesDataBriefComponent/profiles-data-brief.html')
+            @@include('./components/_ProfilesData/ProfilesDataDescriptionComponent/profiles-data-description.html')
+            @@include('./components/_ProfilesData/ProfilesDataGalleryComponent/profiles-data-gallery.html')
+          </div>
+          <button class="admin-profiles-data__button profilesDataHead__button d-button">Save Changes</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

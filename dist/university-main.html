@@ -561,18 +561,13 @@
     <div class="search__field closed">
       <div class="search__field-box">
         <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
-        <input
-          type="text"
-          class="search__field-input"
-          data-search="input"
-          placeholder="Find University"
-        />
+        <input type="text" class="search__field-input" data-search="input" placeholder="Search" />
         <div class="search__field-controls">
           <div class="search__field-select searchSelect" data-search="selectWrapper">
             <div class="searchSelect__button" data-search="selectButton">
               Search
               <div class="searchSelect__button-value">
-                <span>Everywhere</span>
+                <span>Universities</span>
                 <svg
                   width="12"
                   height="12"
@@ -591,8 +586,7 @@
               </div>
             </div>
             <div class="searchSelect__dropdown">
-              <div class="searchSelect__item active" data-search="selectItem">Everywhere</div>
-              <div class="searchSelect__item" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item active" data-search="selectItem">Universities</div>
               <div class="searchSelect__item" data-search="selectItem">News</div>
             </div>
           </div>
@@ -737,7 +731,10 @@
 
         <div class="universitySelect__wrapper container">
   <div class="universitySelect">
-    <select id="universitySelect-year" class="universitySelect__item d-page-select page-select">
+    <select
+      id="universitySelect-year"
+      class="universitySelect__item d-page-select university-select"
+    >
       <option disabled selected>Universities</option>
       <option value="2023">Harvard University</option>
       <option value="2022">Harvard University</option>
@@ -746,13 +743,19 @@
       <option value="2019">Harvard University</option>
       <option value="2018">Harvard University</option>
     </select>
-    <select id="universitySelect-ranking" class="universitySelect__item d-page-select page-select">
+    <select
+      id="universitySelect-ranking"
+      class="universitySelect__item d-page-select university-select"
+    >
       <option value="" disabled selected>Ranking</option>
       <option value="world_rank">World rank</option>
       <option value="country_rank">Country rank</option>
       <option value="university_score">University score</option>
     </select>
-    <select id="universitySelect-subject" class="universitySelect__item d-page-select page-select">
+    <select
+      id="universitySelect-subject"
+      class="universitySelect__item d-page-select university-select"
+    >
       <option value="" disabled selected>Subject</option>
       <option value="usa">Science</option>
       <option value="china">Math</option>
@@ -1999,7 +2002,7 @@
     </div>
   </div>
   <div class="universityIndicators__content">
-    <div class="universityIndicators-chart"><canvas id="university-chart"></canvas></div>
+    <div class="universityIndicators-chart"><canvas id="university-chart-item-1"></canvas></div>
     <div class="universityIndicators__content-tabs" data-chart-tabs>
       <div
         class="universityIndicators__content-box active"
@@ -2574,7 +2577,7 @@
 </div>
 
             <div class="universityAsideButtons">
-  <a href="#" class="universityAsideButtons__item">
+  <a href="#" id="universityAsideButtons-save" class="universityAsideButtons__item">
     Save
     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -2587,7 +2590,7 @@
       />
     </svg>
   </a>
-  <a href="#" class="universityAsideButtons__item">
+  <a href="#" class="universityAsideButtons__item" id="universityAsideButtons-print">
     Print
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

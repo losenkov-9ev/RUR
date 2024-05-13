@@ -8,5 +8,5 @@ export const toolbarOptions = [
   [{ script: 'super' }, { script: 'sub' }], // superscript/subscript
   ['code-block', 'blockquote'],
   [{ direction: 'rtl' }], // text direction
-  [{ align: [] }],
+  // [{ align: [] }],
 ];

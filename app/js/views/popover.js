@@ -12,6 +12,7 @@ export class Popover {
     this.animationDuration = 300;
 
     this.onClick = onClick;
+    this.visibilityFlag = true;
 
     this.init();
   }
@@ -35,12 +36,17 @@ export class Popover {
 
   handleMouseEnter = (event) => {
     const $el = event.currentTarget;
-    this.toggleDropdownPopover($el, true);
+    this.visibilityFlag = true;
+    this.toggleDropdownPopover($el, this.visibilityFlag);
   };
 
   handleMouseLeave = (event) => {
     const $el = event.currentTarget;
-    this.toggleDropdownPopover($el, false);
+    this.visibilityFlag = false;
+
+    setTimeout(() => {
+      !this.visibilityFlag && this.toggleDropdownPopover($el, false);
+    }, this.animationDuration);
   };
 
   toggleDropdownPopover = ($el, isOpen) => {

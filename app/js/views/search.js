@@ -6,7 +6,7 @@ export class SearchManager {
 
     if (this.searchWrapper) {
       this.searchList = this.searchWrapper.querySelector('[data-search="list"]');
-      this.searchButton = this.searchWrapper.querySelector('[data-search="searchButton"]');
+      // this.searchButton = this.searchWrapper.querySelector('[data-search="searchButton"]');
       this.searchOpenButton = document.querySelector('[data-search="open"]');
       this.searchInput = this.searchWrapper.querySelector('[data-search="input"]');
 
@@ -69,8 +69,8 @@ export class SearchManager {
   async hideSearchList() {
     this.searchList.classList.remove('opened');
     this.searchWrapper.classList.remove('list-opened');
-    await this.delay(300);
-    this.searchButton.style.transform = 'translateX(0)';
+    // await this.delay(300);
+    // this.searchButton.style.transform = 'translateX(0)';
   }
 
   async handleInputFocus(e) {
@@ -82,7 +82,7 @@ export class SearchManager {
 
   async handleSearchClick(e) {
     const closeBtn = e.target.closest('[data-search="close"]');
-    const searchBtn = e.target.closest('[data-search="searchButton"]');
+    // const searchBtn = e.target.closest('[data-search="searchButton"]');
     const selectBtn = e.target.closest('[data-search="selectButton"]');
     const selectItem = e.target.closest('[data-search="selectItem"]');
 
@@ -90,10 +90,10 @@ export class SearchManager {
       this.closeSearch();
     }
 
-    if (searchBtn) {
-      this.showSearchList();
-      this.searchInput.focus();
-    }
+    // if (searchBtn) {
+    //   this.showSearchList();
+    //   this.searchInput.focus();
+    // }
 
     if (selectBtn) {
       this.toggleDropdown();

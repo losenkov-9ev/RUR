@@ -18,7 +18,7 @@ export class Header {
 
   init() {
     this.initListeners();
-    !this.isCalledByExtendedClass && this.headerMobileListeners();
+    !this.isCalledByExtendedClass && this.$headerMobile && this.headerMobileListeners();
     new Popover({
       $mainArray: this.$header.querySelectorAll('.header__menu-linkWrapper'),
       dropdownSelector: '.header__menu-dropdown',

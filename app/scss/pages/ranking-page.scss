@@ -2,6 +2,27 @@
   .pageSearch {
     margin-bottom: 30px;
   }
+  .ranking__items-box {
+    overflow: auto;
+    height: 1000px;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #eee;
+      border-radius: 4px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $accent;
+      border-radius: 4px;
+    }
+  }
   @media (max-width: $breakpoint-large) {
     .pageSearch {
       margin-bottom: 0;

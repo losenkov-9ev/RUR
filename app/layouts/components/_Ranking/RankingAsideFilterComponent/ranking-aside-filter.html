@@ -18,9 +18,16 @@
       />
     </svg>
   </div>
-  <div class="rankingAsideFilter__title">Filter</div>
-  <select id="rankingAsideFilter-year" class="rankingAsideFilter__select d-page-select page-select">
-    <option value="" disabled selected>Year</option>
+  <div class="rankingAsideFilter__title">
+    Filter <span data-filter="counter">3</span>
+    <div class="rankingAsideFilter__title-clear" data-filter="clear-all">Clear All</div>
+  </div>
+  <div class="rankingAsideFilter__bubble" data-filter="bubbles"></div>
+  <select
+    id="rankingAsideFilter-year"
+    class="rankingAsideFilter__select d-page-select ranking-select-year selected"
+  >
+    <option value="2024" selected>2024</option>
     <option value="2023">2023</option>
     <option value="2022">2022</option>
     <option value="2021">2021</option>
@@ -37,17 +44,38 @@
     <option value="2010">2010</option>
   </select>
   <select
-    id="rankingAsideFilter-ranking"
-    class="rankingAsideFilter__select d-page-select page-select"
+    id="rankingAsideFilter-subject"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
-    <option value="" disabled selected>Ranking</option>
-    <option value="world_rank">World rank</option>
-    <option value="country_rank">Country rank</option>
-    <option value="university_score">University score</option>
+    <option value="" disabled selected>Subject</option>
+    <optgroup label="Math">
+      <option>Math base</option>
+      <option>Math</option>
+      <option>Math 1</option>
+    </optgroup>
+    <optgroup label="Language">
+      <option>English language</option>
+      <option>Russian language</option>
+    </optgroup>
+  </select>
+  <select
+    id="rankingAsideFilter-indicator"
+    class="rankingAsideFilter__select d-page-select ranking-select"
+  >
+    <option value="" disabled selected>Indicator</option>
+    <optgroup label="Indicator_1">
+      <option>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, nesciunt.</option>
+      <option>Math</option>
+      <option>Math 1</option>
+    </optgroup>
+    <optgroup label="Indicator_2">
+      <option>English language</option>
+      <option>Russian language</option>
+    </optgroup>
   </select>
   <select
     id="rankingAsideFilter-region"
-    class="rankingAsideFilter__select d-page-select page-select"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
     <option value="" disabled selected>Region</option>
     <option value="usa">USA</option>
@@ -56,25 +84,12 @@
   </select>
   <select
     id="rankingAsideFilter-location"
-    class="rankingAsideFilter__select d-page-select page-select"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
-    <option value="" disabled selected>Location</option>
+    <option value="" disabled selected>Country</option>
     <option value="usa">USA</option>
     <option value="china">China</option>
     <option value="uk">United Kindom</option>
   </select>
-  <div class="rankingAsideFilter__type">
-    <div class="rankingAsideFilter__type-title">Type</div>
-    <label class="custom-radio">
-      <input type="radio" name="radio-group" checked class="custom-radio-input" />
-      <span class="custom-radio-indicator"></span>
-      Private
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="radio-group" class="custom-radio-input" />
-      <span class="custom-radio-indicator"></span>
-      Public
-    </label>
-  </div>
   <button class="rankingAsideFilter__mobileButton" data-filter="close">Search</button>
 </div>

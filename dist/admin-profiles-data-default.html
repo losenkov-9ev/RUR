@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Admin-profiles</title>
+
+  <meta name="description" content="..." />
+
+  <!-- meta for IOS -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
+  <link rel="shortcut icon" href="images/global/favicon.svg" type="image/x-icon" />
+</head>
+
+  <body class="admin-page admin-profiles-data-default admin-profiles-page">
+    <div class="wrapper">
+      <!-- Header component -->
+      <header class="header">
+  <div class="header__inner container">
+    <a href="#" class="header__logo">
+      <img src="images/global/logo.png" alt="logo" />
+    </a>
+    <nav class="header__menu">
+      <a href="#" class="header__menu-link"><span>Profiles Data</span></a>
+      <a href="#" class="header__menu-link"><span>Ranking Data</span></a>
+      <a href="#" class="header__menu-link"><span>Caveat</span></a>
+      <a href="#" class="header__menu-link"><span>Contact Persons</span></a>
+      <a href="#" class="header__menu-link"><span>Review, print & submit</span></a>
+      <a href="#" class="header__menu-link"><span>Help & Support</span></a>
+      <button
+        class="header__menu-link header__menu-link--search"
+        data-search="open"
+        data-header="close"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 15.75L12.4875 12.4875"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <a href="admin-login.html" class="header__menu-link header__menu-link--logout">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.75 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V3.75C2.25 3.35218 2.40804 2.97064 2.68934 2.68934C2.97064 2.40804 3.35218 2.25 3.75 2.25H6.75"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 12.75L15.75 9L12 5.25"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.75 9H6.75"
+            stroke="#A4B2BF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+      <button class="header__menu-link header__menu-link--burger" data-burger="open">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.25 9H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 4.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2.25 13.5H15.75"
+            stroke="#2B8CD9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="header__mobile">
+  <div class="header__mobile-backdrop" data-header="close"></div>
+  <div class="header__mobile-box">
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Profiles Data
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Ranking Data
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Caveat
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Contact Persons
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Review, print & submit
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link" data-header="close"
+      >Help & Support
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="32" width="32" height="32" rx="16" transform="rotate(90 32 0)" fill="white" />
+        <path
+          d="M13.375 11.375L18.625 16.625L13.375 21.875"
+          stroke="#2B8CD9"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <a href="#" class="header__mobile-link header__mobile-link--logout" data-header="close"
+      >Log Out
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.75 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V3.75C2.25 3.35218 2.40804 2.97064 2.68934 2.68934C2.97064 2.40804 3.35218 2.25 3.75 2.25H6.75"
+          stroke="#A4B2BF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 12.75L15.75 9L12 5.25"
+          stroke="#A4B2BF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M15.75 9H6.75"
+          stroke="#A4B2BF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </div>
+</div>
+
+      <div class="search closed" data-search="wrapper">
+  <div class="search-overlay" data-search="close"></div>
+  <div class="search__inner container">
+    <div class="search__field closed">
+      <div class="search__field-box">
+        <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
+        <input type="text" class="search__field-input" data-search="input" placeholder="Search" />
+        <div class="search__field-controls">
+          <div class="search__field-select searchSelect" data-search="selectWrapper">
+            <div class="searchSelect__button" data-search="selectButton">
+              Search
+              <div class="searchSelect__button-value">
+                <span>Universities</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 7.5L6 4.5L3 7.5"
+                    stroke="#2B8CD9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="searchSelect__dropdown">
+              <div class="searchSelect__item active" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item" data-search="selectItem">News</div>
+            </div>
+          </div>
+          <div class="search__field-button" data-search="searchButton">Search</div>
+        </div>
+      </div>
+      <div class="search__field-close" data-search="close">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="38" height="38" rx="8" fill="white" />
+          <path
+            d="M23.5 14.5L14.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14.5 14.5L23.5 23.5"
+            stroke="#CFCFCF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="search__list" data-search="list">
+      <div class="search__list-wrapper">
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-1.png" alt="" />
+          </div>
+          <div>Peking <span>Univ</span>ersity</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/item-2.png" alt="" />
+          </div>
+          <div><span>Univ</span>ersity of Hong Kong</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2023 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2021 World <span>Univ</span>ersity Ranking</div>
+        </a>
+        <a href="#" class="search__list-item">
+          <div class="search__list-image">
+            <img src="images/content/search/news.svg" alt="" />
+          </div>
+          <div class="search__list-tag">New</div>
+          <div>RUR 2019 World <span>Univ</span>ersity Ranking</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="content">
+        <div class="page-head">
+          <div class="page-head__wrapper container">
+            <div class="page-head__box">
+              <h1 class="title-2-head title-2 page-head__title">
+                Profiles Data
+              </h1>
+              <div class="page-head__text">
+                <p>
+                  You can put or edit the data that will be displayed in your university profile using this page. Use the fields below to edit the text data and picture icons to upload images of your university logo & campus. If you already have profile at Roundranking.com all changes will be displayed automatically in Universities page.
+                </p>
+                <p>
+                  The information in this page is obligatory for participation in the ranking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="admin-box">
+            <div class="profilesDataHead">
+  <h4 class="profilesDataHead__title title-4">Basic information</h4>
+  <button class="profilesDataHead__button d-button">Save Changes</button>
+</div>
+
+            <div class="profilesDataTop admin-box-item first-item">
+  <div class="profilesDataTop__box">
+    <div class="profilesDataTop__file">
+      
+<form class="dataUpload">
+   
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+        <div class="dataUpload__field-text">Upload logo</div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataTop-upload-logo" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataTop-upload-logo"> Allowed *.jpeg, *.jpg, *.png, *.gif <br />Max size of 3.1 MB </label>
+    
+  </form>
+
+    </div>
+    <div class="profilesDataTop__field">
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Name of the university 
+    
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div>
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Location 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div>
+    </div>
+  </div>
+</div>
+
+            <div class="profilesDataBrief admin-box-item">
+  <h6 class="profilesDataBrief__title admin-box-item-title">
+    Brief information
+  </h6>
+  <div class="profilesDataBrief__box">
+    <div class="profilesDataBrief__column">
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Foundation year 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Short Name 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Faculty 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Students 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+    </div>
+    <div class="profilesDataBrief__column">
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Type 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Website 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div> 
+      <div class="dataInput">
+  <div class="dataInput__tip">
+    Region 
+    
+    
+      <div class="dataInput__info">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 17H12.01" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="dataInput__info-popover">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+        </div>
+      </div>
+    
+  </div>
+  <input type="text" class="dataInput__field" data-admin-counter="field">
+  
+</div>
+    </div>
+  </div>
+</div>
+            <div class="profilesDataDescription admin-box-item">
+  <h6 class="profilesDataDescription__title admin-box-item-title">Description</h6>
+  <p class="profilesDataDescription__text">Describe your university to your audience</p>
+
+  <div class="profilesDataDescription__box">
+    <div class="dataInput dataTextarea">
+      <div class="dataInput__tip">
+        Overview
+
+        <div class="dataInput__info">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 17H12.01"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="dataInput__info-popover">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+          </div>
+        </div>
+      </div>
+      <div class="caveatStatement__editor unfocused" data-selector="overview">
+        <div class="editor" id="editorOverview">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, iusto labore provident
+          mollitia cumque quis cum dolorum, fugit ea nemo saepe maxime minus, facilis eveniet quos
+          impedit sit consequuntur eos atque deleniti ipsa voluptate vero quo? Ratione inventore
+          corporis error ipsam laboriosam, quo hic a illo mollitia necessitatibus cupiditate cumque
+          ea, distinctio unde fuga pariatur nam tempore minus, voluptas quod expedita dolore?
+          Distinctio delectus tenetur laboriosam. Vero facere et ipsam libero blanditiis voluptas
+          consectetur quos molestiae, hic quo totam quis optio. Sit fugiat necessitatibus eveniet
+          ipsum optio consequatur laborum blanditiis ab nostrum, labore velit modi odit libero magni
+          molestiae fugit!
+        </div>
+      </div>
+      <div class="caveatStatement__counter">
+        <div class="caveatStatement__counter-item">
+          Characters Left: <span data-caveat-counter="characters">2000</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataInput dataTextarea">
+      <div class="dataInput__tip">
+        Mission Statement
+
+        <div class="dataInput__info">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.09003 8.99996C9.32513 8.33163 9.78918 7.76807 10.4 7.40909C11.0108 7.05012 11.7289 6.9189 12.4272 7.03867C13.1255 7.15844 13.7588 7.52148 14.2151 8.06349C14.6714 8.60549 14.9211 9.29148 14.92 9.99996C14.92 12 11.92 13 11.92 13"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 17H12.01"
+              stroke="#919EAB"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="dataInput__info-popover">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatem.
+          </div>
+        </div>
+      </div>
+      <div class="caveatStatement__editor unfocused" data-selector="mission">
+        <div class="editor" id="editorMissionStatement">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi voluptatibus sapiente
+          perferendis, repudiandae exercitationem officia ex molestias error, nobis itaque, fuga
+          aliquam id laboriosam porro natus reiciendis? Voluptatibus veritatis illo, repudiandae
+          laudantium eveniet maxime veniam tenetur fugiat! Molestias voluptatum aliquid numquam
+          dolore? Laborum, dolores? Distinctio sit harum reprehenderit nostrum sequi sapiente eos
+          rerum cupiditate quis, excepturi, cumque omnis vero dolore doloremque nisi ipsam possimus
+          rem magni. Quae, doloribus. In veniam voluptatibus id saepe esse quibusdam sapiente et
+          dolore nihil, eos incidunt maxime dolores libero fugiat repellendus! Reiciendis, hic
+          quidem quae at, iure in adipisci distinctio sequi nam non consequatur doloribus.
+        </div>
+      </div>
+      <div class="caveatStatement__counter">
+        <div class="caveatStatement__counter-item">
+          Characters Left: <span data-caveat-counter="characters">2000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <div class="profilesDataGallery admin-box-item">
+  <div class="profilesDataGallery__box">
+    <div class="profilesDataGallery__column">
+      <h6 class="profilesDataDescription__title admin-box-item-title">Main photo</h6>
+      <p class="profilesDataDescription__text">
+        This photo will be displayed first on the profile page
+      </p>
+      <form class="dataUpload dataUploadLarge" data-upload-type="image">
+  <div class="dataUpload__field">
+    <img class="dataUpload__field-uploadedImage" src="" alt="" />
+    <div class="dataUpload__field-icon">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+          fill="#919EAB"
+        />
+        <path
+          d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+          fill="#919EAB"
+        />
+      </svg>
+    </div>
+    <div class="dataUpload__field-text">Drag and drop files here or click to upload.</div>
+    <div class="dataUpload__field-delete">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="20" fill="white" />
+        <path
+          d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+          fill="#ED4242"
+        />
+      </svg>
+    </div>
+    <label for="profilesDataGallery-upload-large-photos-1"> Allowed *.jpeg, *.jpg, *.png, *.gif <br />Max size of 30 MB </label>
+  </div>
+  
+    <input type="file" name="profilesDataGallery-upload-large-photos-1" accept=".jpg, .jpeg, .png, .gif" />
+  
+  
+</form>
+
+    </div>
+    <div class="profilesDataGallery__column">
+      <h6 class="profilesDataDescription__title admin-box-item-title">Photos for the gallery</h6>
+      <p class="profilesDataDescription__text">You can upload up to 10 photos here</p>
+      <div class="profilesDataGallery__photos">
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-1" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-1">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-2" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-2">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-3" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-3">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-4" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-4">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-5" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-5">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-6" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-6">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-7" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-7">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-8" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-8">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-9" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-9">  </label>
+    
+  </form>
+
+         
+  <form class="dataUpload no-label">
+    
+    <div class="dataUpload__field">
+      <img class="dataUpload__field-uploadedImage" src="" alt="" />
+      <div class="dataUpload__field-icon">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 20C36.5 19.8166 36.4 19.6333 36.35 19.45C36.2729 19.1265 36.1726 18.8091 36.05 18.5C35.9667 18.3 35.85 18.1 35.75 17.8833C35.65 17.6666 35.5 17.3833 35.35 17.15C35.2 16.9166 35 16.8 35 16.6666C35 16.5333 34.6667 16.25 34.4834 16.05C34.3 15.85 34.1334 15.7166 33.95 15.55L33.3334 15L32.7333 14.6C32.4978 14.4558 32.2528 14.3278 32 14.2166L31.35 13.9166C31.0778 13.8158 30.7995 13.7323 30.5167 13.6666C30.2927 13.6007 30.0644 13.5506 29.8333 13.5166L29.45 13.3333C28.7699 11.3684 27.4943 9.66433 25.8006 8.45824C24.1068 7.25214 22.0793 6.604 20 6.604C17.9207 6.604 15.8932 7.25214 14.1995 8.45824C12.5057 9.66433 11.2301 11.3684 10.55 13.3333L10.25 13.4166C10.019 13.4506 9.79067 13.5007 9.56668 13.5666C9.28391 13.6323 9.00557 13.7158 8.73334 13.8166L8.08334 14.1166C7.83055 14.2278 7.58555 14.3558 7.35001 14.5L6.75001 15L6.13334 15.5166C5.95001 15.6833 5.76668 15.8333 5.60001 16.0166C5.43334 16.2 5.25001 16.4333 5.08334 16.6333C4.91668 16.8333 4.78334 17.0166 4.65001 17.2333C4.51668 17.45 4.38334 17.7166 4.25001 17.9666C4.11668 18.2166 4.03334 18.3833 3.95001 18.5833C3.82741 18.8924 3.72716 19.2099 3.65001 19.5333C3.65001 19.7166 3.53334 19.9 3.50001 20.0833C3.39627 20.6049 3.34048 21.1349 3.33334 21.6666C3.34116 22.1755 3.39133 22.6828 3.48334 23.1833C3.48334 23.35 3.56668 23.5 3.60001 23.6666C3.68239 23.9941 3.78254 24.3168 3.90001 24.6333L4.10001 25.1166C4.24672 25.438 4.41373 25.7498 4.60001 26.05L4.83334 26.4166C4.85732 26.4633 4.8852 26.5079 4.91668 26.55L5.00001 26.6666C5.77624 27.7016 6.78277 28.5416 7.9399 29.1202C9.09703 29.6988 10.373 30 11.6667 30H16.6667V27.7166C16.1603 28.0104 15.5854 28.1656 15 28.1666C14.0971 28.1582 13.2342 27.7927 12.6 27.15C12.2955 26.8349 12.0561 26.463 11.8954 26.0554C11.7348 25.6477 11.6561 25.2124 11.6638 24.7744C11.6716 24.3363 11.7656 23.904 11.9405 23.5023C12.1155 23.1006 12.3679 22.7374 12.6833 22.4333L17.6833 17.6C18.3054 17.0004 19.136 16.6657 20 16.6666C20.8826 16.6704 21.7278 17.024 22.35 17.65L27.35 22.65C27.9709 23.2745 28.3193 24.1193 28.3193 25C28.3193 25.8806 27.9709 26.7254 27.35 27.35C26.7278 27.9759 25.8826 28.3296 25 28.3333C24.4137 28.3388 23.8372 28.1832 23.3333 27.8833V30H28.3333C29.6271 30 30.903 29.6988 32.0601 29.1202C33.2173 28.5416 34.2238 27.7016 35 26.6666L35.0833 26.5833C35.1148 26.5413 35.1427 26.4967 35.1667 26.45L35.4 26.0833C35.5863 25.7831 35.7533 25.4714 35.9 25.15L36.1 24.6666C36.2175 24.3501 36.3176 24.0274 36.4 23.7C36.4 23.5333 36.4833 23.3833 36.5167 23.2166C36.6106 22.7052 36.6607 22.1866 36.6667 21.6666C36.6648 21.107 36.6089 20.5489 36.5 20Z"
+            fill="#919EAB"
+          />
+          <path
+            d="M21.1833 18.8166C20.8718 18.5113 20.4529 18.3402 20.0167 18.3402C19.5804 18.3402 19.1616 18.5113 18.85 18.8166L13.85 23.65C13.6732 23.7959 13.5283 23.9767 13.4246 24.1812C13.3208 24.3857 13.2603 24.6093 13.2469 24.8382C13.2336 25.0671 13.2676 25.2963 13.3468 25.5115C13.426 25.7266 13.5488 25.9231 13.7075 26.0887C13.8661 26.2542 14.0572 26.3852 14.2688 26.4736C14.4804 26.5619 14.7079 26.6056 14.9372 26.6019C15.1664 26.5983 15.3925 26.5474 15.6012 26.4524C15.8098 26.3575 15.9967 26.2204 16.15 26.05L18.3333 23.9333V33.3333C18.3333 33.7753 18.5089 34.1993 18.8215 34.5118C19.1341 34.8244 19.558 35 20 35C20.442 35 20.866 34.8244 21.1785 34.5118C21.4911 34.1993 21.6667 33.7753 21.6667 33.3333V24.0166L23.8167 26.1833C23.9716 26.3395 24.156 26.4635 24.3591 26.5481C24.5621 26.6327 24.78 26.6763 25 26.6763C25.22 26.6763 25.4379 26.6327 25.641 26.5481C25.8441 26.4635 26.0284 26.3395 26.1833 26.1833C26.3396 26.0284 26.4636 25.844 26.5482 25.6409C26.6328 25.4378 26.6763 25.22 26.6763 25C26.6763 24.7799 26.6328 24.5621 26.5482 24.359C26.4636 24.1559 26.3396 23.9716 26.1833 23.8166L21.1833 18.8166Z"
+            fill="#919EAB"
+          />
+        </svg>
+      </div>
+      
+      <div class="dataUpload__field-delete">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="white" />
+          <path
+            d="M17.8 13.4H22.2C22.2 12.8165 21.9682 12.2569 21.5556 11.8444C21.1431 11.4318 20.5835 11.2 20 11.2C19.4165 11.2 18.8569 11.4318 18.4444 11.8444C18.0318 12.2569 17.8 12.8165 17.8 13.4ZM15.6 13.4C15.6 12.233 16.0636 11.1139 16.8887 10.2887C17.7139 9.46357 18.833 9 20 9C21.167 9 22.2861 9.46357 23.1113 10.2887C23.9364 11.1139 24.4 12.233 24.4 13.4H29.9C30.1917 13.4 30.4715 13.5159 30.6778 13.7222C30.8841 13.9285 31 14.2083 31 14.5C31 14.7917 30.8841 15.0715 30.6778 15.2778C30.4715 15.4841 30.1917 15.6 29.9 15.6H28.9298L27.9552 26.974C27.8615 28.0723 27.359 29.0954 26.547 29.841C25.7351 30.5865 24.6729 31.0001 23.5706 31H16.4294C15.3271 31.0001 14.2649 30.5865 13.453 29.841C12.641 29.0954 12.1385 28.0723 12.0448 26.974L11.0702 15.6H10.1C9.80826 15.6 9.52847 15.4841 9.32218 15.2778C9.11589 15.0715 9 14.7917 9 14.5C9 14.2083 9.11589 13.9285 9.32218 13.7222C9.52847 13.5159 9.80826 13.4 10.1 13.4H15.6ZM23.3 20C23.3 19.7083 23.1841 19.4285 22.9778 19.2222C22.7715 19.0159 22.4917 18.9 22.2 18.9C21.9083 18.9 21.6285 19.0159 21.4222 19.2222C21.2159 19.4285 21.1 19.7083 21.1 20V24.4C21.1 24.6917 21.2159 24.9715 21.4222 25.1778C21.6285 25.3841 21.9083 25.5 22.2 25.5C22.4917 25.5 22.7715 25.3841 22.9778 25.1778C23.1841 24.9715 23.3 24.6917 23.3 24.4V20ZM17.8 18.9C17.5083 18.9 17.2285 19.0159 17.0222 19.2222C16.8159 19.4285 16.7 19.7083 16.7 20V24.4C16.7 24.6917 16.8159 24.9715 17.0222 25.1778C17.2285 25.3841 17.5083 25.5 17.8 25.5C18.0917 25.5 18.3715 25.3841 18.5778 25.1778C18.7841 24.9715 18.9 24.6917 18.9 24.4V20C18.9 19.7083 18.7841 19.4285 18.5778 19.2222C18.3715 19.0159 18.0917 18.9 17.8 18.9Z"
+            fill="#ED4242"
+          />
+        </svg>
+      </div>
+    </div>
+    <input type="file" name="profilesDataGallery-upload-photos-10" accept=".jpg, .jpeg, .png, .gif" />
+    
+    <label for="profilesDataGallery-upload-photos-10">  </label>
+    
+  </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <button class="admin-profiles-data__button profilesDataHead__button d-button">Save Changes</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js" defer></script>
+  </body>
+</html>

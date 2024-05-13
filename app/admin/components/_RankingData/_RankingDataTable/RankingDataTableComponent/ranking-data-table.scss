@@ -35,6 +35,37 @@
     .dataInput__tip {
       margin: 0;
     }
+    .dataInput__info-popover {
+      min-width: 240px;
+      resize: horizontal !important;
+    }
+    .dataInput__info-popoverInner {
+      max-height: 90px;
+      overflow: auto;
+      padding-right: 4px;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #eee;
+        border-radius: 4px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $accent;
+        border-radius: 4px;
+      }
+    }
+  }
+  [data-admin-table='row']:first-of-type {
+    .dataInput__info-popover {
+      top: 100%;
+      z-index: 10;
+    }
   }
   &__row-item:not(.rankingDataTable__head-item) {
     padding: 9px 16px;

@@ -561,18 +561,13 @@
     <div class="search__field closed">
       <div class="search__field-box">
         <img class="search__field-icon" src="images/icons/search.svg" alt="search icon" />
-        <input
-          type="text"
-          class="search__field-input"
-          data-search="input"
-          placeholder="Find University"
-        />
+        <input type="text" class="search__field-input" data-search="input" placeholder="Search" />
         <div class="search__field-controls">
           <div class="search__field-select searchSelect" data-search="selectWrapper">
             <div class="searchSelect__button" data-search="selectButton">
               Search
               <div class="searchSelect__button-value">
-                <span>Everywhere</span>
+                <span>Universities</span>
                 <svg
                   width="12"
                   height="12"
@@ -591,8 +586,7 @@
               </div>
             </div>
             <div class="searchSelect__dropdown">
-              <div class="searchSelect__item active" data-search="selectItem">Everywhere</div>
-              <div class="searchSelect__item" data-search="selectItem">Universities</div>
+              <div class="searchSelect__item active" data-search="selectItem">Universities</div>
               <div class="searchSelect__item" data-search="selectItem">News</div>
             </div>
           </div>
@@ -797,9 +791,16 @@
       />
     </svg>
   </div>
-  <div class="rankingAsideFilter__title">Filter</div>
-  <select id="rankingAsideFilter-year" class="rankingAsideFilter__select d-page-select page-select">
-    <option value="" disabled selected>Year</option>
+  <div class="rankingAsideFilter__title">
+    Filter <span data-filter="counter">3</span>
+    <div class="rankingAsideFilter__title-clear" data-filter="clear-all">Clear All</div>
+  </div>
+  <div class="rankingAsideFilter__bubble" data-filter="bubbles"></div>
+  <select
+    id="rankingAsideFilter-year"
+    class="rankingAsideFilter__select d-page-select ranking-select-year selected"
+  >
+    <option value="2024" selected>2024</option>
     <option value="2023">2023</option>
     <option value="2022">2022</option>
     <option value="2021">2021</option>
@@ -816,17 +817,38 @@
     <option value="2010">2010</option>
   </select>
   <select
-    id="rankingAsideFilter-ranking"
-    class="rankingAsideFilter__select d-page-select page-select"
+    id="rankingAsideFilter-subject"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
-    <option value="" disabled selected>Ranking</option>
-    <option value="world_rank">World rank</option>
-    <option value="country_rank">Country rank</option>
-    <option value="university_score">University score</option>
+    <option value="" disabled selected>Subject</option>
+    <optgroup label="Math">
+      <option>Math base</option>
+      <option>Math</option>
+      <option>Math 1</option>
+    </optgroup>
+    <optgroup label="Language">
+      <option>English language</option>
+      <option>Russian language</option>
+    </optgroup>
+  </select>
+  <select
+    id="rankingAsideFilter-indicator"
+    class="rankingAsideFilter__select d-page-select ranking-select"
+  >
+    <option value="" disabled selected>Indicator</option>
+    <optgroup label="Indicator_1">
+      <option>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, nesciunt.</option>
+      <option>Math</option>
+      <option>Math 1</option>
+    </optgroup>
+    <optgroup label="Indicator_2">
+      <option>English language</option>
+      <option>Russian language</option>
+    </optgroup>
   </select>
   <select
     id="rankingAsideFilter-region"
-    class="rankingAsideFilter__select d-page-select page-select"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
     <option value="" disabled selected>Region</option>
     <option value="usa">USA</option>
@@ -835,26 +857,13 @@
   </select>
   <select
     id="rankingAsideFilter-location"
-    class="rankingAsideFilter__select d-page-select page-select"
+    class="rankingAsideFilter__select d-page-select ranking-select"
   >
-    <option value="" disabled selected>Location</option>
+    <option value="" disabled selected>Country</option>
     <option value="usa">USA</option>
     <option value="china">China</option>
     <option value="uk">United Kindom</option>
   </select>
-  <div class="rankingAsideFilter__type">
-    <div class="rankingAsideFilter__type-title">Type</div>
-    <label class="custom-radio">
-      <input type="radio" name="radio-group" checked class="custom-radio-input" />
-      <span class="custom-radio-indicator"></span>
-      Private
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="radio-group" class="custom-radio-input" />
-      <span class="custom-radio-indicator"></span>
-      Public
-    </label>
-  </div>
   <button class="rankingAsideFilter__mobileButton" data-filter="close">Search</button>
 </div>
 
@@ -975,8 +984,8 @@
   </div>
 </div>
 
-
-            <a href="#" class="rankingItem">
+            <div class="ranking__items-box">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-1.png" alt="University-logo" />
   </div>
@@ -1005,7 +1014,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-2.png" alt="University-logo" />
   </div>
@@ -1034,7 +1043,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-3.png" alt="University-logo" />
   </div>
@@ -1063,7 +1072,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-4.png" alt="University-logo" />
   </div>
@@ -1092,7 +1101,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-5.png" alt="University-logo" />
   </div>
@@ -1121,7 +1130,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-6.png" alt="University-logo" />
   </div>
@@ -1150,7 +1159,7 @@
   </div>
 </a>
 
-            <a href="#" class="rankingItem">
+              <a href="#" class="rankingItem">
   <div class="rankingItem__image">
     <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
   </div>
@@ -1179,6 +1188,384 @@
   </div>
 </a>
 
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          8
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          9
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          10
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-1.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Harvard University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          1
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-2.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">California Institute of Technology (Caltech)</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          2
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-3.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Stanford University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          3
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-4.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Massachusetts Institute of Technology (MIT)</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          4
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-5.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Imperial College London</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          5
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-6.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">University of Pennsylvania</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          6
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          7
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          8
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          9
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+              <a href="#" class="rankingItem">
+  <div class="rankingItem__image">
+    <img src="images/content/ranking-page-items/item-7.png" alt="University-logo" />
+  </div>
+  <div class="rankingItem__content">
+    <div class="rankingItem__name">Peking University</div>
+    <div class="rankingItem__location">
+      <img src="images/icons/country-icons/usa.svg" alt="usa" />
+      USA, Cambridge, MA 02138, United States
+    </div>
+    <div class="rankingItem__ranks">
+      <div class="rankingItem__ranks-item">
+        World rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #2b8cd9">
+          10
+        </div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        Country rank
+        <div class="rankingItem__ranks-itemCount" style="--itemCount-color: #48c1c0">1</div>
+      </div>
+      <div class="rankingItem__ranks-item">
+        University score
+        <div class="rankingItem__ranks-itemScore">99.730</div>
+      </div>
+    </div>
+  </div>
+</a>
+
+            </div>
 
             <div class="pagination">
   <div class="pagination__item pagination__item-arrow pagination__item-arrow--disabled">
@@ -1210,172 +1597,7 @@
           </div>
         </div>
         <!-- News section -->
-        <section class="newsCards">
-  <div class="newsCards__inner container">
-    <div class="newsCards__head">
-      <h2 class="newsCards__title title-2">
-        News
-      </h2>
-      <div class="newsCards__arrows">
-        <a class="newsCards__arrow newsCards__arrow--prev">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"/>
-            <path d="M18 10.75L12.75 16L18 21.25" stroke="#2B8CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a class="newsCards__arrow newsCards__arrow--next">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="16" fill="white"/>
-            <path d="M14 10.75L19.25 16L14 21.25" stroke="#2B8CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>  
-        </a>
-      </div>
-    </div>
-    <div class="newsCards__box swiper">
-      <div class="swiper-wrapper">
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">25</div>
-    <div class="newsCard__date-month">may</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-1.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 is released</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">21</div>
-    <div class="newsCard__date-month">dec</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-2.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 Data Collection deadline is extended by February 1, 2023</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">7</div>
-    <div class="newsCard__date-month">dec</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-3.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">25</div>
-    <div class="newsCard__date-month">may</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-1.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 is released</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">21</div>
-    <div class="newsCard__date-month">dec</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-2.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 Data Collection deadline is extended by February 1, 2023</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-        <div class="newsCard swiper-slide">
-  <div class="newsCard__date">
-    <div class="newsCard__date-day">7</div>
-    <div class="newsCard__date-month">dec</div>
-  </div>
-  <div class="newsCard__image">
-    <img src="images/content/news/item-3.jpg" alt="news-image" />
-  </div>
-  <h5 class="newsCard__title">RUR 2023 Data Collection deadline is extended by February 1, 2023 lorem50 is released</h5>
-  <div class="newsCard__button link-button">
-    More detailed
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M5.25 10.5L8.75 7L5.25 3.5"
-        stroke="#2B8CD9"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-</div>
-
-      </div>
-    </div>
-    
-  </div>
-</section>
+        
         <!-- Footer component -->
         <footer class="footer">
   <div class="footer__inner container">

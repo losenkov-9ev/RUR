@@ -2,17 +2,30 @@ import { initUniversityGallerySlider, initUniversityMatrialsSlider } from '../vi
 import { ProgramsAccordion } from './programsAccordion.js';
 import { locationToggler } from './locationToggler.js';
 import { checkPage } from '../utils/checkPage.js';
-import { doughnutChart } from './chart/chart.js';
+import { DoughnutChart } from './chart/chart.js';
 
 import { Popover } from '../views/popover.js';
 import { Aside } from '../views/Aside.js';
 import { Tabs } from '../views/tabs.js';
 
 import { Fancybox } from '@fancyapps/ui';
+import { pdf } from './pdf.js';
+
+import NiceSelect from '../plugins/nice-select2.js';
 
 export const init = () => {
+  pdf();
+
+  document.querySelectorAll('.university-select').forEach(
+    ($s, idx) =>
+      new NiceSelect($s, {
+        placeholder: 'Select',
+        searchable: !idx,
+      }),
+  );
+
   if (checkPage('university-main-page') || checkPage('university-extended-page')) {
-    doughnutChart();
+    new DoughnutChart('item-1');
     const $rankings = document.querySelector('[data-university="rankings"]');
 
     new Popover({

@@ -1,3 +1,14 @@
+.news-space {
+  margin-bottom: 64px;
+
+  @media (max-width: $breakpoint-large) {
+    margin-bottom: 48px;
+  }
+  @media (max-width: $breakpoint-medium) {
+    margin-bottom: 36px;
+  }
+}
+
 .a {
   width: 100%;
   height: 90px;
@@ -309,6 +320,12 @@
 }
 
 .d-page-select {
+  &.selected .current {
+    color: #212b36;
+    max-width: 89%;
+    width: 100%;
+    overflow: hidden;
+  }
   &.nice-select {
     margin-bottom: 18px;
     display: flex;
@@ -343,6 +360,15 @@
     }
     .option.disabled {
       display: none;
+    }
+    .optgroup {
+      padding: 0 10px;
+    }
+    .option {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      line-height: 1.4;
+      white-space: normal;
     }
   }
   .nice-select-dropdown {

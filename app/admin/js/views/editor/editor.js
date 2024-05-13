@@ -1,69 +1,75 @@
 import Quill from 'quill';
 import { toolbarOptions } from './toolbar.js';
+import { defaultOptions } from './defaultOptions.js';
 
-const maxLength = 2000;
-const errorClass = 'editor-error';
+export class Editor {
+  constructor(options = defaultOptions) {
+    const {
+      editorElementSelector,
+      charactersCounterSelector,
+      maxLength,
+      errorClass,
+      clearButtonSelector,
+      editorID,
+      placeholder,
+    } = options;
 
-const $editor = document.querySelector('.caveatStatement__editor');
+    this.editorElementSelector = editorElementSelector;
 
-export const editor = () => {
-  const $characters = document.querySelector('[data-caveat-counter="characters"]');
-  const $files = document.querySelector('[data-caveat-counter="file"]');
+    this.$editorElement = document.querySelector(editorElementSelector);
+    this.$clearButton = document.querySelector(clearButtonSelector);
+    this.$charactersCounter =
+      this.$editorElement.parentNode.querySelector(charactersCounterSelector);
 
-  const editor = initQuillEditor();
-
-  editor.on('text-change', (delta, oldDelta, source) => {
-    updateCharacterCount(editor, $characters);
-    handleTextChange(editor, $characters, source);
-  });
-
-  document.querySelector('.caveatStatement__button').addEventListener('click', (e) => {
-    clearForm(editor);
-
-    $characters.innerHTML = maxLength;
-    $files.innerHTML = 0;
-  });
-};
-
-const initQuillEditor = () => {
-  return new Quill('#editor', {
-    modules: { toolbar: toolbarOptions },
-    theme: 'snow',
-    placeholder: 'Write something awesome...',
-  });
-};
-
-const updateCharacterCount = (editor, $characters) => {
-  $characters.innerHTML = maxLength - editor.getLength() + 1;
-};
-
-const handleTextChange = (editor, $characters, source) => {
-  if (source === 'user') {
-    handleUserTextChange(editor, $characters);
+    this.maxLength = maxLength;
+    this.errorClass = errorClass;
+    this.initializeEditor(editorID, placeholder);
+    this.attachEventListeners();
   }
-};
 
-const handleUserTextChange = (editor, $characters) => {
-  const length = editor.getLength();
-  if (length > maxLength) {
-    handleTextOverflow(editor, $characters, length);
-  } else {
-    resetErrorState($editor, errorClass);
-  }
-};
+  initializeEditor = (id, placeholder) => {
+    this.editor = new Quill(id, {
+      modules: { toolbar: toolbarOptions },
+      theme: 'snow',
+      placeholder,
+    });
+  };
 
-const handleTextOverflow = (editor, $characters, length) => {
-  editor.deleteText(maxLength, length - maxLength);
-  $editor.classList.add(errorClass);
-};
+  attachEventListeners = () => {
+    this.editor.on('text-change', this.handleTextChange);
+    this.$clearButton?.addEventListener('click', this.clearForm);
+  };
 
-const resetErrorState = ($editor, errorClass) => {
-  $editor.classList.remove(errorClass);
-};
+  handleTextChange = (delta, oldDelta, source) => {
+    this.updateCharacterCount();
 
-const clearForm = (editor) => {
-  editor.setText('');
+    if (source === 'user') {
+      this.handleUserTextChange();
+    }
+  };
 
-  // Удаление всех форматирований
-  editor.removeFormat(0, editor.getLength());
-};
+  updateCharacterCount = () => {
+    const remainingCharacters = this.maxLength - this.editor.getLength();
+    this.$charactersCounter.innerHTML = remainingCharacters + 1;
+  };
+
+  handleUserTextChange = () => {
+    const length = this.editor.getLength();
+    length > this.maxLength ? this.handleTextOverflow(length) : this.resetErrorState();
+  };
+
+  handleTextOverflow = (length) => {
+    this.editor.deleteText(this.maxLength, length - this.maxLength);
+    this.$editorElement.classList.add(this.errorClass);
+  };
+
+  resetErrorState = () => {
+    this.$editorElement.classList.remove(this.errorClass);
+  };
+
+  clearForm = () => {
+    this.editor.setText('');
+    this.editor.removeFormat(0, this.editor.getLength());
+    this.$charactersCounter.innerHTML = this.maxLength;
+  };
+}

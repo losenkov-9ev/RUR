@@ -4,20 +4,115 @@
   width: 100%;
   border-radius: 20px;
   background: #fff;
-  padding-bottom: 24px;
+  padding-bottom: 80px;
 
   &__title {
     color: $text;
     font-size: 18px;
     font-weight: 400;
     line-height: 120%;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    [data-filter='counter'] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $accent;
+      color: #fff;
+      opacity: 1;
+      transition: all 0.3s;
+
+      &:not(.has-filters) {
+        opacity: 0;
+      }
+    }
+  }
+
+  .ranking-select-year {
+    margin-top: 8px;
+  }
+  &__title-clear {
+    margin-left: auto;
+    color: $accent;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:not(.has-filters) {
+      display: none;
+    }
+  }
+  &__bubble {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 24px;
+
+    &:not(.has-filters) {
+      display: none;
+    }
+  }
+  &__bubble-item {
+    padding: 4px 8px;
+    padding-right: 32px;
+    border-radius: 24px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+  }
+  &__bubble-itemName {
+    font-size: 16px;
+
+    overflow: hidden;
+    max-width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__bubble-itemClose {
+    font-size: 20px;
+    position: absolute;
+    top: 49%;
+    cursor: pointer;
+    right: 4px;
+    transform: translateY(-50%);
+    padding: 5px;
+
+    &:hover {
+      color: #d10000;
+    }
   }
   &__select {
     display: block;
     max-width: 100%;
     width: 100%;
     height: 56px;
+
+    position: relative;
+
+    .placeholder {
+      display: inline-block !important;
+      position: absolute;
+      background-color: rgba(#fff, 0.5);
+      padding: 0 1px;
+      border-radius: 0px;
+      color: #4d4d4d;
+      font-size: 14px;
+      z-index: 0;
+      top: -7px;
+      line-height: 1;
+      left: 12px;
+      user-select: none;
+      opacity: 0;
+      transition: all 0.5s;
+    }
   }
   &__type {
     padding: 9px 0px 8px 12px;
@@ -87,7 +182,76 @@
 
     &__title {
       font-size: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      [data-filter='counter'] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $accent;
+        color: #fff;
+        opacity: 1;
+        transition: all 0.3s;
+        line-height: 1;
+
+        &:not(.has-filters) {
+          opacity: 0;
+        }
+      }
+    }
+    &__title-clear {
+      margin-left: auto;
+      color: $accent;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+      padding-right: 40px;
+
+      &:not(.has-filters) {
+        display: none;
+      }
+    }
+    &__bubble {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 24px;
+
+      &:not(.has-filters) {
+        display: none;
+      }
+    }
+    &__bubble-item {
+      padding: 4px 8px;
+      padding-right: 32px;
+      border-radius: 24px;
+      border: 1px solid #e7e7e7;
+      position: relative;
+    }
+    &__bubble-itemName {
+      font-size: 16px;
+    }
+    &__bubble-itemClose {
+      font-size: 20px;
+      position: absolute;
+      top: 44%;
+      cursor: pointer;
+      right: 4px;
+      transform: translateY(-50%);
+      padding: 5px;
+
+      &:hover {
+        color: #d10000;
+      }
     }
     &__select {
       height: 56px;
@@ -96,6 +260,23 @@
       }
       .list {
         max-height: 240px;
+      }
+
+      .placeholder {
+        display: inline-block !important;
+        position: absolute;
+        background-color: rgba(#fff, 0.5);
+        padding: 0 1px;
+        border-radius: 0px;
+        color: #4d4d4d;
+        font-size: 14px;
+        z-index: 0;
+        top: -7px;
+        line-height: 1;
+        left: 12px;
+        user-select: none;
+        opacity: 0;
+        transition: all 0.5s;
       }
     }
     &__type {
@@ -128,7 +309,7 @@
       display: block;
       cursor: pointer;
       position: absolute;
-      top: 20px;
+      top: 23px;
       right: 24px;
     }
   }

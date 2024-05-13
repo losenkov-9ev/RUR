@@ -1,0 +1,22 @@
+.printHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  padding-right: 52px;
+  padding-left: 52px;
+  &__logo {
+    max-width: 260px;
+  }
+  &__page {
+    color: #919eab;
+    font-size: 14px;
+  }
+
+  .universityOverview__content {
+    max-width: 100%;
+    width: 100%;
+    flex: 1;
+  }
+}

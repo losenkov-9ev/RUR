@@ -1,65 +1,105 @@
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import Chart from 'chart.js/auto';
 
-import { options } from './options.js';
 import { data } from './data.js';
+import { options } from './options.js';
+
+import { Tabs } from '../../views/tabs.js';
+import { tabsOptions } from './options/tabsOptions.js';
 
 import { getRGBAColor, setRGBAColor } from '../../utils/changeRGBA.js';
-import { Tabs } from '../../views/tabs.js';
 
-export let chartTabsInstance;
-export async function doughnutChart() {
-  const universityIndicators = new Chart(document.getElementById('university-chart'), {
-    type: 'doughnut',
-    data,
-    options,
-    plugins: [ChartDataLabels],
-  });
+export class DoughnutChart {
+  constructor(tabId) {
+    this.tabId = tabId;
+    this.$chartTables = document.querySelector('[data-chart-table-box]');
 
-  chartTabsInstance = new Tabs({
-    controlsSelector: '[data-chart-controls="wrapper"]',
-    tabsSelector: '[data-chart-tabs]',
-    controlsItem: 'data-chart-controls',
-    tabItem: 'data-chart-tab',
-    defaultTabId: 'item-1',
-    activeClass: 'active',
-    defaultDisplay: 'block',
-  });
+    this.init();
+  }
 
-  const $chartTables = document.querySelector('[data-chart-table-box]');
+  init = () => {
+    this.chartTabsInstance = this.initializeTabs();
+    this.chartInstance = this.initializeChart();
 
-  chartTabsInstance.on('changeTab', (tabId) => {
-    if ($chartTables) {
-      $chartTables.querySelectorAll(`[data-chart-table]`).forEach(($el) => {
-        $el.classList.remove('active');
-      });
+    this.chartTabsInstance.changeControlActive(this.tabId, true);
+  };
 
-      $chartTables.querySelector(`[data-chart-table=${tabId}]`).classList.add('active');
-    }
+  initializeTabs = () => {
+    const chartTabsInstance = new Tabs(tabsOptions(this.tabId));
+    chartTabsInstance.on('changeTab', this.handleChangeTab);
 
+    return chartTabsInstance;
+  };
+
+  initializeChart = () =>
+    new Chart(document.getElementById(`university-chart-${this.tabId}`), {
+      type: 'doughnut',
+      data,
+      options: {
+        ...options,
+        onClick: this.handleChartClick,
+      },
+      plugins: [ChartDataLabels],
+    });
+
+  handleChangeTab = (tabId) => {
+    this.updateTableVisibility(tabId);
+    this.updateChartData(tabId);
+  };
+
+  updateTableVisibility = (tabId) => {
+    if (!this.$chartTables) return;
+    const chartTableItems = this.$chartTables.querySelectorAll('[data-chart-table]');
+    chartTableItems.forEach(($el) =>
+      this.toggleActiveClass($el, $el.getAttribute('data-chart-table') === tabId),
+    );
+  };
+
+  toggleActiveClass = (element, isActive) => {
+    element.classList.toggle('active', isActive);
+  };
+
+  updateChartData = (tabId) => {
     const currentId = data.datasets[0].ids.indexOf(tabId);
-    const newColor = setRGBAColor({
+    const newColor = this.getNewColor(currentId);
+    const newData = this.getUpdatedData(newColor, currentId);
+    this.updateChartInstance(newData);
+  };
+
+  getNewColor = (currentId) => {
+    return setRGBAColor({
       ...getRGBAColor(data.datasets[0].backgroundColor[currentId]),
       opacity: 1,
     });
+  };
 
-    const newData = {
-      ...data, // Копируем все свойства из исходного объекта data
-      datasets: [
-        {
-          ...data.datasets[0], // Копируем все свойства из первого элемента массива datasets
-          backgroundColor: data.datasets[0].backgroundColor.map((color, index) =>
-            index === currentId ? newColor : color,
-          ),
-        },
-      ],
-    };
-
-    universityIndicators.data = newData;
-    universityIndicators.options.animation.duration = 0;
-
-    universityIndicators.update();
+  getUpdatedData = (newColor, currentId) => ({
+    ...data,
+    datasets: [
+      {
+        ...data.datasets[0],
+        backgroundColor: data.datasets[0].backgroundColor.map((color, index) =>
+          index === currentId ? newColor : color,
+        ),
+      },
+    ],
   });
 
-  chartTabsInstance.changeControlActive('item-1', true);
+  updateChartInstance = (newData) => {
+    this.chartInstance.data = newData;
+    this.chartInstance.options.animation.duration = 0;
+
+    this.chartInstance.update();
+  };
+
+  handleChartClick = (_, elements) => {
+    if (elements.length > 0) {
+      const clickedElement = elements[0];
+      const datasetIndex = clickedElement.datasetIndex;
+      const index = clickedElement.index;
+      const clickedElementID = data.datasets[datasetIndex].ids[index];
+
+      this.chartTabsInstance.changeControlActive(clickedElementID);
+    }
+  };
 }

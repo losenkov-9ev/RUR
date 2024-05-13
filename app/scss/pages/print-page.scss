@@ -1,0 +1,58 @@
+.print-page {
+  background-color: #fff !important;
+  .u-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .university-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .universityOverview__text {
+    height: 100%;
+    display: inline-block;
+    overflow: visible;
+  }
+  .universityOverview__content,
+  .universityMission__content {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .universityIndicators__table-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .universityIndicators__headBox {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 360px;
+    }
+
+    .universityIndicators__tabs {
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .universityIndicators__tabItem {
+      display: flex;
+      justify-content: space-between;
+    }
+    .universityIndicators__content {
+      order: -1;
+      max-width: 450px;
+    }
+    .universityTop__achievements-info {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+}

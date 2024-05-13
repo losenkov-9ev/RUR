@@ -2,7 +2,12 @@
   .u-aside-wrapper {
     margin-top: 50px;
   }
+  .u-box {
+    max-width: 100%;
+    width: 100%;
+  }
   .u-aside {
+    display: none;
     .a {
       height: 80vh;
     }

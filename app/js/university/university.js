@@ -20,7 +20,7 @@ export const init = () => {
     ($s, idx) =>
       new NiceSelect($s, {
         placeholder: 'Select',
-        searchable: !idx,
+        searchable: idx === 1,
       }),
   );
 

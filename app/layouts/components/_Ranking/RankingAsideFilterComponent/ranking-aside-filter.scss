@@ -312,5 +312,9 @@
       top: 23px;
       right: 24px;
     }
+    &__select--bottom .nice-select-dropdown {
+      bottom: 105% !important;
+      top: auto !important;
+    }
   }
 }

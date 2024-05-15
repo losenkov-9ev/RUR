@@ -203,7 +203,7 @@
     }
   }
 
-  @media (max-width: $breakpoint-medium) {
+  @media (max-width: $breakpoint-large) {
     flex-direction: column;
     align-items: flex-start;
     position: relative;

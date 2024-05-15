@@ -27,5 +27,6 @@ const header = new Header();
 document.querySelectorAll('.page-select').forEach(($s) => {
   new NiceSelect($s, {
     placeholder: 'Select',
+    searchable: $s.classList.contains('page-select-searchable'),
   });
 });

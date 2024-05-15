@@ -370,6 +370,23 @@
       line-height: 1.4;
       white-space: normal;
     }
+    .nice-select-dropdown {
+      border-radius: 8px;
+      top: 105%;
+    }
+    .nice-select-search-box {
+      padding: 8px;
+      border-radius: 8px;
+
+      .nice-select-search {
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin: 0 8px 0 0;
+        line-height: 140%;
+        min-height: 32px;
+        font-size: 14px;
+      }
+    }
   }
   .nice-select-dropdown {
     max-width: 100%;
@@ -387,6 +404,31 @@
         right: 12px;
         width: 24px;
         height: 24px;
+      }
+      .nice-select-dropdown {
+        border-radius: 8px;
+        top: 105%;
+      }
+      .list {
+        max-height: 200px;
+        .option {
+          font-size: 16px;
+          padding: 6px 16px;
+          color: #222;
+        }
+      }
+      .nice-select-search-box {
+        padding: 8px;
+        border-radius: 8px;
+
+        .nice-select-search {
+          border-radius: 8px;
+          padding: 8px 16px;
+          margin: 0 8px 0 0;
+          line-height: 140%;
+          min-height: 32px;
+          font-size: 14px;
+        }
       }
     }
   }

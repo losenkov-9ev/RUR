@@ -735,40 +735,20 @@
         <div class="pageSearch">
   <div class="pageSearch__inner container">
     <div class="pageSearch__inputWrapper">
-      <div class="icon">
-        <svg
-          width="34"
-          height="34"
-          viewBox="0 0 34 34"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M24.5225 22.525L29.3392 27.3275C29.6074 27.5935 29.7582 27.9556 29.7582 28.3333C29.7582 28.7111 29.6074 29.0732 29.3392 29.3392C29.0732 29.6074 28.7111 29.7582 28.3333 29.7582C27.9556 29.7582 27.5935 29.6074 27.3275 29.3392L22.525 24.5225C20.5451 26.0766 18.1003 26.9198 15.5833 26.9167C9.32411 26.9167 4.25 21.8426 4.25 15.5833C4.25 9.32411 9.32411 4.25 15.5833 4.25C21.8426 4.25 26.9167 9.32411 26.9167 15.5833C26.9198 18.1003 26.0766 20.5451 24.5225 22.525ZM15.5833 7.08333C10.8889 7.08333 7.08333 10.8889 7.08333 15.5833C7.08333 20.2778 10.8889 24.0833 15.5833 24.0833C20.2778 24.0833 24.0833 20.2778 24.0833 15.5833C24.0833 10.8889 20.2778 7.08333 15.5833 7.08333Z"
-            fill="url(#paint0_linear_383_15921)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_383_15921"
-              x1="35.4167"
-              y1="7.08333"
-              x2="2.37746"
-              y2="10.2739"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#97CA62" />
-              <stop offset="1" stop-color="#2B8CD9" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <input type="text" class="pageSearch__input" placeholder="Find Mention" />
+      <select
+        id="rankingSearchFilter-mention"
+        class="rankingSearchSelect pageSearch__input page-select-searchable d-page-select page-select"
+      >
+        <option value="" disabled selected>Search university</option>
+        <option value="usa">USA</option>
+        <option value="china">China</option>
+        <option value="uk">United Kindom</option>
+      </select>
     </div>
   </div>
 </div>
 
+        
         <div class="u-aside-wrapper container" data-aside="wrapper">
           <div class="u-aside" data-aside="block">
             <div class="rankingAsideFilter-backdrop" data-filter="backdrop"></div>
@@ -848,7 +828,7 @@
   </select>
   <select
     id="rankingAsideFilter-region"
-    class="rankingAsideFilter__select d-page-select ranking-select"
+    class="rankingAsideFilter__select rankingAsideFilter__select--bottom d-page-select ranking-select"
   >
     <option value="" disabled selected>Region</option>
     <option value="usa">USA</option>
@@ -857,7 +837,7 @@
   </select>
   <select
     id="rankingAsideFilter-location"
-    class="rankingAsideFilter__select d-page-select ranking-select"
+    class="rankingAsideFilter__select rankingAsideFilter__select--bottom d-page-select ranking-select"
   >
     <option value="" disabled selected>Country</option>
     <option value="usa">USA</option>

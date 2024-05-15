@@ -1,19 +1,19 @@
 .contacts-page {
   .page-head__form {
-    margin-bottom: -230px;
   }
   .page-head {
-    margin-bottom: 180px;
-    padding-bottom: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 90px;
   }
-
+  .footer {
+    border-radius: 0;
+  }
   @media (max-width: $breakpoint-large) {
     .page-head__form {
       margin-bottom: 0px;
     }
     .page-head {
-      margin-bottom: 64px;
-      padding-bottom: 40px;
+      padding-bottom: 90px;
     }
   }
 }
